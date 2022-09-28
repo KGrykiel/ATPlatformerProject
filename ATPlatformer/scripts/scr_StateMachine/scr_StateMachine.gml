@@ -5,14 +5,15 @@ function PlayerStateFree(){
 	if(key_jump)
 	{
 		vertical_speed = -jump_height
-		state = PlayerStateJumping
 	}
+	
+	if (check_for_floor() == false) state = PlayerStateAir
 	
 	scr_collision()
 	scr_move()
 }
 
-function PlayerStateJumping(){
+function PlayerStateAir(){
 	if (check_for_floor()) state = PlayerStateFree;
 	scr_collision()
 	scr_move()
