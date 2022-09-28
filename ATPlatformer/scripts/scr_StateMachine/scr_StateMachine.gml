@@ -4,14 +4,16 @@ function PlayerStateFree(){
 	
 	if(key_jump)
 	{
-		vertical_speed = -7
+		vertical_speed = -jump_height
 		state = PlayerStateJumping
 	}
 	
 	scr_collision()
+	scr_move()
 }
 
 function PlayerStateJumping(){
 	if (check_for_floor()) state = PlayerStateFree;
 	scr_collision()
+	scr_move()
 }

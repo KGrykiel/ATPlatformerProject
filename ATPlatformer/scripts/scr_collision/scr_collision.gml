@@ -33,8 +33,6 @@ function scr_collision(){
 		_entitityCount--;
 	}
 	
-	//horizontal move commit
-	x += horizontal_speed;
 	
 	//clear list between axis
 	ds_list_clear(_entityList)
@@ -83,15 +81,12 @@ function scr_collision(){
 		_entitityCount--;
 	}
 	
-	//vertical move commit
-	y += vertical_speed;
-	
 	ds_list_destroy(_entityList)
 }
 
 function check_for_floor()
 {
-	if(tilemap_get_at_pixel(tilemap,bbox_left, bbox_side+ceil(vertical_speed))!=0) || (tilemap_get_at_pixel(tilemap,bbox_right, bbox_side+ceil(vertical_speed))!=0) 
+	if(tilemap_get_at_pixel(tilemap,bbox_left, bbox_bottom+ceil(vertical_speed))!=0) || (tilemap_get_at_pixel(tilemap,bbox_right, bbox_bottom+ceil(vertical_speed))!=0) 
 	{
 		return true;
 	}
