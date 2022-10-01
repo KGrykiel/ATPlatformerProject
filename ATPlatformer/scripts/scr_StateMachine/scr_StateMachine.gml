@@ -7,14 +7,14 @@ function PlayerStateFree(){
 		vertical_speed = -jump_height
 	}
 	
-	if (check_for_floor() == false) state = PlayerStateAir
+	if (!grounded) state = PlayerStateAir
 	
 	scr_collision()
 	scr_move()
 }
 
 function PlayerStateAir(){
-	if (check_for_floor()) state = PlayerStateFree;
+	if (grounded) state = PlayerStateFree;
 	scr_collision()
 	scr_move()
 }

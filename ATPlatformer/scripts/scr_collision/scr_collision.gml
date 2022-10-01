@@ -3,6 +3,7 @@
 function scr_collision(){
 	var _collision = false;
 	var _entityList = ds_list_create();
+	grounded = false
 	
 	if (horizontal_speed >0) bbox_side = bbox_right; else bbox_side = bbox_left;
 	if(tilemap_get_at_pixel(tilemap, bbox_side+horizontal_speed,bbox_top)!=0) || (tilemap_get_at_pixel(tilemap, bbox_side+horizontal_speed, bbox_bottom)!=0)
@@ -47,6 +48,7 @@ function scr_collision(){
 			else y=y - (y mod TILE_SIZE) - (bbox_top - y);
 			vertical_speed=0;
 			_collision = true;
+			grounded = true;
 		}
 	}
 	else { 
@@ -62,7 +64,7 @@ function scr_collision(){
 	
 	
 	//vertical entities //IF CHARACTER VIBRATES WHEN STANDING ON OBJECTS LET ME KNOW @AKAS
-	var _entitityCount = instance_position_list(x, y+vertical_speed, obj_parent_entity, _entityList,false);
+	var _entitityCount = instance_position_list(x, y+ceil(vertical_speed), obj_parent_entity, _entityList,false);
 	var _snapY;
 	while(_entitityCount >0)
 	{
@@ -76,6 +78,7 @@ function scr_collision(){
 			vertical_speed = 0;
 			_collision = true;
 			_entitityCount = 0;
+			grounded = true;
 		}
 		ds_list_delete(_entityList,0);
 		_entitityCount--;

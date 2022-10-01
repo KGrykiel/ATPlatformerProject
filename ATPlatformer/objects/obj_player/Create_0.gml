@@ -15,3 +15,4 @@ walk_speed = 4;
 jump_height = 7
 
 tilemap = layer_tilemap_get_id("Collisions")
+grounded = true
