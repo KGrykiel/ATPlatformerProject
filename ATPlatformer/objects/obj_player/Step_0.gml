@@ -10,8 +10,6 @@ Interact = keyboard_check_pressed(ord("E"));
 
 var move = key_right - key_left;
 
-horizontal_speed = move * walk_speed
-
 vertical_speed = vertical_speed + _gravity;
 
 script_execute(state);

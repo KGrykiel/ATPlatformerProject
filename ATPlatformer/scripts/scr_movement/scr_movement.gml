@@ -1,6 +1,5 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_move(){
-	x += horizontal_speed
-	y += vertical_speed
+	grounded_movement()
 }
