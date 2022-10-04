@@ -30,7 +30,8 @@ horizontal_speed = 0;
 vertical_speed =0;
 _gravity = 0.2;
 walk_speed = 4;
-jump_height = 7
+max_jump_velocity = 7
+min_jump_velocity = 4
 
 
 
@@ -45,3 +46,4 @@ x_acc = 0
 
 tilemap = layer_tilemap_get_id("Collisions")
 grounded = true
+jumped = false
