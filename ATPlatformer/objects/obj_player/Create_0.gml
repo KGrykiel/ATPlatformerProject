@@ -46,4 +46,3 @@ x_acc = 0
 
 tilemap = layer_tilemap_get_id("Collisions")
 grounded = true
-jumped = false

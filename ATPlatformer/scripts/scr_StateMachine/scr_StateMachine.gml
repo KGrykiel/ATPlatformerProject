@@ -5,7 +5,6 @@ function PlayerStateFree(){
 	if(key_jump)
 	{
 		vertical_speed = -max_jump_velocity
-		jumped = true
 	}
 	
 	if (!grounded) state = PlayerStateAir
@@ -18,12 +17,11 @@ function PlayerStateAir(){
 	// logic stolen wholesale from Sonic Retro
 	if(!key_jump_held && vertical_speed < -min_jump_velocity) 
 	{
-		vertical_speed = -4;
+		vertical_speed = -min_jump_velocity;
 	}
 	
 	if (grounded) {
 		state = PlayerStateFree;
-		jumped = false;
 	}
 	
 	scr_collision()
