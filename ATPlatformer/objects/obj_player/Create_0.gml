@@ -29,6 +29,7 @@ key_down = 0;
 horizontal_speed = 0;
 vertical_speed =0;
 _gravity = 0.2;
+down_gravity = 0.2;
 walk_speed = 4;
 max_jump_velocity = 7
 min_jump_velocity = 4

@@ -28,4 +28,11 @@ if (key_jump) && (current_jump  > 0) && double_jump {
 if (!grounded) && (current_jump  > 0) && double_jump {
 	current_jump = 1
 }
+
+if (vertical_speed > 0) {
+	// This speed limit is very generous so we might have to tweak it
+	// in the future. We don't want a meteorite player
+	vertical_speed = min(vertical_speed + down_gravity, 50);
+}
+
 	
