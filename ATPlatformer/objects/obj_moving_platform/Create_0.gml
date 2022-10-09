@@ -11,7 +11,7 @@ distanceToTravel = power(power((xend - xstart),2) + power((yend - ystart),2), 0.
 timeToTravel = distanceToTravel / platformSpeed;
 
 
-// Sets x and y velocity (depending on platformSpeed)
+// Sets x and y velocity ( depending on platformSpeed)
 if distanceToTravel != 0 {
 	vx = ((xend-xstart) / distanceToTravel) * platformSpeed;
 	vy = ((yend-ystart) / distanceToTravel) * platformSpeed;

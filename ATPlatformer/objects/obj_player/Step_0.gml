@@ -13,9 +13,10 @@ var move = key_right - key_left;
 
 vertical_speed = vertical_speed + _gravity;
 
+
 script_execute(state);
 show_debug_message(alarm[0])
-
+manage_attack();
 
 if ((state == PlayerStateFree) || (state == PlayerStateCoyote)) {
 	current_jump = max_jump;

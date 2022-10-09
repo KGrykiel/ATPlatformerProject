@@ -19,6 +19,16 @@ grounded_movement = function() {
 	y += vertical_speed
 }
 
+function manage_attack() {
+	if keyboard_check_pressed(ord("E")) and attack_sequence == noone {
+		attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
+	} else {
+		layer_sequence_x(attack_sequence, x);
+		layer_sequence_y(attack_sequence, y);
+		layer_sequence_xscale(attack_sequence, image_xscale);
+	}
+}
+
 state = PlayerStateFree
 
 key_right = 0;
@@ -56,3 +66,5 @@ current_jump = 0;
 double_jump = true;
 
 coyote_time = 0.5
+
+attack_sequence = noone;
