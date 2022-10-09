@@ -25,9 +25,13 @@ function grounded_attack() {
 		if keyboard_check_pressed(ATTACK_KEY) {
 			if key_up {
 				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack_up);
+				knockback_dir_x = 0;
+				knockback_dir_y = 1;
 			} else {
 				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
 				layer_sequence_xscale(attack_sequence, facing_x);
+				knockback_dir_x = facing_x;
+				knockback_dir_y = 0;
 			}
 			
 		}
@@ -42,11 +46,17 @@ function air_attack() {
 		if keyboard_check_pressed(ATTACK_KEY) {
 			if key_up {
 				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack_up);
+				knockback_dir_x = 0;
+				knockback_dir_y = -1;
 			} else if key_down {
 				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack_down);
+				knockback_dir_x = 0;
+				knockback_dir_y = 1;
 			} else {
 				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
 				layer_sequence_xscale(attack_sequence, facing_x);
+				knockback_dir_x = facing_x;
+				knockback_dir_y = 0;
 			}
 			
 		}
@@ -54,6 +64,11 @@ function air_attack() {
 		layer_sequence_x(attack_sequence, x);
 		layer_sequence_y(attack_sequence, y);
 	}
+}
+
+function attack_knockback() {
+	horizontal_speed = -knockback_dir_x * knockback_force;
+	vertical_speed = -knockback_dir_y * knockback_force;
 }
 
 state = PlayerStateFree
@@ -96,3 +111,6 @@ coyote_time = 0.5
 
 attack_sequence = noone;
 facing_x = 1
+knockback_force = 5;
+knockback_dir_x = 1;
+knockback_dir_y = 0;
