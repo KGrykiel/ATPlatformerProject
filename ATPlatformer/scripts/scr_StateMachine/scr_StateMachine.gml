@@ -1,14 +1,40 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function PlayerStateFree(){
+function enableJump(){
 	
 	if(key_jump)
 	{
 		vertical_speed = -max_jump_velocity
 		jumped = true
 	}
+}
+
+function PlayerStateFree(){
 	
-	if (!grounded) state = PlayerStateAir
+	alarm[0] = -1 // block transition to Air state if we return to the ground during Coyote Time
+	
+	enableJump()
+	
+	if (!grounded) {
+		if (coyote_time != 0) {
+			state = PlayerStateCoyote
+			alarm[0] = FRAME_RATE * coyote_time
+		}
+		else state = PlayerStateAir
+	}
+	
+	scr_collision()
+	scr_move()
+}
+
+function PlayerStateCoyote(){
+	
+	enableJump()
+	
+	if (grounded) {
+		state = PlayerStateFree // back to Free state if we return to the ground during Coyote Time
+		jumped = false
+	}
 	
 	scr_collision()
 	scr_move()
