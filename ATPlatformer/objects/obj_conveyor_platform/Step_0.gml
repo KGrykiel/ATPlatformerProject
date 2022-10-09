@@ -1,6 +1,6 @@
 /// @description Collision Check + Movement
 // You can write your code in this editor
+event_inherited()
 
-isPlayerOn = place_meeting(x,y-5, obj_player)
-
-if isPlayerOn obj_player.x += vx / FRAME_RATE;
+//set conveyor speed to positive values to go right, negative to go left
+if isPlayerOn obj_player.x += conveyor_speed;

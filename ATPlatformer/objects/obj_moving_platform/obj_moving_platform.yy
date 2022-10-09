@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "ob_platform",
-    "path": "objects/ob_platform/ob_platform.yy",
+    "name": "obj_platform",
+    "path": "objects/obj_platform/obj_platform.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
