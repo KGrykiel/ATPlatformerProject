@@ -3,3 +3,4 @@
 #macro FRAME_RATE 60
 #macro TILE_SIZE 64
 #macro ROOM_START Room1
+#macro ATTACK_KEY ord("E")

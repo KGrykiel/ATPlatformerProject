@@ -11,6 +11,7 @@ grounded_movement = function() {
 		}
 	} else {
 		horizontal_speed += _move_dir * acceleration_amt;
+		facing_x = _move_dir
 	}
 	
 	horizontal_speed = clamp(horizontal_speed, -walk_speed, walk_speed);
@@ -19,13 +20,39 @@ grounded_movement = function() {
 	y += vertical_speed
 }
 
-function manage_attack() {
-	if keyboard_check_pressed(ord("E")) and attack_sequence == noone {
-		attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
+function grounded_attack() {
+	if attack_sequence == noone {
+		if keyboard_check_pressed(ATTACK_KEY) {
+			if key_up {
+				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack_up);
+			} else {
+				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
+				layer_sequence_xscale(attack_sequence, facing_x);
+			}
+			
+		}
 	} else {
 		layer_sequence_x(attack_sequence, x);
 		layer_sequence_y(attack_sequence, y);
-		layer_sequence_xscale(attack_sequence, image_xscale);
+	}
+}
+
+function air_attack() {
+	if attack_sequence == noone {
+		if keyboard_check_pressed(ATTACK_KEY) {
+			if key_up {
+				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack_up);
+			} else if key_down {
+				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack_down);
+			} else {
+				attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
+				layer_sequence_xscale(attack_sequence, facing_x);
+			}
+			
+		}
+	} else {
+		layer_sequence_x(attack_sequence, x);
+		layer_sequence_y(attack_sequence, y);
 	}
 }
 
@@ -68,3 +95,4 @@ double_jump = true;
 coyote_time = 0.5
 
 attack_sequence = noone;
+facing_x = 1

@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Attack End
 // You can write your code in this editor
 
 if event_data[? "event_type"] == "sequence event" and event_data[? "message"] == "attack_end" {
