@@ -14,19 +14,21 @@ var move = key_right - key_left;
 vertical_speed = vertical_speed + _gravity;
 
 script_execute(state);
+show_debug_message(alarm[0])
 
 
-if (grounded) {
+if ((state == PlayerStateFree) || (state == PlayerStateCoyote)) {
 	current_jump = max_jump;
 } 
 
-if (key_jump) && (current_jump  > 0) && double_jump { 
+if (state == PlayerStateAir) && (current_jump  > 0) && double_jump {
+	current_jump = max_jump - 1
+}
+
+if (key_jump) && (current_jump  > 0) && double_jump {
+	state = PlayerStateAir
 	current_jump -= 1
 	vertical_speed = -max_jump_velocity;
-} 
-
-if (!grounded) && (current_jump  > 0) && double_jump {
-	current_jump = 1
 }
 
 

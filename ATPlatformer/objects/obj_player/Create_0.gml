@@ -42,7 +42,7 @@ deceleration_period = 30; // no. of frames to decelerate from max_speed to 0
 acceleration_amt = walk_speed / acceleration_period;
 deceleration_amt = walk_speed / deceleration_period;
 
-show_debug_message(acceleration_amt)
+// show_debug_message(acceleration_amt)
 
 x_acc = 0
 
@@ -54,3 +54,5 @@ jumped = false
 max_jump = 2; 
 current_jump = 0;
 double_jump = true;
+
+coyote_time = 0.5
