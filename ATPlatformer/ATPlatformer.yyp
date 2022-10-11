@@ -14,6 +14,7 @@
     {"id":{"name":"scr_movement","path":"scripts/scr_movement/scr_movement.yy",},"order":2,},
     {"id":{"name":"scr_collision","path":"scripts/scr_collision/scr_collision.yy",},"order":1,},
     {"id":{"name":"spr_platform","path":"sprites/spr_platform/spr_platform.yy",},"order":2,},
+    {"id":{"name":"scr_attacks","path":"scripts/scr_attacks/scr_attacks.yy",},"order":5,},
     {"id":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"order":1,},
     {"id":{"name":"seq_attack_up","path":"sequences/seq_attack_up/seq_attack_up.yy",},"order":3,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":1,},

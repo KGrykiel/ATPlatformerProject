@@ -23,7 +23,8 @@ function PlayerStateFree(){
 		else state = PlayerStateAir
 	}
 	
-	grounded_attack();
+	if(key_attack) grounded_attack()
+	draw_attack()
 	scr_collision()
 	scr_move()
 }
@@ -37,7 +38,8 @@ function PlayerStateCoyote(){
 		jumped = false
 	}
 	
-	air_attack();
+	if(key_attack) air_attack();
+	draw_attack()
 	scr_collision()
 	scr_move()
 }
@@ -63,7 +65,8 @@ function PlayerStateAir(){
 		jumped = false
 	}
 	
-	air_attack();
+	if(key_attack) air_attack();
+	draw_attack()
 	scr_collision()
 	scr_move()
 }

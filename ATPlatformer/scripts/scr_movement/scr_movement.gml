@@ -3,3 +3,22 @@
 function scr_move(){
 	grounded_movement()
 }
+
+function grounded_movement() {
+	var _move_dir = key_right - key_left; 
+	
+	if _move_dir == 0 {
+		horizontal_speed -= sign(horizontal_speed) * deceleration_amt;
+		if abs(horizontal_speed) < deceleration_amt{
+			horizontal_speed = 0;
+		}
+	} else {
+		horizontal_speed += _move_dir * acceleration_amt;
+		facing_x = _move_dir
+	}
+	
+	horizontal_speed = clamp(horizontal_speed, -walk_speed, walk_speed);
+	
+	x += horizontal_speed
+	y += vertical_speed
+}
