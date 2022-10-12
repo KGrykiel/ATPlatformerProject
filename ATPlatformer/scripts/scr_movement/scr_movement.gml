@@ -1,10 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_move(){
-	grounded_movement()
-}
 
-function grounded_movement() {
+function movement() {
 	var _move_dir = key_right - key_left; 
 	
 	if _move_dir == 0 {
@@ -18,7 +15,10 @@ function grounded_movement() {
 	}
 	
 	horizontal_speed = clamp(horizontal_speed, -walk_speed, walk_speed);
-	
+
+}
+
+function commit_movement() {
 	x += horizontal_speed
 	y += vertical_speed
 }

@@ -1,7 +1,7 @@
 /// @description Turn around
 
 // Resets alarm
-alarm[0] = FRAME_RATE * timeToTravel;
+alarm[0] = timeToTravel;
 
 
 // Resets position to where it should be to correct for rounding errors

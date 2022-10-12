@@ -10,10 +10,9 @@ key_jump_held = keyboard_check(vk_space);
 key_interact = keyboard_check_pressed(ord("E"));
 key_attack = mouse_check_button_pressed(mb_left)
 
-var move = key_right - key_left;
+//var move = key_right - key_left;
 
 vertical_speed = vertical_speed + _gravity;
-
 
 script_execute(state);
 

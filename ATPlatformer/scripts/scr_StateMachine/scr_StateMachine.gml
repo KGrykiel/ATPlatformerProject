@@ -12,6 +12,7 @@ function enableJump(){
 function PlayerStateFree(){
 	
 	alarm[0] = -1 // block transition to Air state if we return to the ground during Coyote Time
+	//horizontal_speed = 5
 	
 	enableJump()
 	
@@ -25,8 +26,9 @@ function PlayerStateFree(){
 	
 	if(key_attack) grounded_attack()
 	draw_attack()
+	movement()
 	scr_collision()
-	scr_move()
+	commit_movement()
 }
 
 function PlayerStateCoyote(){
@@ -40,8 +42,9 @@ function PlayerStateCoyote(){
 	
 	if(key_attack) air_attack();
 	draw_attack()
+	movement()
 	scr_collision()
-	scr_move()
+	commit_movement()
 }
 
 function PlayerStateAir(){
@@ -67,6 +70,7 @@ function PlayerStateAir(){
 	
 	if(key_attack) air_attack();
 	draw_attack()
+	movement()
 	scr_collision()
-	scr_move()
+	commit_movement()
 }

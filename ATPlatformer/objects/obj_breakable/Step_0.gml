@@ -5,15 +5,3 @@ if place_meeting(x, y, obj_player_attack) {
 	with(obj_player) {attack_knockback()}
 	instance_destroy();
 }
-
-
-
-
-
-
-
-
-
-
-
-

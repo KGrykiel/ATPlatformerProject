@@ -6,32 +6,23 @@ function scr_collision(){
 	grounded = false
 	
 	if (horizontal_speed >0) bbox_side = bbox_right; else bbox_side = bbox_left;
-	if(tilemap_get_at_pixel(tilemap, bbox_side+horizontal_speed,bbox_top)!=0) || (tilemap_get_at_pixel(tilemap, bbox_side+horizontal_speed, bbox_bottom)!=0)
+	if(tilemap_get_at_pixel(tilemap, bbox_side+ceil(horizontal_speed),bbox_top)!=0) || (tilemap_get_at_pixel(tilemap, bbox_side+ceil(horizontal_speed), bbox_bottom)!=0)
 	{
 		if( horizontal_speed>0) x = x - (x mod TILE_SIZE) + (TILE_SIZE-1) -(bbox_right -x);
 		else x=x - (x mod TILE_SIZE) - (bbox_left - x);
 		horizontal_speed=0;
 		_collision = true;
 	}  
-	
-	//horizontal entitities
-	var _entitityCount = instance_position_list(x+horizontal_speed, y, obj_parent_entity, _entityList,false);
-	var _snapX;
-	while(_entitityCount >0)
+
+	if(place_meeting(x+horizontal_speed,y,obj_parent_entity))
 	{
-		var _entityCheck = _entityList[| 0]; 
-		if (_entityCheck.entityCollision == true)
+		while(abs(horizontal_speed) > 0.1)
 		{
-			//Move as close as we can
-			if(sign(horizontal_speed) ==-1) _snapX=_entityCheck.bbox_right+1;
-			else _snapX = _entityCheck.bbox_left-1;
-			x=_snapX;
-			horizontal_speed = 0;
-			_collision = true;
-			_entitityCount = 0;
+			horizontal_speed *= 0.5;
+			if (!place_meeting(x+ horizontal_speed, y, obj_parent_entity)) x += horizontal_speed
 		}
-		ds_list_delete(_entityList,0);
-		_entitityCount--;
+		horizontal_speed = 0;
+		_collision = true;
 	}
 	
 	
@@ -44,8 +35,8 @@ function scr_collision(){
 		bbox_side = bbox_bottom 
 		if(tilemap_get_at_pixel(tilemap,bbox_left, bbox_side+ceil(vertical_speed))!=0) || (tilemap_get_at_pixel(tilemap,bbox_right, bbox_side+ceil(vertical_speed))!=0)
 		{
-			if( vertical_speed>0) y = y - (y mod TILE_SIZE) +  (TILE_SIZE-1) -(bbox_bottom -y);
-			else y=y - (y mod TILE_SIZE) - (bbox_top - y);
+			if(vertical_speed>=0) y = y - (y mod TILE_SIZE) +  (TILE_SIZE - 1) -(bbox_bottom -y);
+			else y= y - (y mod TILE_SIZE) - (bbox_top - y);
 			vertical_speed=0;
 			_collision = true;
 			grounded = true;
@@ -62,29 +53,18 @@ function scr_collision(){
 		}
 	}
 	
-	
-	//vertical entities //IF CHARACTER VIBRATES WHEN STANDING ON OBJECTS LET ME KNOW @AKAS
-	var _entitityCount = instance_position_list(x, y+ceil(vertical_speed), obj_parent_entity, _entityList,false);
-	var _snapY;
-	while(_entitityCount >0)
+	if(place_meeting(x,y+vertical_speed,obj_parent_entity))
 	{
-		var _entityCheck = _entityList[| 0]; 
-		if (_entityCheck.entityCollision == true)
+		while(abs(vertical_speed) > 0.1)
 		{
-			//Move as close as we can
-			if(sign(vertical_speed) ==-1) _snapY=_entityCheck.bbox_bottom+1;
-			else _snapY = _entityCheck.bbox_top-1;
-			y=_snapY;
-			vertical_speed = 0;
-			_collision = true;
-			_entitityCount = 0;
-			grounded = true;
+			vertical_speed *= 0.5;
+			if(!place_meeting(x,y+vertical_speed,obj_parent_entity)) y+=vertical_speed;
 		}
-		ds_list_delete(_entityList,0);
-		_entitityCount--;
+		vertical_speed = 0;
+		grounded = true;
+		_collision = true;		
 	}
 	
-	ds_list_destroy(_entityList)
 }
 
 function check_for_floor()

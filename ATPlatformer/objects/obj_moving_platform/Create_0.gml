@@ -23,7 +23,7 @@ else {
 
 if timeToTravel != 0 {
 	// Sets an alarm to change direction
-	alarm[0] = FRAME_RATE * timeToTravel;
+	alarm[0] = timeToTravel;
 }
 
 // 1 = positive direction, -1 = negative direction

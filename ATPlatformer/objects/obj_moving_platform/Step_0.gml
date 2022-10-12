@@ -3,12 +3,17 @@
 // If the player is on the platform, moves the player at the same speed as the platform
 event_inherited()
 
+	if(place_meeting(x,y+vy,obj_player))
+	{
+		obj_player.x += (currentDirection * (vx));
+		obj_player.y += (currentDirection * (vy));
+	}
+
 if isPlayerOn {
-	obj_player.x += (currentDirection * (vx)) / FRAME_RATE;
-	obj_player.y += (currentDirection * (vy)) / FRAME_RATE;
+	obj_player.x += (currentDirection * (vx));
+	obj_player.y += (currentDirection * (vy));
 }
 
-
 // Moves the platform
-x += (currentDirection * vx) / FRAME_RATE;
-y += (currentDirection * vy) / FRAME_RATE;
+x += (currentDirection * vx);
+y += (currentDirection * vy);
