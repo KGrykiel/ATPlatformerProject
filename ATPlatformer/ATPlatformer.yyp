@@ -17,6 +17,7 @@
     {"id":{"name":"scr_attacks","path":"scripts/scr_attacks/scr_attacks.yy",},"order":5,},
     {"id":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"order":1,},
     {"id":{"name":"seq_attack_up","path":"sequences/seq_attack_up/seq_attack_up.yy",},"order":3,},
+    {"id":{"name":"pth_platform1","path":"paths/pth_platform1/pth_platform1.yy",},"order":0,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":1,},
     {"id":{"name":"spr_breakable","path":"sprites/spr_breakable/spr_breakable.yy",},"order":5,},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},"order":0,},
@@ -42,9 +43,9 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_conveyorPlatforms","path":"rooms/rm_conveyorPlatforms/rm_conveyorPlatforms.yy",},},
-    {"roomId":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":10,},
@@ -70,6 +71,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.9.0.49",
+    "IDEVersion": "2022.9.1.51",
   },
 }
