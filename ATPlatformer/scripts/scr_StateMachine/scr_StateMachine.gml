@@ -57,9 +57,9 @@ function PlayerStateAir(){
 	}
 	
 	if (vertical_speed > 0) {
-	// This speed limit is very generous so we might have to tweak it
-	// in the future. We don't want a meteorite player
-	vertical_speed = min(vertical_speed + down_gravity, max_down_speed);
+		// This speed limit is very generous so we might have to tweak it
+		// in the future. We don't want a meteorite player
+		vertical_speed = min(vertical_speed + down_gravity, max_down_speed);
 	}
 
 	
