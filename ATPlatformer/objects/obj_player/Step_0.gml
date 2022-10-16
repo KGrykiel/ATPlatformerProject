@@ -14,6 +14,7 @@ key_attack = mouse_check_button_pressed(mb_left)
 
 vertical_speed = vertical_speed + _gravity;
 
+
 script_execute(state);
 
 if ((state == player_state_free) || (state == player_state_coyote)) {
