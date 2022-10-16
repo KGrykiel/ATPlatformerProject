@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "ATPlatformer",
   "resources": [
+    {"id":{"name":"scr_jumpbuffer","path":"scripts/scr_jumpbuffer/scr_jumpbuffer.yy",},"order":6,},
     {"id":{"name":"obj_player_attack","path":"objects/obj_player_attack/obj_player_attack.yy",},"order":6,},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"order":0,},
     {"id":{"name":"sequence_moments","path":"scripts/sequence_moments/sequence_moments.yy",},"order":4,},
