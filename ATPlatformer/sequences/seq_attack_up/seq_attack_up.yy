@@ -11,20 +11,12 @@
   "volume": 1.0,
   "length": 20.0,
   "events": {
-    "Keyframes": [
-      {"id":"d200a9d4-9013-4bb6-a924-8d92b63a8d51","Key":19.9999,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
-              "attack_end",
-            ],"resourceVersion":"1.0","resourceType":"MessageEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MessageEventKeyframe>",},
-    ],
+    "Keyframes": [],
     "resourceVersion": "1.0",
     "resourceType": "KeyframeStore<MessageEventKeyframe>",
   },
   "moments": {
-    "Keyframes": [
-      {"id":"fd473e3b-7947-44b7-9a49-174e2be92877","Key":19.9999,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
-              "destroy_sequence",
-            ],"resourceVersion":"1.0","resourceType":"MomentsEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MomentsEventKeyframe>",},
-    ],
+    "Keyframes": [],
     "resourceVersion": "1.0",
     "resourceType": "KeyframeStore<MomentsEventKeyframe>",
   },

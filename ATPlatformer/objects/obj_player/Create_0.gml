@@ -1,6 +1,68 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+function attack_horizontal() {
+	obj_player.attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
+	call_later(10, time_source_units_frames, end_attack);
+	layer_sequence_xscale(attack_sequence, facing_x);
+	knockback_dir_x = -facing_x;
+	knockback_dir_y = 0;
+}
+
+function attack_up() {
+	attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack_up);
+	call_later(10, time_source_units_frames, end_attack);
+	knockback_dir_x = 0;
+	knockback_dir_y = 1;
+}
+
+function attack_down() {
+	attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack_down);
+	call_later(10, time_source_units_frames, end_attack);
+	knockback_dir_x = 0;
+	knockback_dir_y = -1;
+}
+
+function grounded_attack() {
+	if (attack_sequence != noone) return;
+	if key_up {
+		attack_up();
+	} else {
+		attack_horizontal();
+	}
+}
+
+function air_attack() {
+	if (attack_sequence != noone) return;
+	if key_up {
+		attack_up();
+	} else if key_down {
+		attack_down();
+	} else {
+		attack_horizontal();
+	}
+}
+
+function draw_attack() 
+{
+	if attack_sequence == noone return;
+		layer_sequence_x(attack_sequence, x);
+		layer_sequence_y(attack_sequence, y);
+	
+}
+
+function end_attack() {
+	layer_sequence_destroy(attack_sequence);
+	attack_sequence = noone;
+}
+
+function attack_knockback() {
+	horizontal_speed += knockback_dir_x * knockback_force_x;
+	if (knockback_dir_y != 0) {vertical_speed = knockback_dir_y * knockback_force_y;}
+	knockback_dir_x = 0;
+	knockback_dir_y = 0;
+}
+
 state = PlayerStateFree
 
 key_right = 0;
@@ -41,6 +103,7 @@ coyote_time = 0.5
 
 attack_sequence = noone;
 facing_x = 1
-knockback_force = 50;
+knockback_force_x = 4;
+knockback_force_y = 4;
 knockback_dir_x = 1;
 knockback_dir_y = 0;
