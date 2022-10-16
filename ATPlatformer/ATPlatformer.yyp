@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "ATPlatformer",
   "resources": [
+    {"id":{"name":"scr_jumpbuffer","path":"scripts/scr_jumpbuffer/scr_jumpbuffer.yy",},"order":6,},
     {"id":{"name":"obj_player_attack","path":"objects/obj_player_attack/obj_player_attack.yy",},"order":6,},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"order":0,},
     {"id":{"name":"SequenceMoments","path":"scripts/SequenceMoments/SequenceMoments.yy",},"order":4,},
@@ -34,6 +35,7 @@
     {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
+    {"name":"macOS","path":"options/mac/options_mac.yy",},
   ],
   "defaultScriptType": 1,
   "isEcma": false,
