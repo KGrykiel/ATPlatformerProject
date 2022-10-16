@@ -42,7 +42,7 @@ function scr_collision(){
 			grounded = true; // we don't need to check that we are moving downwards since the if statement we are in has already checked
 		}
 	}
-	else { 
+	else {
 		bbox_side = bbox_top;
 		if(tilemap_get_at_pixel(tilemap,bbox_left, bbox_side+floor(vertical_speed))!=0) || (tilemap_get_at_pixel(tilemap,bbox_right, bbox_side+floor(vertical_speed))!=0)
 		{

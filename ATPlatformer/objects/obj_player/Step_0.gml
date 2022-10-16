@@ -15,20 +15,3 @@ key_attack = mouse_check_button_pressed(mb_left)
 vertical_speed = vertical_speed + _gravity;
 
 script_execute(state);
-
-if ((state == PlayerStateFree) || (state == PlayerStateCoyote)) {
-	current_jump = max_jump;
-} 
-
-if (state == PlayerStateAir) && (current_jump  > 0) && double_jump {
-	current_jump = max_jump - 1
-}
-
-if (key_jump) && (current_jump  > 0) && double_jump {
-	state = PlayerStateAir
-	current_jump -= 1
-	vertical_speed = -max_jump_velocity;
-}
-
-
-	

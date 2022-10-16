@@ -11,26 +11,10 @@
  * @param range Int gives the interval of time that we keep the buffer
  * @return Bool whether we should jump when we enter the state
 **/
-function scr_jump_buffer(range)
+function scr_jump_buffer()
 {
-	var jump_buffer = false;
-	var _time_source = time_source_create(time_source_game, range, time_source_units_frames, _clear_jump_buffer);
-
-	if (state == PlayerStateAir)	
-	{
-		if (key_jump)
-		{
-			time_source_start(_time_source);
-			// start counting
-			while (_time_source.time_source_get_state() == 1)
-			{
-				if (key_jump)
-					time_source_restart(_time_source);
-				jump_buffer = true;
-			}
-		}
-	}
-	return jump_buffer;
+	time_source_start(jump_buffer_time_source);
+	jump_buffer = true;
 }
 
 function _clear_jump_buffer()
