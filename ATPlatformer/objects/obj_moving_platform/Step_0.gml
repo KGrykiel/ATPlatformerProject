@@ -1,19 +1,22 @@
-/// @description Allows platform to move and checks for nearby player
+ /// @description Checks for nearby player
 
-// If the player is on the platform, moves the player at the same speed as the platform
 event_inherited()
 
-	if(place_meeting(x,y+vy,obj_player))
-	{
-		obj_player.x += (currentDirection * (vx));
-		obj_player.y += (currentDirection * (vy));
-	}
 
 if isPlayerOn {
-	obj_player.x += (currentDirection * (vx));
-	obj_player.y += (currentDirection * (vy));
+	// If player is on top of platform, moves player with platform
+	if obj_player.bbox_bottom - 5 <= bbox_top {
+		obj_player.x += vx;
+		obj_player.y += bbox_top - obj_player.bbox_bottom;
+	}
+	// If player is colliding with bottom of platform teleports to top of platform
+	else if obj_player.bbox_right -5 > bbox_left and obj_player.bbox_left +5 < bbox_right  {
+			obj_player.y += bbox_top - obj_player.bbox_bottom;
+			show_debug_message("Moving platform hit top of player");
+	}
+	// If player is colliding with the side of platform, moves player horizontally with platform
+	else {
+			obj_player.x += vx;
+			//show_debug_message(vx)
+		}
 }
-
-// Moves the platform
-x += (currentDirection * vx);
-y += (currentDirection * vy);
