@@ -16,16 +16,16 @@ vertical_speed = vertical_speed + _gravity;
 
 script_execute(state);
 
-if ((state == PlayerStateFree) || (state == PlayerStateCoyote)) {
+if ((state == player_state_free) || (state == player_state_coyote)) {
 	current_jump = max_jump;
 } 
 
-if (state == PlayerStateAir) && (current_jump  > 0) && double_jump {
+if (state == player_state_air) && (current_jump  > 0) && double_jump {
 	current_jump = max_jump - 1
 }
 
 if (key_jump) && (current_jump  > 0) && double_jump {
-	state = PlayerStateAir
+	state = player_state_air
 	current_jump -= 1
 	vertical_speed = -max_jump_velocity;
 }

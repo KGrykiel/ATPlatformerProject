@@ -5,15 +5,15 @@ event_inherited()
 
 	if(place_meeting(x,y+vy,obj_player))
 	{
-		obj_player.x += (currentDirection * (vx));
-		obj_player.y += (currentDirection * (vy));
+		obj_player.x += (current_direction * (vx));
+		obj_player.y += (current_direction * (vy));
 	}
 
-if isPlayerOn {
-	obj_player.x += (currentDirection * (vx));
-	obj_player.y += (currentDirection * (vy));
+if is_player_on {
+	obj_player.x += (current_direction * (vx));
+	obj_player.y += (current_direction * (vy));
 }
 
 // Moves the platform
-x += (currentDirection * vx);
-y += (currentDirection * vy);
+x += (current_direction * vx);
+y += (current_direction * vy);

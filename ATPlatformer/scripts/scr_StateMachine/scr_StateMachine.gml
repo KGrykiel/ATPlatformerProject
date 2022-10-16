@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function enableJump(){
+function enable_jump(){
 	
 	if(key_jump)
 	{
@@ -9,19 +9,19 @@ function enableJump(){
 	}
 }
 
-function PlayerStateFree(){
+function player_state_free(){
 	
 	alarm[0] = -1 // block transition to Air state if we return to the ground during Coyote Time
 	//horizontal_speed = 5
 	
-	enableJump()
+	enable_jump()
 	
 	if (!grounded) {
 		if (coyote_time != 0) {
-			state = PlayerStateCoyote
+			state = player_state_coyote
 			alarm[0] = FRAME_RATE * coyote_time
 		}
-		else state = PlayerStateAir
+		else state = player_state_air
 	}
 	
 	if(key_attack) grounded_attack()
@@ -31,12 +31,12 @@ function PlayerStateFree(){
 	commit_movement()
 }
 
-function PlayerStateCoyote(){
+function player_state_coyote(){
 	
-	enableJump()
+	enable_jump()
 	
 	if (grounded) {
-		state = PlayerStateFree // back to Free state if we return to the ground during Coyote Time
+		state = player_state_free // back to Free state if we return to the ground during Coyote Time
 		jumped = false
 	}
 	
@@ -47,7 +47,7 @@ function PlayerStateCoyote(){
 	commit_movement()
 }
 
-function PlayerStateAir(){
+function player_state_air(){
 	// logic stolen wholesale from Sonic Retro
 	// jumped variable ensures this clamping doesn't happen 
 	// if the player's moving up for another reason
@@ -64,7 +64,7 @@ function PlayerStateAir(){
 
 	
 	if (grounded) {
-		state = PlayerStateFree;
+		state = player_state_free;
 		jumped = false
 	}
 	

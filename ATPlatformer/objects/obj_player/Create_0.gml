@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-state = PlayerStateFree
+state = player_state_free
 
 key_right = 0;
 key_left = 0;

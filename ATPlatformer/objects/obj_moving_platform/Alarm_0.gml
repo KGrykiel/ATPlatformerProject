@@ -1,11 +1,11 @@
 /// @description Turn around
 
 // Resets alarm
-alarm[0] = timeToTravel;
+alarm[0] = time_to_travel;
 
 
 // Resets position to where it should be to correct for rounding errors
-if currentDirection == 1 {
+if current_direction == 1 {
 	x = xend;
 	y = yend;
 }
@@ -15,4 +15,4 @@ else {
 }
 
 // Swaps direction of travel
-currentDirection *= -1;
+current_direction *= -1;
