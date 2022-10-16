@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "SequenceMoments",
+  "name": "scr_sequence_moments",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
