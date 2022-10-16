@@ -1,12 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-state = PlayerStateFree
+state = player_state_free
 
 key_right = 0;
 key_left = 0;
 key_up = 0;
 key_down = 0;
+key_jump = 0;
+key_jump_held = 0;
+key_interact = 0;
+key_attack = 0;
 
 horizontal_speed = 0;
 vertical_speed =0;

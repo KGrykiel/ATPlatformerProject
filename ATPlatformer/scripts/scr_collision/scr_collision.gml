@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_collision(){
 	var _collision = false;
-	var _entityList = ds_list_create();
+	var _entity_list = ds_list_create();
 	grounded = false
 	
 	if (horizontal_speed >0) bbox_side = bbox_right; else bbox_side = bbox_left;
@@ -27,7 +27,7 @@ function scr_collision(){
 	
 	
 	//clear list between axis
-	ds_list_clear(_entityList)
+	ds_list_clear(_entity_list)
 	
 	//vertical collision
 	

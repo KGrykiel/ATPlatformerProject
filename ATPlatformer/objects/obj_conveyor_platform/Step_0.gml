@@ -3,4 +3,4 @@
 event_inherited()
 
 //set conveyor speed to positive values to go right, negative to go left
-if isPlayerOn obj_player.x += conveyor_speed;
+if is_player_on obj_player.x += conveyor_speed;

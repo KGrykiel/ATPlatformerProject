@@ -2,4 +2,4 @@
 // You can write your code in this editor
 
 
-if (!grounded) state = PlayerStateAir
+if (!grounded) state = player_state_air
