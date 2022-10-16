@@ -63,7 +63,7 @@ function attack_knockback() {
 	knockback_dir_y = 0;
 }
 
-state = PlayerStateFree
+state = player_state_free
 
 key_right = 0;
 key_left = 0;
@@ -75,6 +75,7 @@ vertical_speed =0;
 _gravity = 0.2;
 down_gravity = 0.2;
 walk_speed = 4;
+air_speed = 4;
 max_jump_velocity = 7;
 min_jump_velocity = 4;
 max_down_speed = 50;
@@ -82,9 +83,16 @@ max_down_speed = 50;
 
 
 acceleration_period = 12; // no. of frames to accelerate from 0 to max_speed
+air_acceleration_period = 20; // no. of frames to accelerate from 0 to max_speed
+
 deceleration_period = 6; // no. of frames to decelerate from max_speed to 0
+air_deceleration_period = 10; // no. of frames to decelerate from max_speed to 0
+
 acceleration_amt = walk_speed / acceleration_period;
+air_acceleration_amt = air_speed / air_acceleration_period;
+
 deceleration_amt = walk_speed / deceleration_period;
+air_deceleration_amt = air_speed / air_deceleration_period;
 
 // show_debug_message(acceleration_amt)
 

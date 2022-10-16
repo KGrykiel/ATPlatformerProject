@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_StateMachine",
+  "name": "sequence_moments",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

@@ -5,7 +5,7 @@
   "resources": [
     {"id":{"name":"obj_player_attack","path":"objects/obj_player_attack/obj_player_attack.yy",},"order":6,},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"order":0,},
-    {"id":{"name":"SequenceMoments","path":"scripts/SequenceMoments/SequenceMoments.yy",},"order":4,},
+    {"id":{"name":"sequence_moments","path":"scripts/sequence_moments/sequence_moments.yy",},"order":4,},
     {"id":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},"order":1,},
     {"id":{"name":"spr_attack_smear","path":"sprites/spr_attack_smear/spr_attack_smear.yy",},"order":4,},
     {"id":{"name":"spr_attack_hitbox","path":"sprites/spr_attack_hitbox/spr_attack_hitbox.yy",},"order":3,},
@@ -24,7 +24,7 @@
     {"id":{"name":"rm_breakablePlatforms","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},"order":3,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_moving_platform","path":"objects/obj_moving_platform/obj_moving_platform.yy",},"order":3,},
-    {"id":{"name":"scr_StateMachine","path":"scripts/scr_StateMachine/scr_StateMachine.yy",},"order":3,},
+    {"id":{"name":"scr_state_machine","path":"scripts/scr_state_machine/scr_state_machine.yy",},"order":3,},
     {"id":{"name":"spr_collision_tiles","path":"sprites/spr_collision_tiles/spr_collision_tiles.yy",},"order":0,},
     {"id":{"name":"pth_test","path":"paths/pth_test/pth_test.yy",},"order":0,},
     {"id":{"name":"seq_attack","path":"sequences/seq_attack/seq_attack.yy",},"order":0,},

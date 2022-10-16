@@ -68,7 +68,7 @@ function player_state_air(){
 		jumped = false
 	}
 	
-	if(key_attack ) air_attack();
+	if(key_attack) air_attack();
 	draw_attack()
 	movement()
 	scr_collision()
