@@ -108,9 +108,17 @@ current_jump = 0;
 double_jump = true;
 
 coyote_time = 0.5
+coyote_time = 0.5;
+
+jump_buffer = false;
+jump_buffer_length = 0.5;
+jump_buffer_frames = jump_buffer_length * FRAME_RATE;
+jump_buffer_time_source = time_source_create(time_source_game, jump_buffer_frames, time_source_units_frames, _clear_jump_buffer);
+
 
 attack_sequence = noone;
 facing_x = 1
+facing_x = 1;
 knockback_force_x = 4;
 knockback_force_y = 4;
 knockback_dir_x = 1;

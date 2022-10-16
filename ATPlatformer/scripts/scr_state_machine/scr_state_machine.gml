@@ -1,10 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function enableJump(){
+function enable_jump(){
 	
 	if((key_jump || jump_buffer) && current_jump > 0)
 	{
-		state = PlayerStateAir
+		state = player_state_air
 		jump_buffer = false
 		
 		vertical_speed = -max_jump_velocity
@@ -18,21 +18,21 @@ function enableJump(){
 	}
 }
 
-function PlayerStateFree(){
+function player_state_free(){
 	current_jump = max_jump;
 	
 	alarm[0] = -1 // block transition to Air state if we return to the ground during Coyote Time
 	//horizontal_speed = 5
 	
-	enableJump()
+	enable_jump()
 	jump_buffer = false
 
 	if (!grounded) {
 		if (coyote_time != 0) {
-			state = PlayerStateCoyote
+			state = player_state_coyote
 			alarm[0] = FRAME_RATE * coyote_time
 		}
-		else state = PlayerStateAir
+		else state = player_state_air
 	}
 	
 	if(key_attack) grounded_attack()
@@ -42,14 +42,14 @@ function PlayerStateFree(){
 	commit_movement()
 }
 
-function PlayerStateCoyote(){
+function player_state_coyote(){
 	current_jump = max_jump;
 	
-	enableJump()
+	enable_jump()
 	jump_buffer = false
 	
 	if (grounded) {
-		state = PlayerStateFree // back to Free state if we return to the ground during Coyote Time
+		state = player_state_free // back to Free state if we return to the ground during Coyote Time
 		jumped = false
 	}
 	
@@ -60,14 +60,14 @@ function PlayerStateCoyote(){
 	commit_movement()
 }
 
-function PlayerStateAir(){
+function player_state_air(){
 	
 	if (key_jump) {
 		scr_jump_buffer();
 	}
 	
 	if (current_jump == max_jump) current_jump -= 1;
-	enableJump(); // multi-jump by default, change max_jump to 1 to disable jumping in Air state
+	enable_jump(); // multi-jump by default, change max_jump to 1 to disable jumping in Air state
 	
 	// logic stolen wholesale from Sonic Retro
 	// jumped variable ensures this clamping doesn't happen 
@@ -85,7 +85,7 @@ function PlayerStateAir(){
 
 	
 	if (grounded) {
-		state = PlayerStateFree;
+		state = player_state_free;
 		jumped = false
 	}
 	
