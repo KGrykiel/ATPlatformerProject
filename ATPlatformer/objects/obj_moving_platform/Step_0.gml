@@ -3,7 +3,7 @@
 event_inherited()
 
 
-if isPlayerOn {
+if is_player_on {
 	// If player is on top of platform, moves player with platform
 	if obj_player.bbox_bottom - 5 <= bbox_top {
 		obj_player.x += vx;

@@ -3,7 +3,7 @@
 
 event_inherited()
 
-if isPlayerOn {
+if is_player_on {
 	if alarm[0] == -1 {
 		alarm[0] = break_time * FRAME_RATE;
 	}

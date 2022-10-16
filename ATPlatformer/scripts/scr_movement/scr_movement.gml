@@ -4,7 +4,7 @@
 function movement() {
 	var _move_dir = key_right - key_left;
 	
-	if state == PlayerStateAir {
+	if state == player_state_air {
 		current_acceleration_amt = air_acceleration_amt
 		current_deceleration_amt = air_deceleration_amt
 		current_speed = air_speed
