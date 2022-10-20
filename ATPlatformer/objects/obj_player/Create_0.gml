@@ -102,6 +102,7 @@ tilemap = layer_tilemap_get_id("Collisions")
 grounded = true
 jumped = false
 
+againstWall = false
 
 max_jump = 2; 
 current_jump = 0;

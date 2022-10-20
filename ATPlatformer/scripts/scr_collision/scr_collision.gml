@@ -13,6 +13,20 @@ function scr_collision(){
 		horizontal_speed=0;
 		_collision = true;
 	}  
+	
+	if (tilemap_get_at_pixel(tilemap, bbox_right + 1,bbox_top) != 0) || 
+	(tilemap_get_at_pixel(tilemap, bbox_left - 1, bbox_top) != 0) ||
+	(tilemap_get_at_pixel(tilemap, bbox_right + 1,bbox_bottom) != 0) || 
+	(tilemap_get_at_pixel(tilemap, bbox_left - 1, bbox_bottom) != 0)
+	{
+		//show_debug_message("against wall!")
+		againstWall = true
+	}
+	else {
+		//show_debug_message("not")
+		againstWall = false
+	}
+	
 
 	if(place_meeting(x+horizontal_speed,y,obj_parent_entity))
 	{

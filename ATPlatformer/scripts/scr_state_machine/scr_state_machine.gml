@@ -89,8 +89,25 @@ function player_state_air(){
 		jumped = false
 	}
 	
+	if (againstWall && vertical_speed >= 0) {
+		state = player_state_against_wall;
+	}
+	
 	if(key_attack) air_attack();
 	draw_attack()
+	movement()
+	scr_collision()
+	commit_movement()
+}
+
+function player_state_against_wall() {
+	vertical_speed = 2
+	
+	if (!againstWall) {
+		if (grounded) { state = player_state_free }
+		else { state = player_state_air }
+	}
+	
 	movement()
 	scr_collision()
 	commit_movement()
