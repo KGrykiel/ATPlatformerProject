@@ -95,3 +95,6 @@ function player_state_air(){
 	scr_collision()
 	commit_movement()
 }
+
+function player_state_stun() {
+}

@@ -14,4 +14,9 @@ key_attack = mouse_check_button_pressed(mb_left)
 
 vertical_speed = vertical_speed + _gravity;
 
+if (check_for_floor()) {
+	safe_x = x;
+	safe_y = y;
+}
+
 script_execute(state);
