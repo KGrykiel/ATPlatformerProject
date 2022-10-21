@@ -3,9 +3,10 @@
 function scr_collision(){
 	var _collision = false;
 	var _entity_list = ds_list_create();
+	
 	grounded = false
 	
-	if (horizontal_speed >0) bbox_side = bbox_right; else bbox_side = bbox_left;
+	if (horizontal_speed >0) {bbox_side = bbox_right;} else {bbox_side = bbox_left;	}
 	if(tilemap_get_at_pixel(tilemap, bbox_side+ceil(horizontal_speed),bbox_top)!=0) || (tilemap_get_at_pixel(tilemap, bbox_side+ceil(horizontal_speed), bbox_bottom)!=0)
 	{
 		if( horizontal_speed>0) x = x - (x mod TILE_SIZE) + (TILE_SIZE-1) -(bbox_right -x);
@@ -14,10 +15,10 @@ function scr_collision(){
 		_collision = true;
 	}  
 	
-	if (tilemap_get_at_pixel(tilemap, bbox_right + 1,bbox_top) != 0) || 
-	(tilemap_get_at_pixel(tilemap, bbox_left - 1, bbox_top) != 0) ||
-	(tilemap_get_at_pixel(tilemap, bbox_right + 1,bbox_bottom) != 0) || 
-	(tilemap_get_at_pixel(tilemap, bbox_left - 1, bbox_bottom) != 0)
+	if (facing_x == 1) {bbox_side = bbox_right;} else if (facing_x == -1) { bbox_side = bbox_left; }
+	
+	if (tilemap_get_at_pixel(tilemap, bbox_side + facing_x,bbox_top) != 0) || 
+	(tilemap_get_at_pixel(tilemap, bbox_side + facing_x, bbox_bottom) != 0)
 	{
 		//show_debug_message("against wall!")
 		againstWall = true

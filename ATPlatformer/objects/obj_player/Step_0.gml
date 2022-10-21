@@ -15,3 +15,9 @@ key_attack = mouse_check_button_pressed(mb_left)
 vertical_speed = vertical_speed + _gravity;
 
 script_execute(state);
+
+// updates movement lock countdown
+mvt_locked = max(0, mvt_locked - 1);
+if (grounded) mvt_locked = 0;
+
+show_debug_message(facing_x)

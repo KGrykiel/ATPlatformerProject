@@ -94,7 +94,9 @@ air_acceleration_amt = air_speed / air_acceleration_period;
 deceleration_amt = walk_speed / deceleration_period;
 air_deceleration_amt = air_speed / air_deceleration_period;
 
-// show_debug_message(acceleration_amt)
+// if the character's movement is intended to be locked for some duration
+mvt_lock_countdown_max = 120;
+mvt_locked = 0;
 
 x_acc = 0
 

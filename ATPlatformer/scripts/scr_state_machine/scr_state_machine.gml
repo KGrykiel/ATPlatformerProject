@@ -9,6 +9,12 @@ function enable_jump(){
 		
 		vertical_speed = -max_jump_velocity
 		jumped = true
+		
+		if (againstWall && !grounded) {
+			facing_x = facing_x * -1
+			horizontal_speed = air_speed * facing_x
+			mvt_locked = mvt_lock_countdown_max
+		}
 		time_source_stop(jump_buffer_time_source);
 		
 		if(current_jump  > 0)
@@ -90,6 +96,7 @@ function player_state_air(){
 	}
 	
 	if (againstWall && vertical_speed >= 0) {
+		//facing_x = facing_x * -1
 		state = player_state_against_wall;
 	}
 	
@@ -102,10 +109,15 @@ function player_state_air(){
 
 function player_state_against_wall() {
 	vertical_speed = 2
+	current_jump = 1
+	
+	enable_jump()
 	
 	if (!againstWall) {
 		if (grounded) { state = player_state_free }
-		else { state = player_state_air }
+		else { 
+			state = player_state_air 
+		}
 	}
 	
 	movement()

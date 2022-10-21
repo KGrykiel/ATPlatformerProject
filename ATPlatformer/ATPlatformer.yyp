@@ -14,6 +14,7 @@
     {"id":{"name":"rm_conveyorPlatforms","path":"rooms/rm_conveyorPlatforms/rm_conveyorPlatforms.yy",},"order":2,},
     {"id":{"name":"scr_movement","path":"scripts/scr_movement/scr_movement.yy",},"order":2,},
     {"id":{"name":"scr_collision","path":"scripts/scr_collision/scr_collision.yy",},"order":1,},
+    {"id":{"name":"rm_wallJump","path":"rooms/rm_wallJump/rm_wallJump.yy",},"order":4,},
     {"id":{"name":"spr_platform","path":"sprites/spr_platform/spr_platform.yy",},"order":2,},
     {"id":{"name":"scr_attacks","path":"scripts/scr_attacks/scr_attacks.yy",},"order":5,},
     {"id":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"order":1,},
@@ -46,6 +47,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_wallJump","path":"rooms/rm_wallJump/rm_wallJump.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},},
     {"roomId":{"name":"rm_breakablePlatforms","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},},

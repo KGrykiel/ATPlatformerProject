@@ -14,14 +14,16 @@ function movement() {
 		current_speed = walk_speed
 	}
 	
-	if _move_dir == 0 {
-		horizontal_speed -= sign(horizontal_speed) * current_deceleration_amt;
-		if abs(horizontal_speed) < current_deceleration_amt{
-			horizontal_speed = 0;
+	if (_move_dir == 0) {
+		if (mvt_locked == 0) {
+			horizontal_speed -= sign(horizontal_speed) * current_deceleration_amt;
+			if abs(horizontal_speed) < current_deceleration_amt{
+				horizontal_speed = 0;
+			}
 		}
 	} else {
 		horizontal_speed += _move_dir * current_acceleration_amt;
-		facing_x = _move_dir
+		if (!againstWall) {facing_x = _move_dir}
 	}
 	
 	horizontal_speed = clamp(horizontal_speed, -current_speed, current_speed);
