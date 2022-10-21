@@ -79,6 +79,7 @@ air_speed = 4;
 max_jump_velocity = 7;
 min_jump_velocity = 4;
 max_down_speed = 50;
+wall_sliding_speed = 2;
 
 
 

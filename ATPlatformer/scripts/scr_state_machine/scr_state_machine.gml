@@ -108,7 +108,7 @@ function player_state_air(){
 }
 
 function player_state_against_wall() {
-	vertical_speed = 2
+	vertical_speed = wall_sliding_speed
 	current_jump = 1
 	
 	enable_jump()
