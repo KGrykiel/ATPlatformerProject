@@ -9,6 +9,7 @@ key_jump = keyboard_check_pressed(vk_space);
 key_jump_held = keyboard_check(vk_space);
 key_interact = keyboard_check_pressed(ord("E"));
 key_attack = mouse_check_button_pressed(mb_left)
+if iframes > 0 iframes--;
 
 //var move = key_right - key_left;
 

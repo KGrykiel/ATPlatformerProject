@@ -11,7 +11,13 @@ if place_meeting(x+horizontal_speed, y, obj_parent_entity) {
 }
 
 if place_meeting(x, y, obj_player) {
-	instance_destroy(obj_player);
+	with (obj_player) {
+		if iframes <= 0 {
+			horizontal_speed = sign(x - other.x) * other.horizontal_knockback
+			vertical_speed = -other.vertical_knockback
+			iframes = 60;
+			}
+	}
 }
 
 vertical_speed += grav;

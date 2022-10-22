@@ -19,12 +19,15 @@ function movement() {
 		if abs(horizontal_speed) < current_deceleration_amt{
 			horizontal_speed = 0;
 		}
+	} else if _move_dir * horizontal_speed < 0 {
+		horizontal_speed += 3 * _move_dir * current_acceleration_amt;
+		facing_x = _move_dir;
 	} else {
-		horizontal_speed += _move_dir * current_acceleration_amt;
+		if (abs(horizontal_speed) < current_speed) horizontal_speed += _move_dir * current_acceleration_amt;
 		facing_x = _move_dir
 	}
 	
-	horizontal_speed = clamp(horizontal_speed, -current_speed, current_speed);
+	//horizontal_speed = clamp(horizontal_speed, -current_speed, current_speed);
 
 }
 
