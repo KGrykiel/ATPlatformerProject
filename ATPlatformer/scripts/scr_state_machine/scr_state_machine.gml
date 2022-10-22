@@ -40,6 +40,17 @@ function player_state_free(){
 	movement()
 	scr_collision()
 	commit_movement()
+	
+	if (key_interact) {
+		var_activateX = lengthdir_x(10,direction);
+		var_activateY = lengthdir_y(10,direction);
+		activate = instance_position(x+_activateX,y+_activateY, obj_parent_entity);
+		
+		if (not(activate == noone)) {
+			
+			
+		}
+	}
 }
 
 function player_state_coyote(){
