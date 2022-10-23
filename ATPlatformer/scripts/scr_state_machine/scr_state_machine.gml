@@ -42,12 +42,12 @@ function player_state_free(){
 	commit_movement()
 	
 	if (key_interact) {
-		var_activateX = lengthdir_x(10,direction);
-		var_activateY = lengthdir_y(10,direction);
-		activate = instance_position(x+_activateX,y+_activateY, obj_parent_entity);
+		var_activate_x = lengthdir_x(10,direction);
+		var_activate_y = lengthdir_y(10,direction);
+		activate = instance_position(x+var_activate_x,y+var_activate_y, obj_parent_entity);
 		
 		if (not(activate == noone)) {
-			
+			// code to be executed upon interaction with some object goes here
 			
 		}
 	}
