@@ -45,6 +45,7 @@ function player_state_free(){
 	draw_attack()
 	movement()
 	scr_collision()
+	check_for_wall()
 	commit_movement()
 }
 
@@ -76,8 +77,9 @@ function player_state_air(){
 	enable_jump(); // multi-jump by default, change max_jump to 1 to disable jumping in Air state
 	
 	// logic stolen wholesale from Sonic Retro
-	// jumped variable ensures this clamping doesn't happen 
-	// if the player's moving up for another reason
+	// if the player lets go at any point during the upward motion of the jump, the upward velocity is set lower and
+	// the jump is therefore cut short
+	// jumped variable ensures this clamping doesn't happen if the player's moving up for another reason
 	if(!key_jump_held && vertical_speed < -min_jump_velocity && jumped) 
 	{
 		vertical_speed = -min_jump_velocity;
@@ -104,6 +106,7 @@ function player_state_air(){
 	draw_attack()
 	movement()
 	scr_collision()
+	check_for_wall()
 	commit_movement()
 }
 
@@ -122,5 +125,6 @@ function player_state_against_wall() {
 	
 	movement()
 	scr_collision()
+	check_for_wall()
 	commit_movement()
 }

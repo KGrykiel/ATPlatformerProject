@@ -15,20 +15,6 @@ function scr_collision(){
 		_collision = true;
 	}  
 	
-	if (facing_x == 1) {bbox_side = bbox_right;} else if (facing_x == -1) { bbox_side = bbox_left; }
-	
-	if (tilemap_get_at_pixel(tilemap, bbox_side + facing_x,bbox_top) != 0) || 
-	(tilemap_get_at_pixel(tilemap, bbox_side + facing_x, bbox_bottom) != 0)
-	{
-		//show_debug_message("against wall!")
-		againstWall = true
-	}
-	else {
-		//show_debug_message("not")
-		againstWall = false
-	}
-	
-
 	if(place_meeting(x+horizontal_speed,y,obj_parent_entity))
 	{
 		while(abs(horizontal_speed) > 0.1)
@@ -89,4 +75,21 @@ function check_for_floor()
 		return true;
 	}
 	else return false;
+}
+
+function check_for_wall() {
+	if (wallJumpEnabled) {
+		if (facing_x == 1) {bbox_side = bbox_right;} else if (facing_x == -1) { bbox_side = bbox_left; }
+	
+		if (tilemap_get_at_pixel(tilemap, bbox_side + facing_x,bbox_top) != 0) || 
+		(tilemap_get_at_pixel(tilemap, bbox_side + facing_x, bbox_bottom) != 0)
+		{
+			//show_debug_message("against wall!")
+			againstWall = true
+		}
+		else {
+			//show_debug_message("not")
+			againstWall = false
+		}
+	}
 }

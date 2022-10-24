@@ -79,8 +79,6 @@ air_speed = 4;
 max_jump_velocity = 7;
 min_jump_velocity = 4;
 max_down_speed = 50;
-wall_sliding_speed = 2;
-
 
 
 acceleration_period = 12; // no. of frames to accelerate from 0 to max_speed
@@ -95,6 +93,11 @@ air_acceleration_amt = air_speed / air_acceleration_period;
 deceleration_amt = walk_speed / deceleration_period;
 air_deceleration_amt = air_speed / air_deceleration_period;
 
+
+// wall jump variables
+wallJumpEnabled = true;
+wall_sliding_speed = 2;
+againstWall = false;
 // if the character's movement is intended to be locked for some duration
 mvt_lock_countdown_max = 120;
 mvt_locked = 0;
@@ -105,7 +108,6 @@ tilemap = layer_tilemap_get_id("Collisions")
 grounded = true
 jumped = false
 
-againstWall = false
 
 max_jump = 2; 
 current_jump = 0;
