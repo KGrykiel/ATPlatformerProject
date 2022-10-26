@@ -11,6 +11,7 @@
     {"id":{"name":"spr_attack_smear","path":"sprites/spr_attack_smear/spr_attack_smear.yy",},"order":4,},
     {"id":{"name":"spr_attack_hitbox","path":"sprites/spr_attack_hitbox/spr_attack_hitbox.yy",},"order":3,},
     {"id":{"name":"rm_jumpyPlatforms","path":"rooms/rm_jumpyPlatforms/rm_jumpyPlatforms.yy",},"order":4,},
+    {"id":{"name":"obj_manager","path":"objects/obj_manager/obj_manager.yy",},"order":11,},
     {"id":{"name":"obj_breakable","path":"objects/obj_breakable/obj_breakable.yy",},"order":7,},
     {"id":{"name":"scr_forced_jump","path":"scripts/scr_forced_jump/scr_forced_jump.yy",},"order":7,},
     {"id":{"name":"rm_conveyorPlatforms","path":"rooms/rm_conveyorPlatforms/rm_conveyorPlatforms.yy",},"order":2,},

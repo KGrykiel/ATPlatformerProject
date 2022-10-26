@@ -102,21 +102,19 @@ air_deceleration_amt = air_speed / air_deceleration_period;
 
 x_acc = 0
 
-tilemap = layer_tilemap_get_id("Collisions")
 grounded = true
 jumped = false
 
 safe_x = 0;
 safe_y = 0;
 
-max_jump = 2; 
+max_jump = 1; 
 current_jump = 0;
-double_jump = true;
 
-coyote_time = 0.2
+coyote_time = 0.05
 
 jump_buffer = false;
-jump_buffer_length = 0.5;
+jump_buffer_length = 0.05;
 jump_buffer_frames = jump_buffer_length * FRAME_RATE;
 jump_buffer_time_source = time_source_create(time_source_game, jump_buffer_frames, time_source_units_frames, _clear_jump_buffer);
 
@@ -129,7 +127,6 @@ _jump_held_frames = _jump_held_length * FRAME_RATE;
 _jump_held_time_source = time_source_create(time_source_game, _jump_held_frames, time_source_units_frames, finish_jump);
 
 attack_sequence = noone;
-facing_x = 1
 facing_x = 1;
 knockback_force_x = 4;
 knockback_force_y = 4;

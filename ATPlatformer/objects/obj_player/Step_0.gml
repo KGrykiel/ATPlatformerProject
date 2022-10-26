@@ -10,8 +10,14 @@ key_jump_held = keyboard_check(vk_space);
 key_interact = keyboard_check_pressed(ord("E"));
 key_attack = mouse_check_button_pressed(mb_left)
 
-//var move = key_right - key_left;
-if (check_for_floor()) {
+grounded = check_collision(0, 1);
+
+if (grounded)
+{
+	// This stores the character's current position in the 'grounded_x' and 'grounded_y' variables.
+	// Since these variables are only changed when the character is on ground, they only store the position
+	// for when the character was last on ground. These values can then be used to restore the player's position after
+	// it falls off a platform into a pit.
 	safe_x = x;
 	safe_y = y;
 }

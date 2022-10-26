@@ -89,7 +89,7 @@ function player_state_coyote(){
 	
 	enable_jump()
 	jump_buffer = false
-	
+	maybe_apply_gravity()
 	if (grounded) free_player()
 	
 	if(key_attack) air_attack();
