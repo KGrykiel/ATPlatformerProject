@@ -11,5 +11,9 @@ key_interact = keyboard_check_pressed(ord("E"));
 key_attack = mouse_check_button_pressed(mb_left)
 
 //var move = key_right - key_left;
+if (check_for_floor()) {
+	safe_x = x;
+	safe_y = y;
+}
 
 script_execute(state);
