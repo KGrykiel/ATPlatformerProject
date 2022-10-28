@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+scr_create_health_vars(20,10)
+
 obj_player._jumping = false;
 
 _enable_gravity_while_jumping = false
