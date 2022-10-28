@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_manager",
+  "name": "obj_character",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -21,13 +21,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "organizational",
-    "path": "folders/Objects/organizational.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
 }

@@ -1,9 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-obj_player._jumping = false;
-
-_enable_gravity_while_jumping = false
+_enable_gravity_while_jumping = true
 
 function attack_horizontal() {
 	obj_player.attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
@@ -66,26 +64,38 @@ function attack_knockback() {
 	knockback_dir_x = 0;
 	knockback_dir_y = 0;
 }
-
+//state declaration
 state = player_state_free
 
+//key declaration
 key_right = 0;
 key_left = 0;
 key_up = 0;
 key_down = 0;
+key_jump = 0;
+key_jump_held = 0;
+key_interact = 0;
+key_attack = 0;
 
 horizontal_speed = 0;
-vertical_speed =0;
+vertical_speed = 0;
+environmental_horizontal_speed = 0;
+environmental_vertical_speed = 0;
 _gravity = 0.2;
-down_gravity = 0.2;
-walk_speed = 4;
-air_speed = 4;
-max_jump_velocity = 7;
-min_jump_velocity = 4;
+
+//down gravity
+down_gravity = 0.3;
 max_down_speed = 50;
 
+//speed
+walk_speed = 4;
+air_speed = 4;
 
+//variable jumping heights
+max_jump_velocity = 7;
+min_jump_velocity = 4;
 
+//Acceleration and deceleration
 acceleration_period = 12; // no. of frames to accelerate from 0 to max_speed
 air_acceleration_period = 20; // no. of frames to accelerate from 0 to max_speed
 
@@ -98,21 +108,20 @@ air_acceleration_amt = air_speed / air_acceleration_period;
 deceleration_amt = walk_speed / deceleration_period;
 air_deceleration_amt = air_speed / air_deceleration_period;
 
-// show_debug_message(acceleration_amt)
-
-x_acc = 0
-
 grounded = true
 jumped = false
 
 safe_x = 0;
 safe_y = 0;
 
+//double+ jumps
 max_jump = 1; 
 current_jump = 0;
 
+//coyote time
 coyote_time = 0.05
 
+//jump buffer
 jump_buffer = false;
 jump_buffer_length = 0.05;
 jump_buffer_frames = jump_buffer_length * FRAME_RATE;
@@ -126,6 +135,8 @@ _jump_held_length = 0.2;
 _jump_held_frames = _jump_held_length * FRAME_RATE;
 _jump_held_time_source = time_source_create(time_source_game, _jump_held_frames, time_source_units_frames, finish_jump);
 
+
+//Attack variables
 attack_sequence = noone;
 facing_x = 1;
 knockback_force_x = 4;

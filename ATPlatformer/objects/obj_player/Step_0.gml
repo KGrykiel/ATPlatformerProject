@@ -12,6 +12,9 @@ key_attack = mouse_check_button_pressed(mb_left)
 
 grounded = check_collision(0, 1);
 
+environmental_horizontal_speed = 0;
+environmental_vertical_speed = 0;
+
 if (grounded)
 {
 	// This stores the character's current position in the 'grounded_x' and 'grounded_y' variables.
