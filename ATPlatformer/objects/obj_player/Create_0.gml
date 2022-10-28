@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 _enable_gravity_while_jumping = true
-
+scr_create_health_vars(20,10)
 function attack_horizontal() {
 	obj_player.attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
 	call_later(10, time_source_units_frames, end_attack);
