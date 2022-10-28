@@ -3,4 +3,7 @@
 event_inherited()
 
 //set conveyor speed to positive values to go right, negative to go left
-if is_player_on obj_player.x += conveyor_speed;
+for (var _i=0; _i<ds_list_size(list_entities_on);_i++){
+	var _entity = ds_list_find_value(list_entities_on, _i)
+	_entity.environmental_horizontal_speed = conveyor_speed
+}

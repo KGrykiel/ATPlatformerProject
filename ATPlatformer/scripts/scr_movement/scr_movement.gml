@@ -21,16 +21,16 @@ function movement() {
 				horizontal_speed = 0;
 			}
 		}
-	} else {
-		horizontal_speed += _move_dir * current_acceleration_amt;
-		if (!againstWall) {facing_x = _move_dir}
+	} else {//this is literally a clamp...
+		if(abs(horizontal_speed + (_move_dir * current_acceleration_amt)) < current_speed){
+			horizontal_speed += _move_dir * current_acceleration_amt;
+		} 
+		else horizontal_speed = _move_dir * current_speed;
+		facing_x = _move_dir
 	}
-	
-	horizontal_speed = clamp(horizontal_speed, -current_speed, current_speed);
-
 }
 
 function commit_movement() {
-	x += horizontal_speed
-	y += vertical_speed
+	x += horizontal_speed + environmental_horizontal_speed
+	y += vertical_speed + environmental_vertical_speed
 }
