@@ -119,10 +119,10 @@ function player_state_air(){
 	
 	if (grounded) free_player()
 	
-	if (againstWall && vertical_speed >= 0) {
+	//if (againstWall && vertical_speed >= 0) {
 		//facing_x = facing_x * -1
-		state = player_state_against_wall;
-	}
+	//	state = player_state_against_wall;
+	//}
 	
 	if(key_attack) air_attack();
 	standard_movement()
@@ -133,7 +133,7 @@ function standard_movement(){
 	draw_attack()
 	movement()
 	scr_collision()
-	check_for_wall()
+	//check_for_wall()
 	commit_movement()
 }
 
