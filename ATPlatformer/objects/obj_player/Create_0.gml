@@ -110,6 +110,18 @@ air_acceleration_amt = air_speed / air_acceleration_period;
 deceleration_amt = walk_speed / deceleration_period;
 air_deceleration_amt = air_speed / air_deceleration_period;
 
+// wall jump variables
+wall_jump_enabled = true;
+wall_sliding_speed = 1;
+against_wall = false;
+// if the character's movement is intended to be locked for some duration
+mvt_lock_countdown_max = 120;
+mvt_locked = 0;
+
+x_acc = 0
+
+tilemap = layer_tilemap_get_id("Collisions")
+
 grounded = true
 jumped = false
 

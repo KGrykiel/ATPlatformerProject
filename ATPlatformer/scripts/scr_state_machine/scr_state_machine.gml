@@ -9,6 +9,15 @@ function enable_jump(){
 		
 		vertical_speed = -max_jump_velocity
 		jumped = true
+		
+		// make character face opposite direction, push them off the wall and restrict their 
+		// movement so they can't stay stuck to the wall
+		if (against_wall && !grounded) {
+			against_wall = false
+			facing_x = facing_x * -1
+			horizontal_speed = air_speed * facing_x
+			mvt_locked = mvt_lock_countdown_max
+		}
 		time_source_stop(jump_buffer_time_source);
 		
 		if(current_jump > 0)
@@ -70,6 +79,7 @@ function player_state_free(){
 	}
 	
 	if(key_attack) grounded_attack()
+
 	standard_movement()
 }
 
@@ -91,10 +101,14 @@ function player_state_air(){
 	
 	if (current_jump == max_jump) current_jump -= 1;
 	enable_jump(); // multi-jump by default, change max_jump to 1 to disable jumping in Air state
-	
+
 	maybe_stop_jumping()
 	
 	if (grounded) free_player()
+	
+	if (against_wall && vertical_speed >= 0) {
+		state = player_state_against_wall;
+	}
 	
 	if(key_attack) air_attack();
 	standard_movement()
@@ -105,6 +119,22 @@ function standard_movement(){
 	draw_attack()
 	movement()
 	scr_collision()
+	check_for_wall()
+	//commit_movement()
+}
+
+function player_state_against_wall() {
+	vertical_speed = wall_sliding_speed
+	reset_jump()
+	
+	enable_jump()
+	
+	if (grounded) { state = player_state_free }
+	if (!against_wall) {
+		state = player_state_air 
+	}
+	
+	standard_movement()
 }
 
 function player_state_stun() {

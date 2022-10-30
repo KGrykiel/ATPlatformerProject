@@ -4,9 +4,10 @@ function scr_collision_old(){
 	
 	var _collision = false;
 	var _entity_list = ds_list_create();
+	
 	grounded = false
 	
-	if (horizontal_speed >0) bbox_side = bbox_right; else bbox_side = bbox_left;
+	if (horizontal_speed >0) {bbox_side = bbox_right;} else {bbox_side = bbox_left;	}
 	if(tilemap_get_at_pixel(tilemap, bbox_side+ceil(horizontal_speed),bbox_top)!=0) || (tilemap_get_at_pixel(tilemap, bbox_side+ceil(horizontal_speed), bbox_bottom)!=0)
 	{
 		if( horizontal_speed>0) x = x - (x mod TILE_SIZE) + (TILE_SIZE-1) -(bbox_right -x);
@@ -14,7 +15,7 @@ function scr_collision_old(){
 		horizontal_speed=0;
 		_collision = true;
 	}  
-
+	
 	if(place_meeting(x+horizontal_speed,y,obj_parent_entity))
 	{
 		while(abs(horizontal_speed) > 0.1)
@@ -127,13 +128,42 @@ function scr_collision()
 			if(!check_collision(0, vertical_speed)) y += vertical_speed;
 		}
 		vertical_speed = 0;
-		
 	}
 	
 	//bug fix to avoid getting stuck on corners
 	if(check_collision(horizontal_speed, vertical_speed))
 	{
 		horizontal_speed = 0;
-		
+		show_debug_message("colliding")
+	}
+}
+
+function check_for_wall_old() {
+	if (wall_jump_enabled) {
+		if (facing_x == 1) {bbox_side = bbox_right;} else if (facing_x == -1) { bbox_side = bbox_left; }
+	
+		if (tilemap_get_at_pixel(tilemap, bbox_side + facing_x,bbox_top) != 0) || 
+		(tilemap_get_at_pixel(tilemap, bbox_side + facing_x, bbox_bottom) != 0)
+		{
+			//show_debug_message("against wall!")
+			against_wall = true
+		}
+		else {
+			//show_debug_message("not")
+			against_wall = false
+		}
+	}
+}
+
+// essentially just checks if there's a wall one pixel to the left or to the right of the player;
+// independent of movement speed so works even if player is stationary
+function check_for_wall() {
+	if (wall_jump_enabled) {
+		if (check_collision(1,0) || check_collision(-1,0)) {
+			against_wall = true
+		}
+		else {
+			against_wall = false
+		}
 	}
 }
