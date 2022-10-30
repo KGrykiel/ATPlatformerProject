@@ -13,6 +13,7 @@ function enable_jump(){
 		// make character face opposite direction, push them off the wall and restrict their 
 		// movement so they can't stay stuck to the wall
 		if (againstWall && !grounded) {
+			againstWall = false
 			facing_x = facing_x * -1
 			horizontal_speed = air_speed * facing_x
 			mvt_locked = mvt_lock_countdown_max
@@ -100,22 +101,6 @@ function player_state_air(){
 	
 	if (current_jump == max_jump) current_jump -= 1;
 	enable_jump(); // multi-jump by default, change max_jump to 1 to disable jumping in Air state
-	
-
-	// logic stolen wholesale from Sonic Retro
-	// if the player lets go at any point during the upward motion of the jump, the upward velocity is set lower and
-	// the jump is therefore cut short
-	// jumped variable ensures this clamping doesn't happen if the player's moving up for another reason
-	//if(!key_jump_held && vertical_speed < -min_jump_velocity && jumped) 
-	//{
-	//	vertical_speed = -min_jump_velocity;
-	//}
-	
-	//if (vertical_speed > 0) {
-	// This speed limit is very generous so we might have to tweak it
-	// in the future. We don't want a meteorite player
-	//vertical_speed = min(vertical_speed + down_gravity, max_down_speed);
-	//}
 
 	maybe_stop_jumping()
 	
