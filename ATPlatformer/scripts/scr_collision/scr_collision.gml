@@ -128,14 +128,13 @@ function scr_collision()
 			if(!check_collision(0, vertical_speed)) y += vertical_speed;
 		}
 		vertical_speed = 0;
-		
 	}
 	
 	//bug fix to avoid getting stuck on corners
 	if(check_collision(horizontal_speed, vertical_speed))
 	{
 		horizontal_speed = 0;
-		
+		show_debug_message("colliding")
 	}
 }
 

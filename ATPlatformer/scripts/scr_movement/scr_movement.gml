@@ -22,11 +22,12 @@ function movement() {
 			}
 		}
 	} else {//this is literally a clamp...
+		
 		if(abs(horizontal_speed + (_move_dir * current_acceleration_amt)) < current_speed){
 			horizontal_speed += _move_dir * current_acceleration_amt;
 		} 
 		else horizontal_speed = _move_dir * current_speed;
-		facing_x = _move_dir
+		if (!againstWall) {facing_x = _move_dir}
 	}
 }
 
