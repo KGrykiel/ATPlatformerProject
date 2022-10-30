@@ -77,8 +77,10 @@ key_jump_held = 0;
 key_interact = 0;
 key_attack = 0;
 
+//Velocty components for player input
 horizontal_speed = 0;
 vertical_speed = 0;
+//Velocity components for movement induced by the environment
 environmental_horizontal_speed = 0;
 environmental_vertical_speed = 0;
 _gravity = 0.2;
