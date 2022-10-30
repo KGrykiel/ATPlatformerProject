@@ -139,7 +139,7 @@ function scr_collision()
 	}
 }
 
-function check_for_wall() {
+function check_for_wall_old() {
 	if (wallJumpEnabled) {
 		if (facing_x == 1) {bbox_side = bbox_right;} else if (facing_x == -1) { bbox_side = bbox_left; }
 	
@@ -151,6 +151,19 @@ function check_for_wall() {
 		}
 		else {
 			//show_debug_message("not")
+			againstWall = false
+		}
+	}
+}
+
+// essentially just checks if there's a wall one pixel to the left or to the right of the player;
+// independent of movement speed so works even if player is stationary
+function check_for_wall() {
+	if (wallJumpEnabled) {
+		if (check_collision(1,0) || check_collision(-1,0)) {
+			againstWall = true
+		}
+		else {
 			againstWall = false
 		}
 	}

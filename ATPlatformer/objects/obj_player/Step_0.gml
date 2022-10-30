@@ -34,3 +34,4 @@ mvt_locked = max(0, mvt_locked - 1);
 if (grounded) mvt_locked = 0;
 
 show_debug_message(facing_x)
+//show_debug_message(mvt_locked)
