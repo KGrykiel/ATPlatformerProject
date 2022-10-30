@@ -12,8 +12,8 @@ function enable_jump(){
 		
 		// make character face opposite direction, push them off the wall and restrict their 
 		// movement so they can't stay stuck to the wall
-		if (againstWall && !grounded) {
-			againstWall = false
+		if (against_wall && !grounded) {
+			against_wall = false
 			facing_x = facing_x * -1
 			horizontal_speed = air_speed * facing_x
 			mvt_locked = mvt_lock_countdown_max
@@ -106,7 +106,7 @@ function player_state_air(){
 	
 	if (grounded) free_player()
 	
-	if (againstWall && vertical_speed >= 0) {
+	if (against_wall && vertical_speed >= 0) {
 		state = player_state_against_wall;
 	}
 	
@@ -129,11 +129,9 @@ function player_state_against_wall() {
 	
 	enable_jump()
 	
-	if (!againstWall) {
-		if (grounded) { state = player_state_free }
-		else { 
-			state = player_state_air 
-		}
+	if (grounded) { state = player_state_free }
+	if (!against_wall) {
+		state = player_state_air 
 	}
 	
 	standard_movement()

@@ -27,7 +27,7 @@ function movement() {
 			horizontal_speed += _move_dir * current_acceleration_amt;
 		} 
 		else horizontal_speed = _move_dir * current_speed;
-		if (!againstWall) {facing_x = _move_dir}
+		if (!against_wall) {facing_x = _move_dir}
 	}
 }
 

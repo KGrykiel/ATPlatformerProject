@@ -109,9 +109,9 @@ deceleration_amt = walk_speed / deceleration_period;
 air_deceleration_amt = air_speed / air_deceleration_period;
 
 // wall jump variables
-wallJumpEnabled = true;
+wall_jump_enabled = true;
 wall_sliding_speed = 1;
-againstWall = false;
+against_wall = false;
 // if the character's movement is intended to be locked for some duration
 mvt_lock_countdown_max = 120;
 mvt_locked = 0;
