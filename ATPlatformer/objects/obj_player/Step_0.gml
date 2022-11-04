@@ -13,6 +13,4 @@ if iframes > 0 iframes--;
 
 //var move = key_right - key_left;
 
-vertical_speed = vertical_speed + _gravity;
-
 script_execute(state);

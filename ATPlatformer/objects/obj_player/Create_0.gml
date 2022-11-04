@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+obj_player._jumping = false;
+
+_enable_gravity_while_jumping = false
+
 function attack_horizontal() {
 	obj_player.attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
 	call_later(10, time_source_units_frames, end_attack);
@@ -107,14 +111,20 @@ max_jump = 2;
 current_jump = 0;
 double_jump = true;
 
-coyote_time = 0.5
-coyote_time = 0.5;
+coyote_time = 0.2
 
 jump_buffer = false;
 jump_buffer_length = 0.5;
 jump_buffer_frames = jump_buffer_length * FRAME_RATE;
 jump_buffer_time_source = time_source_create(time_source_game, jump_buffer_frames, time_source_units_frames, _clear_jump_buffer);
 
+function finish_jump() {
+	obj_player._jumping = false;
+}
+
+_jump_held_length = 0.2;
+_jump_held_frames = _jump_held_length * FRAME_RATE;
+_jump_held_time_source = time_source_create(time_source_game, _jump_held_frames, time_source_units_frames, finish_jump);
 
 attack_sequence = noone;
 facing_x = 1
