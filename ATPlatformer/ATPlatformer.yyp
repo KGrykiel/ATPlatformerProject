@@ -40,7 +40,7 @@
     {"id":{"name":"seq_attack","path":"sequences/seq_attack/seq_attack.yy",},"order":0,},
     {"id":{"name":"obj_jumpy_platform","path":"objects/obj_jumpy_platform/obj_jumpy_platform.yy",},"order":9,},
     {"id":{"name":"obj_breakable_platform","path":"objects/obj_breakable_platform/obj_breakable_platform.yy",},"order":8,},
-    {"id":{"name":"obj_character","path":"objects/obj_character/obj_character.yy",},"order":15,},    
+    {"id":{"name":"obj_character","path":"objects/obj_character/obj_character.yy",},"order":15,},
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},"order":2,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":9,},
     {"id":{"name":"obj_conveyor_platform","path":"objects/obj_conveyor_platform/obj_conveyor_platform.yy",},"order":4,},
