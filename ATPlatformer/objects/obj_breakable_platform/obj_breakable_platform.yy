@@ -37,7 +37,7 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "platforms",
+    "path": "folders/Objects/platforms.yy",
   },
 }

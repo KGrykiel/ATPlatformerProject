@@ -14,24 +14,24 @@ function movement() {
 		current_speed = walk_speed
 	}
 	
-	if _move_dir == 0 {
-		horizontal_speed -= sign(horizontal_speed) * current_deceleration_amt;
-		if abs(horizontal_speed) < current_deceleration_amt{
-			horizontal_speed = 0;
+	if (_move_dir == 0) {
+		if (mvt_locked == 0) {
+			horizontal_speed -= sign(horizontal_speed) * current_deceleration_amt;
+			if abs(horizontal_speed) < current_deceleration_amt{
+				horizontal_speed = 0;
+			}
 		}
-	} else if _move_dir * horizontal_speed < 0 {
-		horizontal_speed += 3 * _move_dir * current_acceleration_amt;
-		facing_x = _move_dir;
-	} else {
-		if (abs(horizontal_speed) < current_speed) horizontal_speed += _move_dir * current_acceleration_amt;
-		facing_x = _move_dir
+	} else {//this is literally a clamp...
+		
+		if(abs(horizontal_speed + (_move_dir * current_acceleration_amt)) < current_speed){
+			horizontal_speed += _move_dir * current_acceleration_amt;
+		} 
+		else horizontal_speed = _move_dir * current_speed;
+		if (!against_wall) {facing_x = _move_dir}
 	}
-	
-	//horizontal_speed = clamp(horizontal_speed, -current_speed, current_speed);
-
 }
 
 function commit_movement() {
-	x += horizontal_speed
-	y += vertical_speed
+	x += horizontal_speed + environmental_horizontal_speed
+	y += vertical_speed + environmental_vertical_speed
 }
