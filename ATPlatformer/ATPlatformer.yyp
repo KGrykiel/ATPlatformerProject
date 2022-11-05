@@ -42,6 +42,7 @@
     {"id":{"name":"obj_character","path":"objects/obj_character/obj_character.yy",},"order":15,},
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},"order":4,},
     {"id":{"name":"obj_conveyor_platform","path":"objects/obj_conveyor_platform/obj_conveyor_platform.yy",},"order":1,},
+    {"id":{"name":"spr_player_walk","path":"sprites/spr_player_walk/spr_player_walk.yy",},"order":7,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -86,10 +87,10 @@
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
   ],
   "TextureGroups": [
-    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","loadType":"default","directory":"","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
+    {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","isScaled":true,"compressFormat":"bz2","autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,},
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.9.1.51",
+    "IDEVersion": "2022.8.1.37",
   },
 }
