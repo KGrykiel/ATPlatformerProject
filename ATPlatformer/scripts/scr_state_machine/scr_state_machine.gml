@@ -76,6 +76,8 @@ function player_state_free(){
 
 	if (!grounded) {
 		unfree_player()
+	} else if (dashing) {
+		state = player_state_dashing;
 	}
 	
 	if(key_attack) grounded_attack()
@@ -88,7 +90,11 @@ function player_state_coyote(){
 	
 	enable_jump()
 	jump_buffer = false
-	if (grounded) free_player()
+	if (grounded) {
+		free_player();
+	} else if (dashing) {
+		state = player_state_dashing;
+	}
 	if(key_attack) air_attack();
 	standard_movement()
 }
@@ -104,7 +110,11 @@ function player_state_air(){
 
 	maybe_stop_jumping()
 	
-	if (grounded) free_player()
+	if (grounded) {
+		free_player();
+	} else if (dashing) {
+		state = player_state_dashing;
+	}
 	
 	if (against_wall && vertical_speed >= 0) {
 		state = player_state_against_wall;
@@ -112,6 +122,18 @@ function player_state_air(){
 	
 	if(key_attack) air_attack();
 	standard_movement()
+}
+
+function begin_dashing() {
+	// Amount of time for which the dash will continue
+	// todo - some way to stop vertical movement (check the movement() / commit_movement() code/uses)
+	alarm[1] = dash_time;
+	state = player_state_dashing;
+}
+
+// todo - change horizontal speed depending on left/right
+function player_state_dashing() {
+	
 }
 
 function standard_movement(){
@@ -123,14 +145,26 @@ function standard_movement(){
 	//commit_movement()
 }
 
+function dash_movement(){
+	draw_attack()
+	movement()
+	scr_collision()
+	check_for_wall()
+}
+
 function player_state_against_wall() {
 	vertical_speed = wall_sliding_speed
 	reset_jump()
 	
 	enable_jump()
 	
-	if (grounded) { state = player_state_free }
-	if (!against_wall) {
+	if (dashing) {
+		state = player_state_dashing;
+	}
+	else if (grounded) {
+		state = player_state_free;
+
+	if (!against_wall && !dashing) {
 		state = player_state_air 
 	}
 	

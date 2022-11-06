@@ -64,6 +64,10 @@ function attack_knockback() {
 	knockback_dir_x = 0;
 	knockback_dir_y = 0;
 }
+
+function dash() {
+	show_debug_message("dashing!");
+}
 //state declaration
 state = player_state_free
 
@@ -76,6 +80,7 @@ key_jump = 0;
 key_jump_held = 0;
 key_interact = 0;
 key_attack = 0;
+key_dash = 0;
 
 //Velocty components for player input
 horizontal_speed = 0;
@@ -124,6 +129,7 @@ tilemap = layer_tilemap_get_id("Collisions")
 
 grounded = true
 jumped = false
+dashing = false
 
 safe_x = 0;
 safe_y = 0;
@@ -134,6 +140,9 @@ current_jump = 0;
 
 //coyote time
 coyote_time = 0.05
+
+//dash time
+dash_time = 0.2;
 
 //jump buffer
 jump_buffer = false;

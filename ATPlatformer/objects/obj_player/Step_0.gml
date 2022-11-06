@@ -9,7 +9,8 @@ key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 key_jump = keyboard_check_pressed(vk_space);
 key_jump_held = keyboard_check(vk_space);
 key_interact = keyboard_check_pressed(ord("E"));
-key_attack = mouse_check_button_pressed(mb_left)
+key_attack = mouse_check_button_pressed(mb_left);
+key_dash = keyboard_check(vk_shift);
 
 grounded = check_collision(0, 1);
 
