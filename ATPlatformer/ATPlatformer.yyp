@@ -58,8 +58,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_cameraTest","path":"rooms/rm_cameraTest/rm_cameraTest.yy",},},
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_wallJump","path":"rooms/rm_wallJump/rm_wallJump.yy",},},
     {"roomId":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},},
     {"roomId":{"name":"rm_breakablePlatforms","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},},
