@@ -42,6 +42,7 @@
     {"id":{"name":"obj_jumpy_platform","path":"objects/obj_jumpy_platform/obj_jumpy_platform.yy",},"order":2,},
     {"id":{"name":"obj_breakable_platform","path":"objects/obj_breakable_platform/obj_breakable_platform.yy",},"order":0,},
     {"id":{"name":"obj_character","path":"objects/obj_character/obj_character.yy",},"order":15,},
+    {"id":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},"order":5,},
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},"order":4,},
     {"id":{"name":"obj_conveyor_platform","path":"objects/obj_conveyor_platform/obj_conveyor_platform.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
@@ -59,6 +60,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_cameraTest","path":"rooms/rm_cameraTest/rm_cameraTest.yy",},},
+    {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_wallJump","path":"rooms/rm_wallJump/rm_wallJump.yy",},},
     {"roomId":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},},
