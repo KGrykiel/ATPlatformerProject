@@ -107,7 +107,7 @@ function player_state_free()
 		// if there is at least one object to interact with 
 		else 
 		{
-			// activates the script of the  object
+			// activates the script of the object
 			script_execute(activate.entityActivateScript);
 		}
 		
