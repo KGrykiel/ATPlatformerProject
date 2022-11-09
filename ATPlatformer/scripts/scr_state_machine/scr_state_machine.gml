@@ -57,7 +57,8 @@ function maybe_stop_jumping(){
 	}
 }
 
-function player_state_free(){
+function player_state_free()
+{
 	reset_jump()
 	
 	alarm[0] = -1 // block transition to Air state if we return to the ground during Coyote Time
@@ -71,6 +72,47 @@ function player_state_free(){
 	
 	if(key_attack) grounded_attack()
 	standard_movement()
+	
+	if(key_interact) 
+	{
+		var _activateX = x + lengthdir_x(10,direction);
+		var _activateY = y + lengthdir_x(10,direction);
+		var _activateSize = 4;
+		var _activateList = ds_list_create();
+		
+		activate = noone;
+		
+		var _entities_found = collision_rectangle_list(
+			_activateX - _activateSize,
+			_activateY - _activateSize,
+			_activateX + _activateSize,
+			_activateY + _activateSize,
+			obj_interactable,
+			false,
+			true,
+			_activateList,
+			true);
+		
+		while(_entities_found > 0) {
+			var _check = _activateList[| --_entities_found];
+			if (_check.entityActivateScript != -1) {
+				activate = _check;
+				break
+			}
+		}
+		// if there is no interactable objects nearby
+		if (activate == noone) {
+			
+		}
+		// if there is at least one object to interact with 
+		else 
+		{
+			// activates the script of the  object
+			script_execute(activate.entityActivateScript);
+		}
+		
+		ds_list_destroy(_activateList);
+	}
 }
 
 function player_state_coyote(){
@@ -108,4 +150,5 @@ function standard_movement(){
 }
 
 function player_state_stun() {
+	
 }

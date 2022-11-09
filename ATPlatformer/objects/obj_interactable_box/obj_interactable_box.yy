@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_parent_entity",
-    "path": "objects/obj_parent_entity/obj_parent_entity.yy",
+    "name": "obj_interactable",
+    "path": "objects/obj_interactable/obj_interactable.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -33,7 +33,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":69,"eventType":9,"collisionObjectId":null,},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"entityActivateScript","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"objectId":{"name":"obj_parent_entity","path":"objects/obj_parent_entity/obj_parent_entity.yy",},"value":"scr_interactable_box",},
+  ],
   "parent": {
     "name": "Objects",
     "path": "folders/Objects.yy",
