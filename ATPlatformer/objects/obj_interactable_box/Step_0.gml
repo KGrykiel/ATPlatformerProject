@@ -16,11 +16,16 @@ switch(state)
  }
  
 
-function scr_interactable_box()
-{
+function scr_interactable_object(){
 	if(state == STATE_INTERACTABLE_BOX.idle)
 	{
  	state = STATE_INTERACTABLE_BOX.opened;
  	// object will change state to opeend when the current state is idle
 	}
+}
+
+
+if unopened = true
+{
+	scr_interactable_object()
 }

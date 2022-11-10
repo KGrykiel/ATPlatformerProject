@@ -93,9 +93,11 @@ function player_state_free()
 			_activateList,
 			true);
 		
-		while(_entities_found > 0) {
+		while(_entities_found > 0) 
+		{
 			var _check = _activateList[| --_entities_found];
-			if (_check.entityActivateScript != -1) {
+			if (_check.entityActivateScript != -1) 
+			{
 				activate = _check;
 				break
 			}
@@ -108,9 +110,8 @@ function player_state_free()
 		else 
 		{
 			// activates the script of the object
-			_check.scr_interactable_box()
+			_check.unopened = true
 		}
-		
 		ds_list_destroy(_activateList);
 	}
 }
