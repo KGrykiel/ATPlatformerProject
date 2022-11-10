@@ -108,7 +108,7 @@ function player_state_free()
 		else 
 		{
 			// activates the script of the object
-			script_execute(activate.entityActivateScript);
+			_check.scr_interactable_box()
 		}
 		
 		ds_list_destroy(_activateList);
