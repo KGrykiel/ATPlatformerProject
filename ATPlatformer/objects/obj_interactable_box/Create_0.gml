@@ -4,4 +4,3 @@
 state = STATE_INTERACTABLE_BOX.idle;
 //the normal state of the object
 
-unopened = false

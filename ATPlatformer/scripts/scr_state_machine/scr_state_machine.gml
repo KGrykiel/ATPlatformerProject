@@ -96,7 +96,7 @@ function player_state_free()
 		while(_entities_found > 0) 
 		{
 			var _check = _activateList[| --_entities_found];
-			if (_check.entityActivateScript != -1) 
+			if (_check.unopened == false) 
 			{
 				activate = _check;
 				break
