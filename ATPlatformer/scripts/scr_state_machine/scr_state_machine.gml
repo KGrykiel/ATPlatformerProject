@@ -76,7 +76,7 @@ function player_state_free()
 	if(key_interact) 
 	{
 		var _activateX = x + lengthdir_x(10,direction);
-		var _activateY = y + lengthdir_x(10,direction);
+		var _activateY = y + lengthdir_y(10,direction);
 		var _activateSize = 4;
 		var _activateList = ds_list_create();
 		
