@@ -3,6 +3,9 @@
 
 function movement() {
 	var _move_dir = key_right - key_left;
+	if (!dashing && _move_dir != 0) {
+		dash_direction = _move_dir
+	}
 	
 	if state == player_state_air {
 		current_acceleration_amt = air_acceleration_amt
@@ -12,6 +15,9 @@ function movement() {
 		current_acceleration_amt = air_acceleration_amt
 		current_deceleration_amt = air_deceleration_amt
 		current_speed = dash_speed
+		
+		// Reset movement direction to direction when dash started
+		_move_dir = dash_direction
 	} else {
 		current_acceleration_amt = acceleration_amt
 		current_deceleration_amt = deceleration_amt

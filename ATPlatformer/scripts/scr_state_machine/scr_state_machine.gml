@@ -126,7 +126,6 @@ function player_state_air(){
 
 function begin_dashing() {
 	// Amount of time for which the dash will continue
-	// todo - some way to stop vertical movement (check the movement() / commit_movement() code/uses)
 	alarm[1] = FRAME_RATE * dash_time;
 	alarm[2] = FRAME_RATE * dash_cooldown;
 	vertical_speed = 0

@@ -97,7 +97,7 @@ max_down_speed = 50;
 //speed
 walk_speed = 4;
 air_speed = 4;
-dash_speed = walk_speed * 2;
+// for dash speed, see the dash parameters section
 
 //variable jumping heights
 max_jump_velocity = 7;
@@ -133,6 +133,7 @@ jumped = false
 dashing = false
 dash_cooling = false
 want_to_dash = false
+dash_direction = 1;
 
 safe_x = 0;
 safe_y = 0;
@@ -144,9 +145,11 @@ current_jump = 0;
 //coyote time
 coyote_time = 0.05
 
-//dash time
+//dash parameters
 dash_time = 0.5;
 dash_cooldown = 0.7;
+dash_speed = walk_speed * 2;
+
 
 //jump buffer
 jump_buffer = false;
