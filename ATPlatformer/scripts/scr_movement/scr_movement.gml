@@ -8,6 +8,10 @@ function movement() {
 		current_acceleration_amt = air_acceleration_amt
 		current_deceleration_amt = air_deceleration_amt
 		current_speed = air_speed
+	} else if state == player_state_dashing {
+		current_acceleration_amt = air_acceleration_amt
+		current_deceleration_amt = air_deceleration_amt
+		current_speed = dash_speed
 	} else {
 		current_acceleration_amt = acceleration_amt
 		current_deceleration_amt = deceleration_amt
@@ -29,6 +33,10 @@ function movement() {
 		else horizontal_speed = _move_dir * current_speed;
 		if (!against_wall) {facing_x = _move_dir}
 	}
+}
+
+function movement_while_dashing() {
+	
 }
 
 function commit_movement() {

@@ -17,6 +17,8 @@ grounded = check_collision(0, 1);
 environmental_horizontal_speed = 0;
 environmental_vertical_speed = 0;
 
+want_to_dash = key_dash && !dash_cooling
+
 if (grounded)
 {
 	// This stores the character's current position in the 'grounded_x' and 'grounded_y' variables.

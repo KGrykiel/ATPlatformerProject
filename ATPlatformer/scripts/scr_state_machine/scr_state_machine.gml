@@ -52,7 +52,7 @@ function apply_gravity(){
 		// in the future. We don't want a meteorite player
 		vertical_speed = min(vertical_speed + down_gravity, max_down_speed);
 	}
-	else{
+	else {
 		vertical_speed = vertical_speed + _gravity;
 	}
 }
@@ -76,8 +76,8 @@ function player_state_free(){
 
 	if (!grounded) {
 		unfree_player()
-	} else if (dashing) {
-		state = player_state_dashing;
+	} else if (want_to_dash) {
+		begin_dashing()
 	}
 	
 	if(key_attack) grounded_attack()
@@ -92,8 +92,8 @@ function player_state_coyote(){
 	jump_buffer = false
 	if (grounded) {
 		free_player();
-	} else if (dashing) {
-		state = player_state_dashing;
+	} else if (want_to_dash) {
+		begin_dashing()
 	}
 	if(key_attack) air_attack();
 	standard_movement()
@@ -112,8 +112,8 @@ function player_state_air(){
 	
 	if (grounded) {
 		free_player();
-	} else if (dashing) {
-		state = player_state_dashing;
+	} else if (want_to_dash) {
+		begin_dashing()
 	}
 	
 	if (against_wall && vertical_speed >= 0) {
@@ -127,13 +127,24 @@ function player_state_air(){
 function begin_dashing() {
 	// Amount of time for which the dash will continue
 	// todo - some way to stop vertical movement (check the movement() / commit_movement() code/uses)
-	alarm[1] = dash_time;
+	alarm[1] = FRAME_RATE * dash_time;
+	alarm[2] = FRAME_RATE * dash_cooldown;
+	vertical_speed = 0
+	dashing = true
+	dash_cooling = true // dashing disabled until cooldown completed
 	state = player_state_dashing;
 }
 
 // todo - change horizontal speed depending on left/right
 function player_state_dashing() {
+	dash_movement()
 	
+	if (against_wall) {
+		alarm[1] = -1; // Cancel rest of dash because wall hit
+		dashing = false
+		state = player_state_against_wall
+	}
+	show_debug_message("DASHING NOW")
 }
 
 function standard_movement(){
@@ -146,6 +157,7 @@ function standard_movement(){
 }
 
 function dash_movement(){
+	//apply_gravity()
 	draw_attack()
 	movement()
 	scr_collision()
@@ -158,12 +170,12 @@ function player_state_against_wall() {
 	
 	enable_jump()
 	
-	if (dashing) {
-		state = player_state_dashing;
+	if (want_to_dash) {
+		begin_dashing()
 	}
 	else if (grounded) {
 		state = player_state_free;
-
+	}
 	if (!against_wall && !dashing) {
 		state = player_state_air 
 	}
@@ -172,4 +184,5 @@ function player_state_against_wall() {
 }
 
 function player_state_stun() {
+	
 }

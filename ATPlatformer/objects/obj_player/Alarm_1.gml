@@ -1,4 +1,4 @@
-/// @description Coyote Time Countdown
+/// @description Dash Time Countdown
 // You can write your code in this editor
 
 // todo - check state it should be
