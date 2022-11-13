@@ -129,6 +129,7 @@ function begin_dashing() {
 	alarm[1] = FRAME_RATE * dash_time;
 	alarm[2] = FRAME_RATE * dash_cooldown;
 	vertical_speed = 0
+	horizontal_speed = dash_speed * dash_direction
 	dashing = true
 	dash_cooling = true // dashing disabled until cooldown completed
 	state = player_state_dashing;
