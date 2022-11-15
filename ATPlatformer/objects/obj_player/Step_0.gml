@@ -14,8 +14,6 @@ if iframes > 0 iframes--;
 
 grounded = check_collision(0, 1);
 
-environmental_horizontal_speed = 0;
-environmental_vertical_speed = 0;
 
 if (grounded)
 {

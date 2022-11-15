@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-list_entities_on = ds_list_create();
+
+environmental_horizontal_speed = 0;
+environmental_vertical_speed = 0;

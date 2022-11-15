@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 if (horizontal_speed == 0) horizontal_speed = 1;
 
 // handle destroying the enemy when coming into contact with player attacks
@@ -29,10 +30,7 @@ if place_meeting(x, y, obj_player) {
 vertical_speed += grav;
 vertical_speed = min(vertical_speed, 5)
 
-scr_collision()
 
-x += horizontal_speed;
-y += vertical_speed;
 
 
 
