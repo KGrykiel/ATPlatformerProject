@@ -26,6 +26,7 @@ if (grounded)
 	safe_y = y;
 }
 
+
 script_execute(state);
 
 // updates movement lock countdown
@@ -36,12 +37,5 @@ if (grounded) mvt_locked = 0;
 //show_debug_message(mvt_locked)
 show_debug_message(vertical_speed)
 
-//walking animation code
-if (horizontal_speed != 0 || vertical_speed != 0){
-	image_speed = horizontal_speed/3
-}
-else{
-	image_speed = 0
-}
-	
+
 	
