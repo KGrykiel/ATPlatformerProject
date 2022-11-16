@@ -20,3 +20,10 @@ following = obj_player // Can change which object just doing following = {new ob
 
 x_to = x;
 y_to = y;
+
+//screenshake
+screen_shake = true;
+shake_power = 15;
+shake_value = 0;
+
+
