@@ -82,14 +82,6 @@ function player_state_free(){
 
 	standard_movement()
 	
-	//idle and moving sprite
-	#region idle and moving animations
-	if horizontal_speed == 0{
-		script_execute(spr_state_idle)
-	}else{
-		script_execute(spr_state_walk)
-	}
-	#endregion
 }
 
 function player_state_coyote(){
@@ -100,7 +92,7 @@ function player_state_coyote(){
 	if (grounded) free_player()
 	if(key_attack) air_attack();
 	standard_movement()
-	script_execute(spr_state_idle)
+	
 }
 
 function player_state_air(){
@@ -125,8 +117,7 @@ function player_state_air(){
 	if(key_attack) air_attack();
 	standard_movement()
 	
-	//jumping sprite
-	spr_state_jumping()
+
 }
 
 function standard_movement(){
@@ -150,7 +141,7 @@ function player_state_against_wall() {
 	}
 	
 	standard_movement()
-	script_execute(spr_state_idle)
+	
 }
 
 function player_state_stun() {

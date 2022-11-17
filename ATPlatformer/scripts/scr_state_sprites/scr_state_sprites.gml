@@ -1,25 +1,27 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
-
-
-function spr_state_jumping(){
-	var _move_dir = key_right - key_left;
-	sprite_index = spr_player_jump
-	if _move_dir != 0{
-		image_xscale = -sign(_move_dir)
-	}
-}
-
-function spr_state_walk(){
-	var _move_dir = key_right - key_left;
-	sprite_index = spr_player_walk
-	if _move_dir != 0{
-		image_xscale = -sign(_move_dir)
+function scr_state_sprites(){
+	
+	var _move_dir = key_left - key_right;
+	
+	if (_move_dir!=0){
+		image_xscale = sign(_move_dir)
 	}
 	
-}
-
-function spr_state_idle(){
-	sprite_index = spr_player_idle
+	switch(state){
+		
+		case player_state_free:
+			if (horizontal_speed != 0){
+				sprite_index = spr_player_walk;
+			}
+			else{
+				sprite_index = spr_player_idle;
+			}
+		break;
+		
+		case player_state_air:
+			sprite_index = spr_player_jump
+		break;
+	}
 }
