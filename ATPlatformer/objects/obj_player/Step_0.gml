@@ -25,7 +25,11 @@ if (grounded)
 	safe_y = y;
 }
 
+
 script_execute(state);
+
+//animations
+scr_state_sprites()
 
 // updates movement lock countdown
 mvt_locked = max(0, mvt_locked - 1);
