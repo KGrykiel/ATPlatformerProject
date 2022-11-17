@@ -74,8 +74,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
     {"roomId":{"name":"rm_cameraTest","path":"rooms/rm_cameraTest/rm_cameraTest.yy",},},
     {"roomId":{"name":"rm_wallJump","path":"rooms/rm_wallJump/rm_wallJump.yy",},},
     {"roomId":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},},
@@ -92,6 +92,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"characters","folderPath":"folders/Objects/characters.yy","order":13,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"organizational","folderPath":"folders/Objects/organizational.yy","order":12,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"platforms","folderPath":"folders/Objects/platforms.yy","order":14,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"test objects","folderPath":"folders/Objects/test objects.yy","order":19,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Paths","folderPath":"folders/Paths.yy","order":3,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Rooms","folderPath":"folders/Rooms.yy","order":8,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Scripts.yy","order":13,},
@@ -102,7 +103,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player Sprites","folderPath":"folders/Sprites/Player Sprites.yy","order":9,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy","order":1,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy","order":6,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"test objects","folderPath":"folders/Objects/test objects.yy","order":19,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
