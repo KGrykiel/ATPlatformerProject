@@ -3,10 +3,9 @@
 
 function scr_state_sprites(){
 	
-	var _move_dir = key_left - key_right;
 	
-	if (_move_dir!=0){
-		image_xscale = sign(_move_dir)
+	if (facing_x!=0){
+		image_xscale = sign(-facing_x)
 	}
 	
 	switch(state){
