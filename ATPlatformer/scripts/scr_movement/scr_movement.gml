@@ -34,3 +34,15 @@ function commit_movement() {
 	x += horizontal_speed// + environmental_horizontal_speed
 	y += vertical_speed //+ environmental_vertical_speed
 }
+
+function apply_resistance(){
+	environmental_horizontal_speed -= sign(environmental_horizontal_speed) * resistance;
+	if abs(environmental_horizontal_speed) < resistance{
+		environmental_horizontal_speed = 0;
+	}
+
+	environmental_vertical_speed -= sign(environmental_vertical_speed) * resistance;
+	if abs(environmental_vertical_speed) < resistance{
+		environmental_vertical_speed = 0;
+	}
+}
