@@ -37,6 +37,7 @@
     {"id":{"name":"obj_projectile","path":"objects/obj_projectile/obj_projectile.yy",},"order":8,},
     {"id":{"name":"scr_state_machine","path":"scripts/scr_state_machine/scr_state_machine.yy",},"order":3,},
     {"id":{"name":"spr_danger_zone","path":"sprites/spr_danger_zone/spr_danger_zone.yy",},"order":6,},
+    {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},"order":14,},
     {"id":{"name":"spr_collision_tiles","path":"sprites/spr_collision_tiles/spr_collision_tiles.yy",},"order":0,},
     {"id":{"name":"pth_test","path":"paths/pth_test/pth_test.yy",},"order":0,},
     {"id":{"name":"seq_attack","path":"sequences/seq_attack/seq_attack.yy",},"order":0,},

@@ -8,3 +8,7 @@ if bbox_right < 0 or bbox_left > room_width or bbox_bottom < 0 or bbox_top > roo
 // Updates x and y positions of projectile
 x += horizontal_speed
 y += vertical_speed
+
+if check_collision(0,0) {
+	instance_destroy();
+}
