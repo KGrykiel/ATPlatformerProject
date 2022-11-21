@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+event_inherited()
 _enable_gravity_while_jumping = true
 scr_create_health_vars(20,10)
 function attack_horizontal() {
@@ -120,8 +120,6 @@ mvt_locked = 0;
 
 x_acc = 0
 
-tilemap = layer_tilemap_get_id("Collisions")
-
 grounded = true
 jumped = false
 
@@ -157,3 +155,5 @@ knockback_force_x = 4;
 knockback_force_y = 4;
 knockback_dir_x = 1;
 knockback_dir_y = 0;
+
+iframes = 0;

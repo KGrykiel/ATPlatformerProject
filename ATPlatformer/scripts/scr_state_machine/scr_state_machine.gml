@@ -119,7 +119,7 @@ function standard_movement(){
 	apply_gravity()
 	draw_attack()
 	movement()
-	scr_collision()
+	//scr_collision()
 	check_for_wall()
 	//commit_movement()
 }
