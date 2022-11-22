@@ -4,7 +4,7 @@
   "name": "obj_inventory",
   "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": true,

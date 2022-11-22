@@ -1,9 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 #macro INVENTORY_SIZE 15
+function create_item(_name, _desc, _spr) constructor {
+	name = _name;
+	description = _desc;
+	sprite = _spr
+}
+
+global.item_list = {
+	dummy : new create_item("Dummy Item", "Fuck All", spr_item_default)
+}
+
+
 rowLength = 6
 inventory = array_create(INVENTORY_SIZE, -1)
-inventory[0] = instance_create_layer(x,y,"Instances", obj_item_parent)
+inventory[0] = global.item_list.dummy
 
 function inventory_search(itemType) {
 	for (var i = 0; i < INVENTORY_SIZE; i+=1) {
