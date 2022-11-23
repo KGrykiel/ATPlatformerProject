@@ -137,6 +137,37 @@ function scr_collision()
 	}
 }
 
+function scr_environmental_collision()
+{
+	//horizontal collision
+	if(check_collision(environmental_horizontal_speed, 0))
+	{
+		while(abs(environmental_horizontal_speed) > 0.1)
+		{
+			environmental_horizontal_speed *= 0.5;
+			if (!check_collision(environmental_horizontal_speed,0)) x += environmental_horizontal_speed
+		}
+		environmental_horizontal_speed = 0;
+	}
+	
+	//vertical collision
+	if(check_collision(0, environmental_vertical_speed))
+	{
+		while(abs(environmental_vertical_speed) >0.1)
+		{
+			environmental_vertical_speed *= 0.5;
+			if(!check_collision(0, environmental_vertical_speed)) y += environmental_vertical_speed;
+		}
+		environmental_vertical_speed = 0;
+	}
+	
+	//bug fix to avoid getting stuck on corners
+	if(check_collision(environmental_horizontal_speed, environmental_vertical_speed))
+	{
+		environmental_horizontal_speed = 0;
+	}
+}
+
 function check_for_wall_old() {
 	if (wall_jump_enabled) {
 		if (facing_x == 1) {bbox_side = bbox_right;} else if (facing_x == -1) { bbox_side = bbox_left; }
