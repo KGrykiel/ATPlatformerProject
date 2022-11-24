@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 #macro INVENTORY_SIZE 15
-function create_item(_name, _desc, _spr) constructor {
+grid_x = 0
+grid_y = 0
+
+/* function create_item(_name, _desc, _spr) constructor {
 	name = _name;
 	description = _desc;
 	sprite = _spr
@@ -9,9 +12,8 @@ function create_item(_name, _desc, _spr) constructor {
 
 global.item_list = {
 	dummy : new create_item("Dummy Item", "Fuck All", spr_item_default)
-}
-
-
+} */
+instance_create_layer(0,0,"Instances",obj_item_manager)
 rowLength = 6
 inventory = array_create(INVENTORY_SIZE, -1)
 inventory[0] = global.item_list.dummy

@@ -45,6 +45,7 @@
     {"id":{"name":"obj_danger_zone","path":"objects/obj_danger_zone/obj_danger_zone.yy",},"order":10,},
     {"id":{"name":"obj_moving_platform","path":"objects/obj_moving_platform/obj_moving_platform.yy",},"order":3,},
     {"id":{"name":"spr_item_default","path":"sprites/spr_item_default/spr_item_default.yy",},"order":11,},
+    {"id":{"name":"obj_item_manager","path":"objects/obj_item_manager/obj_item_manager.yy",},"order":21,},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":2,},
     {"id":{"name":"scr_state_machine","path":"scripts/scr_state_machine/scr_state_machine.yy",},"order":3,},
     {"id":{"name":"spr_danger_zone","path":"sprites/spr_danger_zone/spr_danger_zone.yy",},"order":6,},
