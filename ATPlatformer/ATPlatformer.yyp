@@ -5,6 +5,7 @@
   "resources": [
     {"id":{"name":"pth_test2","path":"paths/pth_test2/pth_test2.yy",},"order":1,},
     {"id":{"name":"scr_jumpbuffer","path":"scripts/scr_jumpbuffer/scr_jumpbuffer.yy",},"order":6,},
+    {"id":{"name":"scr_screen_shake","path":"scripts/scr_screen_shake/scr_screen_shake.yy",},"order":11,},
     {"id":{"name":"spr_bg_test","path":"sprites/spr_bg_test/spr_bg_test.yy",},"order":9,},
     {"id":{"name":"obj_player_attack","path":"objects/obj_player_attack/obj_player_attack.yy",},"order":6,},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"order":0,},
@@ -66,6 +67,7 @@
     {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
+    {"name":"macOS","path":"options/mac/options_mac.yy",},
   ],
   "defaultScriptType": 1,
   "isEcma": false,
@@ -74,8 +76,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_cameraTest","path":"rooms/rm_cameraTest/rm_cameraTest.yy",},},
     {"roomId":{"name":"rm_wallJump","path":"rooms/rm_wallJump/rm_wallJump.yy",},},
     {"roomId":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},},

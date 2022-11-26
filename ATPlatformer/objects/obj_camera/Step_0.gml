@@ -20,3 +20,13 @@ y = clamp(y, height / 2 , room_height - (height / 2));
 
 var _view_matrix = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);
 camera_set_view_mat(camera, _view_matrix);
+
+//screenshake
+shake = power(shake_value,2) * shake_magnitude;
+
+x += random_range(-shake,shake);
+y += random_range(-shake,shake);
+
+//reduce shake
+if (shake_value > 0) shake_value -= 0.1;
+
