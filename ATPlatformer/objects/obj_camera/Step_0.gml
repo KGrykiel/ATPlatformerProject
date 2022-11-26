@@ -30,3 +30,7 @@ y += random_range(-shake,shake);
 //reduce shake
 if (shake_value > 0) shake_value -= 0.1;
 
+//test, works outside obj_camera too
+if keyboard_check_pressed(vk_enter){	
+	screen_shake(5,10)
+}
