@@ -31,13 +31,16 @@ function dismiss_prompt(_whichPrompt){ //choose which prompt to dismiss
 }
 
 function detect_nearby_interactible(){ //detect if interactible obj nearby
+	prompt = false;
     nearbyInteractible = collision_rectangle(x-30, y-30, x+30, y+30, obj_interactable, false,true) //look range is 30
 	if nearbyInteractible {
 		// Pop up prompt
 		prompt = pop_up_prompt(nearbyInteractible); //pop up prompt for that object
 	}
 	if !nearbyInteractible {
-		// Get rid of prompt
-		scr_dismissPrompt(prompt); //can dismiss that prompt else
+		// Get rid of prompt if it exists
+		if(prompt){
+			scr_dismissPrompt(prompt); //can dismiss that prompt else
+		}
 	}
 }
