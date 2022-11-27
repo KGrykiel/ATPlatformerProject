@@ -83,6 +83,7 @@ function player_state_free(){
 	if(key_attack) grounded_attack()
 
 	standard_movement()
+	interact()
 }
 
 function player_state_coyote(){
@@ -151,7 +152,7 @@ function standard_movement(){
 	apply_gravity()
 	draw_attack()
 	movement()
-	scr_collision()
+	//scr_collision()
 	check_for_wall()
 	//commit_movement()
 }
@@ -185,4 +186,112 @@ function player_state_against_wall() {
 
 function player_state_stun() {
 	
+}
+
+function interact() {
+		if (key_interact)
+	{
+		//1. check for an entity to activate
+		//2. if there is nothing, or there is something, but it has no script - do nothing I guess.
+		//3. otherwise, there is something and it has a script! Activate!
+		//4. If the thing is an NPC, might as well do something more
+		
+		var _activate_x = x + lengthdir_x(10,direction); //change constant to alter length of activation
+		var _activate_y = y + lengthdir_y(10,direction);
+		var _activate_size = 4;
+		var _activate_list = ds_list_create();
+		activate = noone;
+		var _entities_found = collision_rectangle_list(
+			_activate_x - _activate_size,
+			_activate_y - _activate_size,
+			_activate_x + _activate_size,
+			_activate_y + _activate_size,
+			obj_interactable,
+			false,
+			true,
+			_activate_list,
+			true
+		);
+		
+		// if the first instance we find has no script, try the next one
+		while (_entities_found>0)
+		{
+			var _check = _activate_list[| --_entities_found];
+			if (_check.entity_activate_script !=-1)
+			{
+				activate = _check;
+				break;
+			}
+				
+		}
+		
+		ds_list_destroy(_activate_list)
+		
+		if (activate == noone)
+		{
+			//do nothing, might add a sound effect or something later idk.
+		}
+		else
+		{
+			// activate the entity
+			script_execute_array(activate.entity_activate_script,activate.entity_activate_args);
+			
+		}
+		
+	
+	}
+}
+
+function interact() {
+		if (key_interact)
+	{
+		//1. check for an entity to activate
+		//2. if there is nothing, or there is something, but it has no script - do nothing I guess.
+		//3. otherwise, there is something and it has a script! Activate!
+		//4. If the thing is an NPC, might as well do something more
+		
+		var _activate_x = x + lengthdir_x(10,direction); //change constant to alter length of activation
+		var _activate_y = y + lengthdir_y(10,direction);
+		var _activate_size = 4;
+		var _activate_list = ds_list_create();
+		activate = noone;
+		var _entities_found = collision_rectangle_list(
+			_activate_x - _activate_size,
+			_activate_y - _activate_size,
+			_activate_x + _activate_size,
+			_activate_y + _activate_size,
+			obj_interactable,
+			false,
+			true,
+			_activate_list,
+			true
+		);
+		
+		// if the first instance we find has no script, try the next one
+		while (_entities_found>0)
+		{
+			var _check = _activate_list[| --_entities_found];
+			if (_check.entity_activate_script !=-1)
+			{
+				activate = _check;
+				break;
+			}
+				
+		}
+		
+		ds_list_destroy(_activate_list)
+		
+		if (activate == noone)
+		{
+			//do nothing, might add a sound effect or something later idk.
+		}
+		else
+		{
+			// activate the entity
+			script_execute_array(activate.entity_activate_script,activate.entity_activate_args);
+			
+		}
+		
+	
+	}
 }

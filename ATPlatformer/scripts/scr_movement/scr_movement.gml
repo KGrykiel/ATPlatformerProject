@@ -46,6 +46,6 @@ function movement_while_dashing() {
 }
 
 function commit_movement() {
-	x += horizontal_speed + environmental_horizontal_speed
-	y += vertical_speed + environmental_vertical_speed
+	x += horizontal_speed// + environmental_horizontal_speed
+	y += vertical_speed //+ environmental_vertical_speed
 }

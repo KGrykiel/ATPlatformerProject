@@ -11,11 +11,10 @@ key_jump_held = keyboard_check(vk_space);
 key_interact = keyboard_check_pressed(ord("E"));
 key_attack = mouse_check_button_pressed(mb_left);
 key_dash = keyboard_check(vk_shift);
+if iframes > 0 iframes--;
 
 grounded = check_collision(0, 1);
 
-environmental_horizontal_speed = 0;
-environmental_vertical_speed = 0;
 
 want_to_dash = key_dash && !dash_cooling
 
@@ -34,7 +33,3 @@ script_execute(state);
 // updates movement lock countdown
 mvt_locked = max(0, mvt_locked - 1);
 if (grounded) mvt_locked = 0;
-
-//show_debug_message(facing_x)
-//show_debug_message(mvt_locked)
-show_debug_message(vertical_speed)

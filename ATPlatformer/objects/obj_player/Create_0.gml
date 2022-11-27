@@ -126,8 +126,6 @@ mvt_locked = 0;
 
 x_acc = 0
 
-tilemap = layer_tilemap_get_id("Collisions")
-
 grounded = true
 jumped = false
 dashing = false
@@ -173,3 +171,5 @@ knockback_force_x = 4;
 knockback_force_y = 4;
 knockback_dir_x = 1;
 knockback_dir_y = 0;
+
+iframes = 0;
