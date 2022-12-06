@@ -105,8 +105,8 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_concept","path":"rooms/rm_concept/rm_concept.yy",},},
-    {"roomId":{"name":"rm_dialoguesystem_demo","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},},
     {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
+    {"roomId":{"name":"rm_dialoguesystem_demo","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_cameraTest","path":"rooms/rm_cameraTest/rm_cameraTest.yy",},},
     {"roomId":{"name":"rm_wallJump","path":"rooms/rm_wallJump/rm_wallJump.yy",},},
