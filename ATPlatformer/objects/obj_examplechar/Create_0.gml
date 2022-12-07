@@ -5,7 +5,7 @@ event_inherited(); //so it will inherit from par_speaker
 
 myPortrait			= spr_portrait_examplechar;
 myVoice				= snd_voice1;
-myName				= "Blue";
+myName				= "Asset";
 
 myPortraitTalk		= spr_portrait_examplechar_mouth;
 myPortraitTalk_x	= 26;
