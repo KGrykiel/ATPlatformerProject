@@ -139,3 +139,6 @@ function player_state_against_wall() {
 
 function player_state_stun() {
 }
+
+function player_state_transition(){
+}

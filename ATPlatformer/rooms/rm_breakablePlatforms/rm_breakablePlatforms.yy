@@ -31,11 +31,11 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
+    {"name":"inst_7C0361EB","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},
     {"name":"inst_489A0FE","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},
     {"name":"inst_59D76EBE","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},
     {"name":"inst_2015346E","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},
     {"name":"inst_201CF635","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},
-    {"name":"inst_7C0361EB","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

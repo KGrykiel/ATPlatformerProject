@@ -32,9 +32,9 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
+    {"name":"inst_322D7AB4","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},
     {"name":"inst_59E9ED1B","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},
     {"name":"inst_417C6558","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},
-    {"name":"inst_322D7AB4","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
