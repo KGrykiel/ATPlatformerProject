@@ -169,3 +169,10 @@ myPortraitTalk		= spr_portrait_examplechar_mouth;
 myPortraitTalk_x	= 26;
 myPortraitTalk_y	= 44;
 myPortraitIdle		= spr_portrait_examplechar_idle;
+
+// Room transition
+if (global.target_x != -1) {
+	x = global.target_x;
+	y = global.target_y;
+	direction = global.target_direction;
+}

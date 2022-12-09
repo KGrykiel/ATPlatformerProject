@@ -21,6 +21,7 @@
     {"id":{"name":"rm_jumpyPlatforms","path":"rooms/rm_jumpyPlatforms/rm_jumpyPlatforms.yy",},"order":4,},
     {"id":{"name":"spr_portrait_examplechar_idle","path":"sprites/spr_portrait_examplechar_idle/spr_portrait_examplechar_idle.yy",},"order":8,},
     {"id":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},"order":22,},
+    {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},"order":8,},
     {"id":{"name":"obj_manager","path":"objects/obj_manager/obj_manager.yy",},"order":0,},
     {"id":{"name":"spr_industrial_tiles_background","path":"sprites/spr_industrial_tiles_background/spr_industrial_tiles_background.yy",},"order":15,},
     {"id":{"name":"spr_platform2","path":"sprites/spr_platform2/spr_platform2.yy",},"order":13,},
@@ -60,6 +61,7 @@
     {"id":{"name":"scr_health","path":"scripts/scr_health/scr_health.yy",},"order":8,},
     {"id":{"name":"rm_cameraTest","path":"rooms/rm_cameraTest/rm_cameraTest.yy",},"order":5,},
     {"id":{"name":"seq_attack_down","path":"sequences/seq_attack_down/seq_attack_down.yy",},"order":2,},
+    {"id":{"name":"spr_room_exit","path":"sprites/spr_room_exit/spr_room_exit.yy",},"order":19,},
     {"id":{"name":"rm_breakablePlatforms","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},"order":3,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"snd_voice1","path":"sounds/snd_voice1/snd_voice1.yy",},"order":2,},
@@ -115,6 +117,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"roomId":{"name":"rm_concept","path":"rooms/rm_concept/rm_concept.yy",},},
     {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
     {"roomId":{"name":"rm_dialoguesystem_demo","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},},

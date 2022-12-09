@@ -154,6 +154,9 @@ function player_state_dialogue() {
 	if(!instance_exists(obj_textbox)){ free_player() }
 }
 
+function player_state_transition(){
+}
+
 function interact() {
 		if (key_interact)
 	{
