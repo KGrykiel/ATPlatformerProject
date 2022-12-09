@@ -3,7 +3,6 @@
   "resourceVersion": "1.6",
   "name": "ATPlatformer",
   "resources": [
-    {"id":{"name":"obj_init","path":"objects/obj_init/obj_init.yy",},"order":1,},
     {"id":{"name":"obj_room_exit","path":"objects/obj_room_exit/obj_room_exit.yy",},"order":9,},
     {"id":{"name":"pth_test2","path":"paths/pth_test2/pth_test2.yy",},"order":1,},
     {"id":{"name":"scr_jumpbuffer","path":"scripts/scr_jumpbuffer/scr_jumpbuffer.yy",},"order":6,},
