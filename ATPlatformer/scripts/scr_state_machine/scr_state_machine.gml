@@ -142,6 +142,7 @@ function begin_dashing() {
 	horizontal_speed = dash_speed * dash_direction
 	dashing = true
 	dash_cooling = true // dashing disabled until cooldown completed
+	dash_ground_reset = false // dashing disabled until player hits the ground
 	state = player_state_dashing;
 }
 
@@ -154,7 +155,7 @@ function player_state_dashing() {
 		dashing = false
 		state = player_state_against_wall
 	}
-	show_debug_message("DASHING NOW")
+	// show_debug_message("DASHING NOW")
 }
 
 function standard_movement(){
@@ -176,6 +177,10 @@ function dash_movement(){
 
 function player_state_against_wall() {
 	vertical_speed = wall_sliding_speed
+	
+	// could optionally reset dash on wall collisions (would change name to dash_surface_reset)
+	// dash_ground_reset = true
+	
 	reset_jump()
 	
 	enable_jump()

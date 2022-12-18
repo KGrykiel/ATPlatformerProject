@@ -15,8 +15,10 @@ if iframes > 0 iframes--;
 
 grounded = check_collision(0, 1);
 
-
-want_to_dash = key_dash && !dash_cooling
+// The player can only dash if the dash key is down, the cooldown from previous dashes is complete,
+// and the player has hit the ground since the previous dash (want_to_dash is all that needs to be checked
+// in other parts of the program)
+want_to_dash = key_dash && !dash_cooling && dash_ground_reset;
 
 if (grounded)
 {
@@ -26,6 +28,7 @@ if (grounded)
 	// it falls off a platform into a pit.
 	safe_x = x;
 	safe_y = y;
+	dash_ground_reset = true;
 }
 
 
