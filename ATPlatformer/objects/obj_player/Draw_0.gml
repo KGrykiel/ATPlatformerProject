@@ -3,4 +3,4 @@
 
 if (iframes>>2) % 2 == 0 draw_self();
 
-scr_draw_health_bar();
+//scr_draw_health_bar();

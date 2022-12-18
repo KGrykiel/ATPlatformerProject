@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-x += environmental_horizontal_speed
-y += environmental_vertical_speed
+scr_environmental_collision()
+
+commit_environmental_movement()
+
+apply_resistance()
 
 scr_collision()
 

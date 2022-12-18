@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+event_inherited()
 _enable_gravity_while_jumping = true
 scr_create_health_vars(20,10)
 function attack_horizontal() {
@@ -173,3 +173,22 @@ knockback_dir_x = 1;
 knockback_dir_y = 0;
 
 iframes = 0;
+
+//Dialogue system
+reset_dialogue_defaults();
+myPortrait			= spr_portrait_player;
+myVoice				= snd_voice2;
+myFont				= fnt_dialogue;
+myName				= "Player";
+
+myPortraitTalk		= spr_portrait_examplechar_mouth;
+myPortraitTalk_x	= 26;
+myPortraitTalk_y	= 44;
+myPortraitIdle		= spr_portrait_examplechar_idle;
+
+// Room transition
+if (global.target_x != -1) {
+	x = global.target_x;
+	y = global.target_y;
+	direction = global.target_direction;
+}
