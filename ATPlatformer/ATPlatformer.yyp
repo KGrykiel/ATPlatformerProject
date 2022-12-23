@@ -13,7 +13,7 @@
     {"id":{"name":"ts_collisons","path":"tilesets/ts_collisons/ts_collisons.yy",},"order":0,},
     {"id":{"name":"reset_dialogue_defaults","path":"scripts/reset_dialogue_defaults/reset_dialogue_defaults.yy",},"order":4,},
     {"id":{"name":"sequence_moments","path":"scripts/sequence_moments/sequence_moments.yy",},"order":4,},
-    {"id":{"name":"obj_item_world","path":"objects/obj_item_world/obj_item_world.yy",},"order":20,},
+    {"id":{"name":"obj_dummy_item_world","path":"objects/obj_dummy_item_world/obj_dummy_item_world.yy",},"order":20,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":6,},
     {"id":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},"order":1,},
     {"id":{"name":"spr_attack_smear","path":"sprites/spr_attack_smear/spr_attack_smear.yy",},"order":4,},
@@ -123,14 +123,10 @@
     "children": [],
   },
   "RoomOrderNodes": [
-<<<<<<< HEAD
-    {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
-=======
     {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"roomId":{"name":"rm_concept","path":"rooms/rm_concept/rm_concept.yy",},},
     {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
     {"roomId":{"name":"rm_dialoguesystem_demo","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},},
->>>>>>> 46d79c97c488a62c877cd1aaef4003a52b346808
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_cameraTest","path":"rooms/rm_cameraTest/rm_cameraTest.yy",},},
     {"roomId":{"name":"rm_wallJump","path":"rooms/rm_wallJump/rm_wallJump.yy",},},

@@ -4,15 +4,6 @@
 grid_x = 0
 grid_y = 0
 
-/* function create_item(_name, _desc, _spr) constructor {
-	name = _name;
-	description = _desc;
-	sprite = _spr
-}
-
-global.item_list = {
-	dummy : new create_item("Dummy Item", "Fuck All", spr_item_default)
-} */
 instance_create_layer(0,0,"Instances",obj_item_manager)
 rowLength = 6
 inventory = array_create(INVENTORY_SIZE, -1)

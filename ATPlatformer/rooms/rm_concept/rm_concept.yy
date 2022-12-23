@@ -16,7 +16,9 @@
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
   ],
   "layers": [
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Text","instances":[],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Text","instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_23EB5DA6","properties":[],"isDnd":false,"objectId":{"name":"obj_dummy_item_world","path":"objects/obj_dummy_item_world/obj_dummy_item_world.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":256.0,"y":544.0,},
+      ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Frontwalls","tilesetId":{"name":"ts_industrial","path":"tilesets/ts_industrial/ts_industrial.yy",},"x":0,"y":0,"tiles":{"TileDataFormat":1,"SerialiseWidth":79,"SerialiseHeight":47,"TileCompressedData":[
 -78,19,1,-2147483648,-78,19,1,-2147483648,-78,19,1,-2147483648,-78,19,2,-2147483648,10,-4,25,1,29,-18,25,1,11,-19,19,1,10,-5,25,1,29,-17,25,1,11,-9,19,2,-2147483648,20,-4,-2147483648,1,27,-18,-2147483648,2,24,11,-18,19,1,20,-5,-2147483648,1,21,-6,-2147483648,-11,0,1,18,-9,19,4,-2147483648,16,7,8,-22,-2147483648,2,24,11,-17,19,
 1,20,-5,-2147483648,1,21,-6,-2147483648,-11,0,1,18,-9,19,2,-2147483648,20,-8,-2147483648,-4,0,-13,-2147483648,1,24,-5,25,1,11,-11,19,10,16,13,13,14,-2147483648,-2147483648,21,-2147483648,-2147483648,12,-12,13,3,14,0,18,-9,19,2,-2147483648,20,-31,-2147483648,4,24,25,25,11,-11,19,7,20,-2147483648,-2147483648,21,-2147483648,-2147483648,18,-12,19,3,20,0,18,-9,19,2,
@@ -115,6 +117,7 @@
     {"name":"inst_3ECCE23E","path":"rooms/rm_concept/rm_concept.yy",},
     {"name":"inst_7968E250","path":"rooms/rm_concept/rm_concept.yy",},
     {"name":"inst_96279F4","path":"rooms/rm_concept/rm_concept.yy",},
+    {"name":"inst_23EB5DA6","path":"rooms/rm_concept/rm_concept.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
