@@ -82,6 +82,15 @@ function player_state_free(){
 
 	standard_movement()
 	interact()
+	
+	//TODO: probably make it into a seperate method like stop_player or something
+	//looks kinda messy like this
+	if(instance_exists(obj_textbox))
+	{ 
+		state = player_state_dialogue 
+		sprite_index = spr_player_idle;
+		horizontal_speed = 0;
+	}
 }
 
 function player_state_coyote(){
@@ -139,6 +148,13 @@ function player_state_against_wall() {
 }
 
 function player_state_stun() {
+}
+
+function player_state_dialogue() {
+	if(!instance_exists(obj_textbox)){ free_player() }
+}
+
+function player_state_transition(){
 }
 
 function interact() {

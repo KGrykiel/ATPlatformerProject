@@ -31,9 +31,15 @@ function movement() {
 }
 
 function commit_movement() {
-	x += horizontal_speed// + environmental_horizontal_speed
-	y += vertical_speed //+ environmental_vertical_speed
+	x += horizontal_speed
+	y += vertical_speed 
 }
+
+function commit_environmental_movement() {
+	x += environmental_horizontal_speed
+	y += environmental_vertical_speed
+}
+
 
 function apply_resistance(){
 	environmental_horizontal_speed -= sign(environmental_horizontal_speed) * resistance;
