@@ -20,7 +20,6 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3CA4B2BF","properties":[],"isDnd":false,"objectId":{"name":"obj_examplechar","path":"objects/obj_examplechar/obj_examplechar.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":256.0,"y":128.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4510C1D3","properties":[],"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":128.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_346CFEAD","properties":[],"isDnd":false,"objectId":{"name":"obj_manager","path":"objects/obj_manager/obj_manager.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":96.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_229BA284","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"height","path":"objects/obj_camera/obj_camera.yy",},"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"value":"270",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"width","path":"objects/obj_camera/obj_camera.yy",},"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"value":"480",},
@@ -36,7 +35,6 @@
   "instanceCreationOrder": [
     {"name":"inst_3CA4B2BF","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},
     {"name":"inst_4510C1D3","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},
-    {"name":"inst_346CFEAD","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},
     {"name":"inst_229BA284","path":"rooms/rm_dialoguesystem_demo/rm_dialoguesystem_demo.yy",},
   ],
   "inheritCreationOrder": false,
