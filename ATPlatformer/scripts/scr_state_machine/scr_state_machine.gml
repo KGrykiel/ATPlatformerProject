@@ -82,6 +82,7 @@ function player_state_free(){
 
 	standard_movement()
 	interact()
+	promptControl()
 }
 
 function player_state_coyote(){
@@ -190,7 +191,19 @@ function interact() {
 			script_execute_array(activate.entity_activate_script,activate.entity_activate_args);
 			
 		}
-		
-	
+	}
+}
+
+function promptControl() {
+	//check for collision with interactible object
+	nearbyInteractible = collision_rectangle(x-30,y-30,x+30,y+30,obj_interactable,false,true);
+	if (nearbyInteractible){
+		//pop up prompt
+		if (npcPrompt == noone || npcPrompt == undefined) {
+			npcPrompt = make_prompt(nearbyInteractible,nearbyInteractible.x,nearbyInteractible.y-450);
+		}
+	}
+	if (!nearbyInteractible){
+		dismiss_prompt(npcPrompt);
 	}
 }

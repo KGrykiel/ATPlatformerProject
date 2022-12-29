@@ -157,3 +157,6 @@ knockback_dir_x = 1;
 knockback_dir_y = 0;
 
 iframes = 0;
+
+//Prompts variables
+npcPrompt = noone;
