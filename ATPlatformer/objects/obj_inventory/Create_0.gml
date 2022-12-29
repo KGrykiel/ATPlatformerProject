@@ -3,6 +3,7 @@
 #macro INVENTORY_SIZE 15
 grid_x = 0
 grid_y = 0
+key_inventory = 0
 
 instance_create_layer(0,0,"Instances",obj_item_manager)
 rowLength = 6
