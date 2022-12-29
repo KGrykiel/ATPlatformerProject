@@ -202,8 +202,10 @@ function promptControl() {
 		if (npcPrompt == noone || npcPrompt == undefined) {
 			npcPrompt = make_prompt(nearbyInteractible,nearbyInteractible.x,nearbyInteractible.y-450);
 		}
+		show_debug_message("obj_player has found an interactible object");
 	}
 	if (!nearbyInteractible){
 		dismiss_prompt(npcPrompt);
+		show_debug_message("obj_player hasnt found anything");
 	}
 }
