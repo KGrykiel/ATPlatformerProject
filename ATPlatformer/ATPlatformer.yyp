@@ -8,6 +8,7 @@
     {"id":{"name":"scr_jumpbuffer","path":"scripts/scr_jumpbuffer/scr_jumpbuffer.yy",},"order":6,},
     {"id":{"name":"spr_bg_test","path":"sprites/spr_bg_test/spr_bg_test.yy",},"order":9,},
     {"id":{"name":"spr_dialoguebox","path":"sprites/spr_dialoguebox/spr_dialoguebox.yy",},"order":1,},
+    {"id":{"name":"spr_selection","path":"sprites/spr_selection/spr_selection.yy",},"order":20,},
     {"id":{"name":"obj_player_attack","path":"objects/obj_player_attack/obj_player_attack.yy",},"order":6,},
     {"id":{"name":"change_variable","path":"scripts/change_variable/change_variable.yy",},"order":0,},
     {"id":{"name":"ts_collisons","path":"tilesets/ts_collisons/ts_collisons.yy",},"order":0,},
