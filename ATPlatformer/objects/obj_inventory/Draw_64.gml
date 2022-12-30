@@ -16,8 +16,8 @@ if (key_inventory) {
 
 	// item slots
 	for (var i = 0; i < INVENTORY_SIZE; i+=1) {
-		var xx = grid_x + (i mod ITEM_ROW_LENGTH) * 36 + 2;
-		var yy = grid_y + (i div ITEM_ROW_LENGTH) * 36 + 2;
+		var xx = grid_x + (i mod ITEM_ROW_LENGTH) * (ITEM_SPRITE_SIZE + GRID_SPACING) + (GRID_SPACING / 2);
+		var yy = grid_y + (i div ITEM_ROW_LENGTH) * (ITEM_SPRITE_SIZE + GRID_SPACING) + (GRID_SPACING / 2);
 		
 		draw_sprite(spr_slot,0,xx,yy)
 		
@@ -30,14 +30,20 @@ if (key_inventory) {
 		}
 	}
 	
-	var xx = grid_x + (selected_item_index mod ITEM_ROW_LENGTH) * 36 + 2;
-	var yy = grid_y + (selected_item_index div ITEM_ROW_LENGTH) * 36 + 2;
+	var xx = grid_x + (selected_item_index mod ITEM_ROW_LENGTH) * (ITEM_SPRITE_SIZE + GRID_SPACING) + (GRID_SPACING / 2);
+	var yy = grid_y + (selected_item_index div ITEM_ROW_LENGTH) * (ITEM_SPRITE_SIZE + GRID_SPACING) + (GRID_SPACING / 2);
 	draw_sprite(spr_selection,0,xx,yy)
 	
 	// description box
+	var desc_box_x = grid_x + grid_width + DESC_BOX_GRID_GAP
+	var desc_box_y = grid_y
 	draw_sprite_stretched(spr_inventory_bg, 0, 
-							grid_x + grid_width + DESC_BOX_GRID_GAP,
-							grid_y,
+							desc_box_x,
+							desc_box_y,
 							DESCRIPTION_BOX_WIDTH,
 							grid_height)
+	if (inventory[selected_item_index] != -1) {
+		draw_text(desc_box_x, desc_box_y, inventory[selected_item_index].name)
+		draw_text(desc_box_x, desc_box_y + 64, inventory[selected_item_index].description)
+	}
 }

@@ -2,14 +2,14 @@
 // You can write your code in this editor
 
 
-#macro INVENTORY_SIZE 15 // number of items in inventory
+#macro INVENTORY_SIZE 30 // number of items in inventory
 #macro ITEM_ROW_LENGTH 5 // number of items per row in grid
 
-#macro ITEM_SPRITE_SIZE 32 // sprite dimensions for item, slot, selection icon, etc.
-#macro GRID_SPACING 4 // 2 * gap between slots (therefore accounts for either side)
+#macro ITEM_SPRITE_SIZE 64 // sprite dimensions for item, slot, selection icon, etc.
+#macro GRID_SPACING 8 // 2 * gap between slots (therefore accounts for either side)
 
-#macro DESCRIPTION_BOX_WIDTH 64 // width of box provided for item description
-#macro DESC_BOX_GRID_GAP 12 // gap between
+#macro DESCRIPTION_BOX_WIDTH 256 // width of box provided for item description
+#macro DESC_BOX_GRID_GAP 24 // gap between inventory grid and description text
 
 key_inventory = 0 // to allow inv. display to be brought up
 selected_item_index = 0 // records which item is currently being looked at by the player
