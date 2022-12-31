@@ -10,7 +10,8 @@ function create_item(_name, _desc, _spr) constructor {
 
 // global variable that stores all item types
 global.item_list = {
-	dummy : new create_item("Dummy Item", "Does fuck all", spr_dummy_item)
+	dummy : new create_item("Dummy Item", "Does fuck all", spr_dummy_item),
+	dummy2 : new create_item("Sonic Screwdriver", "Hey bb, are u a dr? bc when i look at you i wan2 go 'oooo weee oooo'", spr_dumbass_joke)
 }
 
 

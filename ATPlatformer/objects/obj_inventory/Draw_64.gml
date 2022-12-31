@@ -43,7 +43,13 @@ if (key_inventory) {
 							DESCRIPTION_BOX_WIDTH,
 							grid_height)
 	if (inventory[selected_item_index] != -1) {
-		draw_text(desc_box_x, desc_box_y, inventory[selected_item_index].name)
-		draw_text(desc_box_x, desc_box_y + 64, inventory[selected_item_index].description)
+		draw_set_font(fnt_dialogue)
+		var name = scr_wrap_text(inventory[selected_item_index].name, DESCRIPTION_BOX_WIDTH, "\n", false)
+		draw_text(desc_box_x, desc_box_y, name)
+		var name_height = string_height(name)
+		
+		draw_set_font(fnt_debug)
+		var desc = scr_wrap_text(inventory[selected_item_index].description, DESCRIPTION_BOX_WIDTH, "\n", false)
+		draw_text(desc_box_x, desc_box_y + name_height , desc)
 	}
 }
