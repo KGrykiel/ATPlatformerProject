@@ -8,8 +8,9 @@
 #macro ITEM_SPRITE_SIZE 64 // sprite dimensions for item, slot, selection icon, etc.
 #macro GRID_SPACING 8 // 2 * gap between slots (therefore accounts for either side)
 
-#macro DESCRIPTION_BOX_WIDTH 256 // width of box provided for item description
+#macro DESCRIPTION_BOX_WIDTH 272 // width of box provided for item description
 #macro DESC_BOX_GRID_GAP 24 // gap between inventory grid and description text
+#macro DESCRIPTION_TEXT_SPACING 16
 
 key_inventory = 0 // to allow inv. display to be brought up
 selected_item_index = 0 // records which item is currently being looked at by the player
@@ -34,10 +35,10 @@ function inventory_search(itemType) {
 	return -1;
 }
 
-function inventory_add(itemType) {
+function inventory_add(item) {
 	slot = inventory_search(-1);
 	if (slot != -1) {
-		inventory[slot] = itemType;
+		inventory[slot] = item;
 		return true;
 	}
 	else return false;

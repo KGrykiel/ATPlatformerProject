@@ -21,10 +21,6 @@ if (key_inventory) {
 		
 		draw_sprite(spr_slot,0,xx,yy)
 		
-		/*if (mx >= xx) && (mx <= xx+ITEM_SPRITE_SIZE) && (my >= yy) && (my <= yy+ITEM_SPRITE_SIZE) {
-			draw_sprite(spr_selection,0,xx,yy)
-		}*/
-	
 		if (inventory[i] != -1) {
 			draw_sprite(inventory[i].sprite,0,xx,yy)	
 		}
@@ -42,14 +38,16 @@ if (key_inventory) {
 							desc_box_y,
 							DESCRIPTION_BOX_WIDTH,
 							grid_height)
+							
+	// name and description text
 	if (inventory[selected_item_index] != -1) {
 		draw_set_font(fnt_dialogue)
-		var name = scr_wrap_text(inventory[selected_item_index].name, DESCRIPTION_BOX_WIDTH, "\n", false)
-		draw_text(desc_box_x, desc_box_y, name)
+		var name = scr_wrap_text(inventory[selected_item_index].name, DESCRIPTION_BOX_WIDTH - DESCRIPTION_TEXT_SPACING, "\n", false)
+		draw_text(desc_box_x + DESCRIPTION_TEXT_SPACING, desc_box_y + DESCRIPTION_TEXT_SPACING, name)
 		var name_height = string_height(name)
 		
 		draw_set_font(fnt_debug)
-		var desc = scr_wrap_text(inventory[selected_item_index].description, DESCRIPTION_BOX_WIDTH, "\n", false)
-		draw_text(desc_box_x, desc_box_y + name_height , desc)
+		var desc = scr_wrap_text(inventory[selected_item_index].description, DESCRIPTION_BOX_WIDTH - DESCRIPTION_TEXT_SPACING, "\n", false)
+		draw_text(desc_box_x + DESCRIPTION_TEXT_SPACING, desc_box_y + name_height + DESCRIPTION_TEXT_SPACING, desc)
 	}
 }
