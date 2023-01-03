@@ -12,6 +12,11 @@ key_interact = keyboard_check_pressed(ord("E"));
 key_attack = mouse_check_button_pressed(mb_left)
 if iframes > 0 iframes--;
 
+if (keyboard_check_pressed(ord("I"))) && 
+	(state == player_state_free || state == player_state_inventory_check) {
+	key_inventory = !key_inventory
+}
+
 grounded = check_collision(0, 1);
 
 

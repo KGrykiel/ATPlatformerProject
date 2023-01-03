@@ -12,7 +12,7 @@
 #macro DESC_BOX_GRID_GAP 24 // gap between inventory grid and description text
 #macro DESCRIPTION_TEXT_SPACING 16
 
-key_inventory = 0 // to allow inv. display to be brought up
+inventory_active = 0
 selected_item_index = 0 // records which item is currently being looked at by the player
 
 

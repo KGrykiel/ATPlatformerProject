@@ -75,6 +75,7 @@ key_down = 0;
 key_jump = 0;
 key_jump_held = 0;
 key_interact = 0;
+key_inventory = 0;
 key_attack = 0;
 
 //Velocty components for player input

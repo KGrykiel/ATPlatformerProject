@@ -4,7 +4,7 @@
 // this will probably change later
 //display_set_gui_size(320,180)
 
-if (key_inventory) {
+if (inventory_active) {
 	// code I stole to draw inventory grid w/ bg
 	// inventory background
 	draw_sprite_stretched(spr_inventory_bg, 0, 

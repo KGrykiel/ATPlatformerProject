@@ -79,6 +79,13 @@ function player_state_free(){
 	}
 	
 	if(key_attack) grounded_attack()
+	
+	if(key_inventory) {
+		state = player_state_inventory_check
+		obj_inventory.inventory_active = true
+		sprite_index = spr_player_idle
+		horizontal_speed = 0
+	}
 
 	standard_movement()
 	interact()
@@ -155,6 +162,13 @@ function player_state_dialogue() {
 }
 
 function player_state_transition(){
+}
+
+function player_state_inventory_check() {
+	if (!key_inventory) {
+		state = player_state_free
+		obj_inventory.inventory_active = false
+	}
 }
 
 function interact() {
