@@ -83,6 +83,12 @@ function player_state_free(){
 	standard_movement()
 	interact()
 	
+	if(obj_inventory.inventory_active) {
+		state = player_state_inventory_check
+		sprite_index = spr_player_idle
+		horizontal_speed = 0;
+	}
+	
 	//TODO: probably make it into a seperate method like stop_player or something
 	//looks kinda messy like this
 	if(instance_exists(obj_textbox))
@@ -155,6 +161,13 @@ function player_state_dialogue() {
 }
 
 function player_state_transition(){
+}
+
+function player_state_inventory_check() {
+	if (!obj_inventory.inventory_active) {
+		free_player()
+		//obj_inventory.inventory_active = false
+	}
 }
 
 function interact() {
