@@ -50,7 +50,7 @@ function apply_gravity(){
 		vertical_speed += down_gravity
 		// This speed limit is very generous so we might have to tweak it
 		// in the future. We don't want a meteorite player
-		vertical_speed = min(vertical_speed + down_gravity, max_down_speed);
+		vertical_speed = min(max(vertical_speed + down_gravity,1), max_down_speed);
 	}
 	else{
 		vertical_speed = vertical_speed + _gravity;
