@@ -79,16 +79,15 @@ function player_state_free(){
 	}
 	
 	if(key_attack) grounded_attack()
-	
-	if(key_inventory) {
-		state = player_state_inventory_check
-		obj_inventory.inventory_active = true
-		sprite_index = spr_player_idle
-		horizontal_speed = 0
-	}
 
 	standard_movement()
 	interact()
+	
+	if(obj_inventory.inventory_active) {
+		state = player_state_inventory_check
+		sprite_index = spr_player_idle
+		horizontal_speed = 0;
+	}
 	
 	//TODO: probably make it into a seperate method like stop_player or something
 	//looks kinda messy like this
@@ -165,9 +164,9 @@ function player_state_transition(){
 }
 
 function player_state_inventory_check() {
-	if (!key_inventory) {
-		state = player_state_free
-		obj_inventory.inventory_active = false
+	if (!obj_inventory.inventory_active) {
+		free_player()
+		//obj_inventory.inventory_active = false
 	}
 }
 

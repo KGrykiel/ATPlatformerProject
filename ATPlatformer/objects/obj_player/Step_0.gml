@@ -10,11 +10,13 @@ key_jump = keyboard_check_pressed(vk_space);
 key_jump_held = keyboard_check(vk_space);
 key_interact = keyboard_check_pressed(ord("E"));
 key_attack = mouse_check_button_pressed(mb_left)
+key_inventory = keyboard_check_pressed(ord("I"))
 if iframes > 0 iframes--;
 
-if (keyboard_check_pressed(ord("I"))) && 
-	(state == player_state_free || state == player_state_inventory_check) {
-	key_inventory = !key_inventory
+if (key_inventory) && 
+	(state == player_state_free || state == player_state_inventory_check) {	
+	obj_inventory.inventory_active = !obj_inventory.inventory_active
+	show_debug_message(horizontal_speed)
 }
 
 grounded = check_collision(0, 1);
