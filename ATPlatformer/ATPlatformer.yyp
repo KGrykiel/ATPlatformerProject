@@ -97,7 +97,7 @@
     {"id":{"name":"scr_wrap_text","path":"scripts/scr_wrap_text/scr_wrap_text.yy",},"order":13,},
     {"id":{"name":"seq_attack","path":"sequences/seq_attack/seq_attack.yy",},"order":0,},
     {"id":{"name":"spr_slot","path":"sprites/spr_slot/spr_slot.yy",},"order":10,},
-    {"id":{"name":"spr_dumbass_joke","path":"sprites/spr_dumbass_joke/spr_dumbass_joke.yy",},"order":0,},
+    {"id":{"name":"spr_sonic_screwdriver","path":"sprites/spr_sonic_screwdriver/spr_sonic_screwdriver.yy",},"order":0,},
     {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},"order":19,},
     {"id":{"name":"obj_jumpy_platform","path":"objects/obj_jumpy_platform/obj_jumpy_platform.yy",},"order":9,},
     {"id":{"name":"spr_portraitframe","path":"sprites/spr_portraitframe/spr_portraitframe.yy",},"order":11,},
@@ -176,6 +176,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.11.1.56",
+    "IDEVersion": "2022.9.1.51",
   },
 }
