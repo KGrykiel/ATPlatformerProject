@@ -16,7 +16,7 @@ function dismiss_prompt(_whichPrompt){ //choose which prompt to dismiss
                 fadeMe = "fadeOut"; //fade out that prompt
             }
             if (instance_exists(obj_player)){
-                npcPrompt = false //change prompt back to false as no prompt dismissed
+                npcPrompt = noone //change prompt back to false as no prompt dismissed
             }
         }
     }

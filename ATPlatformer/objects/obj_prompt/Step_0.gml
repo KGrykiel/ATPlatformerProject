@@ -9,7 +9,7 @@ switch fadeMe {
         if (image_alpha>=1){
             fadeMe = "fadeVisible";
         }
-    }; break;
+    } break;
     
     case "fadeOut": {
         if (image_alpha>0){
@@ -19,5 +19,5 @@ switch fadeMe {
             fadeMe="fadeDone";
             alarm[0]=2;
         }
-    }; break;
+    } break;
 }
