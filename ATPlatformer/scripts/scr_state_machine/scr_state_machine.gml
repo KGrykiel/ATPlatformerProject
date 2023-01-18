@@ -46,7 +46,8 @@ function unfree_player(){
 }
 
 function apply_gravity(){
-	if (vertical_speed > 0) {
+	//changed to -1.5 because it makes the movement feel better
+	if (vertical_speed > -1.5) {
 		vertical_speed += down_gravity
 		// This speed limit is very generous so we might have to tweak it
 		// in the future. We don't want a meteorite player
@@ -83,6 +84,7 @@ function player_state_free(){
 	standard_movement()
 	interact()
 	
+	//TODO: sprite shouldn't be directly assigned outside of scr_state_sprites
 	if(obj_inventory.inventory_active) {
 		state = player_state_inventory_check
 		sprite_index = spr_player_idle
