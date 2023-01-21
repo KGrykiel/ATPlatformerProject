@@ -1,4 +1,4 @@
-event_inherited(); //so it will inherit from par_speaker
+ event_inherited(); //so it will inherit from par_speaker
 
 
 //-------DIALOGUE STUFF

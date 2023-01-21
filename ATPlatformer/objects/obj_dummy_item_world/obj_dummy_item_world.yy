@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_dummy_item_world",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_dummy_item",
+    "path": "sprites/spr_dummy_item/spr_dummy_item.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

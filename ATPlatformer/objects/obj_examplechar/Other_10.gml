@@ -1,4 +1,4 @@
-//---You can update variables here!---//
+  //---You can update variables here!---//
 reset_dialogue_defaults();
 
 

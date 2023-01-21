@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_dummy_item_world_2",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_dumbass_joke",
+    "path": "sprites/spr_dumbass_joke/spr_dumbass_joke.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
