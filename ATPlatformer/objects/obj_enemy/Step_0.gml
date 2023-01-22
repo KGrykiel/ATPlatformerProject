@@ -15,6 +15,11 @@ if check_collision(horizontal_speed, -1) {
 	horizontal_speed *= -1;
 }
 
+// Change direction when colliding with another enemy
+if place_meeting(x,y,obj_enemy) {
+	horizontal_speed *= -1;
+}
+
 // damage player when colliding
 if place_meeting(x, y, obj_player) {
 	with (obj_player) {
