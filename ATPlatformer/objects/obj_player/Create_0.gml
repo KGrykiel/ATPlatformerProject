@@ -75,6 +75,7 @@ key_down = 0;
 key_jump = 0;
 key_jump_held = 0;
 key_interact = 0;
+key_inventory = 0;
 key_attack = 0;
 
 //Velocty components for player input
@@ -83,10 +84,10 @@ vertical_speed = 0;
 //Velocity components for movement induced by the environment
 environmental_horizontal_speed = 0;
 environmental_vertical_speed = 0;
-_gravity = 0.2;
+_gravity = 0.4;
 
 //down gravity
-down_gravity = 0.3;
+down_gravity = 0.6;
 max_down_speed = 50;
 
 //speed
@@ -94,12 +95,12 @@ walk_speed = 4;
 air_speed = 4;
 
 //variable jumping heights
-max_jump_velocity = 7;
-min_jump_velocity = 4;
+max_jump_velocity = 10;
+min_jump_velocity = 3;
 
 //Acceleration and deceleration
 acceleration_period = 12; // no. of frames to accelerate from 0 to max_speed
-air_acceleration_period = 20; // no. of frames to accelerate from 0 to max_speed
+air_acceleration_period = 6; // no. of frames to accelerate from 0 to max_speed
 
 deceleration_period = 6; // no. of frames to decelerate from max_speed to 0
 air_deceleration_period = 10; // no. of frames to decelerate from max_speed to 0

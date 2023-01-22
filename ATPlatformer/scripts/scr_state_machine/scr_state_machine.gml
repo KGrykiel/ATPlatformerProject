@@ -50,7 +50,7 @@ function apply_gravity(){
 		vertical_speed += down_gravity
 		// This speed limit is very generous so we might have to tweak it
 		// in the future. We don't want a meteorite player
-		vertical_speed = min(vertical_speed + down_gravity, max_down_speed);
+		vertical_speed = min(max(vertical_speed + down_gravity,1), max_down_speed);
 	}
 	else{
 		vertical_speed = vertical_speed + _gravity;
@@ -82,6 +82,12 @@ function player_state_free(){
 
 	standard_movement()
 	interact()
+	
+	if(obj_inventory.inventory_active) {
+		state = player_state_inventory_check
+		sprite_index = spr_player_idle
+		horizontal_speed = 0;
+	}
 	
 	//TODO: probably make it into a seperate method like stop_player or something
 	//looks kinda messy like this
@@ -155,6 +161,13 @@ function player_state_dialogue() {
 }
 
 function player_state_transition(){
+}
+
+function player_state_inventory_check() {
+	if (!obj_inventory.inventory_active) {
+		free_player()
+		//obj_inventory.inventory_active = false
+	}
 }
 
 function interact() {
