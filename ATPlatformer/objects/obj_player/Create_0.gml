@@ -145,9 +145,9 @@ current_jump = 0;
 coyote_time = 0.05
 
 //dash parameters
-dash_time = 0.5;
+dash_time = 0.25;
 dash_cooldown = 0.7;
-dash_speed = walk_speed * 2;
+dash_speed = walk_speed * 3;
 
 
 //jump buffer

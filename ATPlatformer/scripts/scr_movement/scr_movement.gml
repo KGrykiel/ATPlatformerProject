@@ -40,10 +40,6 @@ function movement() {
 	}
 }
 
-function movement_while_dashing() {
-	
-}
-
 function commit_movement() {
 	x += horizontal_speed
 	y += vertical_speed 

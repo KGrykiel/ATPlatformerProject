@@ -38,10 +38,12 @@ function free_player(){
 }
 
 function unfree_player(){
-	if (coyote_time != 0) {
+	// If coyote_time enabled, and not coming out of a dash, enter coyote state
+	if (coyote_time != 0 && state != player_state_dashing) {
 		state = player_state_coyote
 		alarm[0] = FRAME_RATE * coyote_time
 	}
+	// Else no jump resets
 	else state = player_state_air
 }
 
@@ -261,4 +263,16 @@ function interact() {
 		
 	
 	}
+}
+
+// Debugger function used to work out which state you're in when called:
+function state_check_debug() {
+	if (state == player_state_against_wall) {show_debug_message("AGAINST_WALL")}
+	if (state == player_state_air) {show_debug_message("AIR")}
+	if (state == player_state_coyote) {show_debug_message("COYOTE")}
+	if (state == player_state_dashing) {show_debug_message("DASH")}
+	if (state == player_state_dialogue) {show_debug_message("DIALOGUE")}
+	if (state == player_state_free) {show_debug_message("FREE")}
+	if (state == player_state_stun) {show_debug_message("STUN")}
+	if (state == player_state_transition) {show_debug_message("TRANSITION")}
 }
