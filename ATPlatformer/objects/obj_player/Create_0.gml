@@ -131,6 +131,7 @@ grounded = true
 jumped = false
 dashing = false
 dash_ground_reset = true
+dash_wall_reset = false
 dash_cooling = false
 want_to_dash = false
 dash_direction = 1;
@@ -149,6 +150,8 @@ coyote_time = 0.05
 dash_time = 0.25;
 dash_cooldown = 0.7;
 dash_speed = walk_speed * 3;
+dash_distance = dash_speed * dash_time;
+dash_energy = 0;
 
 
 //jump buffer

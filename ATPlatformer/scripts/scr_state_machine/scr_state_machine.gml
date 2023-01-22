@@ -14,6 +14,7 @@ function enable_jump(){
 		// movement so they can't stay stuck to the wall
 		if (against_wall && !grounded) {
 			against_wall = false
+			dash_direction = dash_direction * -1
 			facing_x = facing_x * -1
 			horizontal_speed = air_speed * facing_x
 			mvt_locked = mvt_lock_countdown_max
@@ -143,8 +144,12 @@ function player_state_air(){
 }
 
 function begin_dashing() {
+	// Used for debug
+	// time_spent_dashing = 0.0;
+	
 	// Amount of time for which the dash will continue
-	alarm[1] = FRAME_RATE * dash_time;
+	dash_energy = dash_distance;
+	
 	alarm[2] = FRAME_RATE * dash_cooldown;
 	vertical_speed = 0
 	horizontal_speed = dash_speed * dash_direction
@@ -154,8 +159,13 @@ function begin_dashing() {
 	state = player_state_dashing;
 }
 
-// todo - change horizontal speed depending on left/right
 function player_state_dashing() {
+	// Used for debug
+	// time_spent_dashing += delta_time / 1000000;
+	// show_debug_message(string(t) + " " + string(dash_energy) + " " + string(y));
+	
+	vertical_speed = 0
+	dash_energy -= dash_speed * delta_time / 1000000;
 	dash_movement()
 	
 	// Creating the trail effect
@@ -163,13 +173,27 @@ function player_state_dashing() {
 		trail_removal_rate = 0.05;
 		sprite_index = other.sprite_index;
 		image_alpha = 0.7;
-		
 	}
 	
+	// Checks if the player has collided with a wall, and alters state
 	if (against_wall) {
-		alarm[1] = -1; // Cancel rest of dash because wall hit
 		dashing = false
 		state = player_state_against_wall
+	}
+	// If dash energy depleted (full dash is complete) stop dashing and work out new state
+	else if (dash_energy <= 0) {
+		dashing = false;
+		// Either returns to free state, or some other unfree state
+
+		// Stops you from dashing a second time in midair if you had some contact with the ground
+		// but are now midair
+		dash_ground_reset = false;
+
+		if (grounded) {
+		    state = player_state_free;
+		} else {
+		    unfree_player();
+		}
 	}
 	// show_debug_message("DASHING NOW")
 }

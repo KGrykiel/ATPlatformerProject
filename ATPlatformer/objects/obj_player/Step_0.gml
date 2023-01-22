@@ -25,7 +25,7 @@ grounded = check_collision(0, 1);
 // The player can only dash if the dash key is down, the cooldown from previous dashes is complete,
 // and the player has hit the ground since the previous dash (want_to_dash is all that needs to be checked
 // in other parts of the program)
-want_to_dash = key_dash && !dash_cooling && dash_ground_reset;
+want_to_dash = key_dash && !dash_cooling && (dash_ground_reset || dash_wall_reset);
 
 if (grounded)
 {
@@ -37,6 +37,8 @@ if (grounded)
 	safe_y = y;
 	dash_ground_reset = true;
 }
+
+if (against_wall) dash_wall_reset = true;
 
 
 script_execute(state);
