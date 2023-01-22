@@ -225,10 +225,7 @@ function player_state_against_wall() {
 	
 	enable_jump()
 	
-	if (want_to_dash) {
-		begin_dashing()
-	}
-	else if (grounded) {
+	if (grounded) {
 		state = player_state_free;
 	}
 	if (!against_wall && !dashing) {
