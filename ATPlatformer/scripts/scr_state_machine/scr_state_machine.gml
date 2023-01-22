@@ -158,6 +158,14 @@ function begin_dashing() {
 function player_state_dashing() {
 	dash_movement()
 	
+	// Creating the trail effect
+	with (instance_create_depth(x,y,depth+1, obj_player_dash_trail)) {
+		trail_removal_rate = 0.05;
+		sprite_index = other.sprite_index;
+		image_alpha = 0.7;
+		
+	}
+	
 	if (against_wall) {
 		alarm[1] = -1; // Cancel rest of dash because wall hit
 		dashing = false
