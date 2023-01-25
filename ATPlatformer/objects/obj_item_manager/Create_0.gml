@@ -18,7 +18,7 @@ global.item_list = {
 							}),
 	dummy2 : new create_item("Sonic Screwdriver", 
 							"Hey bb, are u a dr? bc when i look at you i wan2 go 'oooo weee oooo'; multi-use item", 
-							spr_dumbass_joke,
+							spr_sonic_screwdriver,
 							function() {
 								audio_play_sound(snd_sonic_screwdriver, 1, false)
 							})

@@ -16,7 +16,6 @@ if iframes > 0 iframes--;
 if (key_inventory) && 
 	(state == player_state_free || state == player_state_inventory_check) {	
 	obj_inventory.inventory_active = !obj_inventory.inventory_active
-	show_debug_message(horizontal_speed)
 }
 
 grounded = check_collision(0, 1);
