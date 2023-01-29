@@ -40,7 +40,7 @@ function free_player(){
 
 function unfree_player(){
 	// If coyote_time enabled, and not coming out of a dash, enter coyote state
-	if (coyote_time != 0 && state != player_state_dashing) {
+	if (coyote_time != 0) {
 		state = player_state_coyote
 		alarm[0] = FRAME_RATE * coyote_time
 	}
@@ -192,7 +192,7 @@ function player_state_dashing() {
 		if (grounded) {
 		    state = player_state_free;
 		} else {
-		    unfree_player();
+		    state = player_state_air;
 		}
 	}
 	// show_debug_message("DASHING NOW")
@@ -228,7 +228,7 @@ function player_state_against_wall() {
 	if (grounded) {
 		state = player_state_free;
 	}
-	if (!against_wall && !dashing) {
+	if (!against_wall) {
 		state = player_state_air 
 	}
 	
