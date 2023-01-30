@@ -16,8 +16,7 @@ function enable_jump(){
 			against_wall = false
 			dash_direction = dash_direction * -1
 			facing_x = facing_x * -1
-			horizontal_speed = air_speed * facing_x
-			mvt_locked = mvt_lock_countdown_max
+			horizontal_speed = wall_propulsion_speed * facing_x
 		}
 		time_source_stop(jump_buffer_time_source);
 		
