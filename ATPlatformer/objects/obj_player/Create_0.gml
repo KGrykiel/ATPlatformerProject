@@ -123,8 +123,6 @@ wall_sliding_speed = 1;
 against_wall = false;
 // if the character's movement is intended to be locked for some duration
 wall_propulsion_speed = 7;
-//mvt_lock_countdown_max = 120;
-//mvt_locked = 0;
 
 x_acc = 0
 

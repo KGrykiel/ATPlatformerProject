@@ -26,7 +26,6 @@ function movement() {
 	
 	if (_move_dir == 0 || abs(horizontal_speed) > current_speed) 
 	{
-		//if (mvt_locked == 0) {
 			horizontal_speed -= sign(horizontal_speed) * current_deceleration_amt;
 			if abs(horizontal_speed) < current_deceleration_amt
 			{
