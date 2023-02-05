@@ -154,7 +154,7 @@ function begin_dashing() {
 	horizontal_speed = dash_speed * dash_direction
 	dashing = true
 	dash_cooling = true // dashing disabled until cooldown completed
-	dash_ground_reset = false // dashing disabled until player hits the ground
+	dash_surface_reset = false // dashing disabled until player hits the ground
 	state = player_state_dashing;
 }
 
@@ -186,7 +186,7 @@ function player_state_dashing() {
 
 		// Stops you from dashing a second time in midair if you had some contact with the ground
 		// but are now midair
-		dash_ground_reset = false;
+		dash_surface_reset = false;
 
 		if (grounded) {
 		    state = player_state_free;
