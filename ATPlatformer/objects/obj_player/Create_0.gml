@@ -64,6 +64,10 @@ function attack_knockback() {
 	knockback_dir_x = 0;
 	knockback_dir_y = 0;
 }
+
+function dash() {
+	show_debug_message("dashing!");
+}
 //state declaration
 state = player_state_free
 
@@ -77,6 +81,7 @@ key_jump_held = 0;
 key_interact = 0;
 key_inventory = 0;
 key_attack = 0;
+key_dash = 0;
 
 //Velocty components for player input
 horizontal_speed = 0;
@@ -93,6 +98,7 @@ max_down_speed = 50;
 //speed
 walk_speed = 4;
 air_speed = 4;
+// for dash speed, see the dash parameters section
 
 //variable jumping heights
 max_jump_velocity = 10;
@@ -116,13 +122,17 @@ wall_jump_enabled = true;
 wall_sliding_speed = 1;
 against_wall = false;
 // if the character's movement is intended to be locked for some duration
-mvt_lock_countdown_max = 120;
-mvt_locked = 0;
+wall_propulsion_speed = 7;
 
 x_acc = 0
 
 grounded = true
 jumped = false
+dashing = false
+dash_surface_reset = true
+dash_cooling = false
+want_to_dash = false
+dash_direction = 1;
 
 safe_x = 0;
 safe_y = 0;
@@ -133,6 +143,14 @@ current_jump = 0;
 
 //coyote time
 coyote_time = 0.05
+
+//dash parameters
+dash_time = 0.25;
+dash_cooldown = 0.7;
+dash_speed = walk_speed * 3;
+dash_distance = dash_speed * dash_time;
+dash_energy = 0;
+
 
 //jump buffer
 jump_buffer = false;

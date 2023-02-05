@@ -14,9 +14,9 @@ function enable_jump(){
 		// movement so they can't stay stuck to the wall
 		if (against_wall && !grounded) {
 			against_wall = false
+			dash_direction = dash_direction * -1
 			facing_x = facing_x * -1
-			horizontal_speed = air_speed * facing_x
-			mvt_locked = mvt_lock_countdown_max
+			horizontal_speed = wall_propulsion_speed * facing_x
 		}
 		time_source_stop(jump_buffer_time_source);
 		
@@ -38,10 +38,12 @@ function free_player(){
 }
 
 function unfree_player(){
+	// If coyote_time enabled, and not coming out of a dash, enter coyote state
 	if (coyote_time != 0) {
 		state = player_state_coyote
 		alarm[0] = FRAME_RATE * coyote_time
 	}
+	// Else no jump resets
 	else state = player_state_air
 }
 
@@ -53,7 +55,7 @@ function apply_gravity(){
 		// in the future. We don't want a meteorite player
 		vertical_speed = min(max(vertical_speed + down_gravity,1), max_down_speed);
 	}
-	else{
+	else {
 		vertical_speed = vertical_speed + _gravity;
 	}
 }
@@ -77,6 +79,8 @@ function player_state_free(){
 
 	if (!grounded) {
 		unfree_player()
+	} else if (want_to_dash) {
+		begin_dashing()
 	}
 	
 	if(key_attack) grounded_attack()
@@ -106,7 +110,11 @@ function player_state_coyote(){
 	
 	enable_jump()
 	jump_buffer = false
-	if (grounded) free_player()
+	if (grounded) {
+		free_player();
+	} else if (want_to_dash) {
+		begin_dashing()
+	}
 	if(key_attack) air_attack();
 	standard_movement()
 }
@@ -122,7 +130,11 @@ function player_state_air(){
 
 	maybe_stop_jumping()
 	
-	if (grounded) free_player()
+	if (grounded) {
+		free_player();
+	} else if (want_to_dash) {
+		begin_dashing()
+	}
 	
 	if (against_wall && vertical_speed >= 0) {
 		state = player_state_against_wall;
@@ -130,6 +142,61 @@ function player_state_air(){
 	
 	if(key_attack) air_attack();
 	standard_movement()
+}
+
+function begin_dashing() {
+	// Used for debug
+	// time_spent_dashing = 0.0;
+	
+	// Amount of time for which the dash will continue
+	dash_energy = dash_distance;
+	
+	alarm[2] = FRAME_RATE * dash_cooldown;
+	vertical_speed = 0
+	horizontal_speed = dash_speed * dash_direction
+	dashing = true
+	dash_cooling = true // dashing disabled until cooldown completed
+	dash_surface_reset = false // dashing disabled until player hits the ground
+	state = player_state_dashing;
+}
+
+function player_state_dashing() {
+	// Used for debug
+	// time_spent_dashing += delta_time / 1000000;
+	// show_debug_message(string(t) + " " + string(dash_energy) + " " + string(y));
+	
+	vertical_speed = 0
+	dash_energy -= dash_speed * delta_time / 1000000;
+	dash_movement()
+	
+	// Creating the trail effect
+	with (instance_create_depth(x,y,depth+1, obj_player_dash_trail)) {
+		trail_removal_rate = 0.05;
+		sprite_index = other.sprite_index;
+		image_alpha = 0.7;
+	}
+	
+	// Checks if the player has collided with a wall, and alters state
+	if (against_wall) {
+		dashing = false
+		state = player_state_against_wall
+	}
+	// If dash energy depleted (full dash is complete) stop dashing and work out new state
+	else if (dash_energy <= 0) {
+		dashing = false;
+		// Either returns to free state, or some other unfree state
+
+		// Stops you from dashing a second time in midair if you had some contact with the ground
+		// but are now midair
+		dash_surface_reset = false;
+
+		if (grounded) {
+		    state = player_state_free;
+		} else {
+		    state = player_state_air;
+		}
+	}
+	// show_debug_message("DASHING NOW")
 }
 
 function standard_movement(){
@@ -141,13 +208,27 @@ function standard_movement(){
 	//commit_movement()
 }
 
+function dash_movement(){
+	//apply_gravity()
+	draw_attack()
+	movement()
+	scr_collision()
+	check_for_wall()
+}
+
 function player_state_against_wall() {
 	vertical_speed = wall_sliding_speed
+	
+	// could optionally reset dash on wall collisions (would change name to dash_surface_reset)
+	// dash_ground_reset = true
+	
 	reset_jump()
 	
 	enable_jump()
 	
-	if (grounded) { state = player_state_free }
+	if (grounded) {
+		state = player_state_free;
+	}
 	if (!against_wall) {
 		state = player_state_air 
 	}
@@ -156,6 +237,7 @@ function player_state_against_wall() {
 }
 
 function player_state_stun() {
+	
 }
 
 function player_state_dialogue() {
@@ -224,4 +306,16 @@ function interact() {
 		
 	
 	}
+}
+
+// Debugger function used to work out which state you're in when called:
+function state_check_debug() {
+	if (state == player_state_against_wall) {show_debug_message("AGAINST_WALL")}
+	if (state == player_state_air) {show_debug_message("AIR")}
+	if (state == player_state_coyote) {show_debug_message("COYOTE")}
+	if (state == player_state_dashing) {show_debug_message("DASH")}
+	if (state == player_state_dialogue) {show_debug_message("DIALOGUE")}
+	if (state == player_state_free) {show_debug_message("FREE")}
+	if (state == player_state_stun) {show_debug_message("STUN")}
+	if (state == player_state_transition) {show_debug_message("TRANSITION")}
 }
