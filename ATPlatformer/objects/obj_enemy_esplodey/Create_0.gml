@@ -6,27 +6,29 @@ ParticleSystem = part_system_create();
 esplode_particle = part_type_create();
 part_type_shape(esplode_particle, pt_shape_disk);
 part_type_scale(esplode_particle,1,1)
-part_type_size(esplode_particle,0.10,0.15,-.001,0)
+part_type_size(esplode_particle,0.05,0.10,-.001,0)
 part_type_color2(esplode_particle,$fcdb05,$db3c02);
 part_type_alpha2(esplode_particle,1,0);
-part_type_speed(esplode_particle,0.1,0.5,0,0);
+part_type_speed(esplode_particle,2,2,0,0);
 part_type_direction(esplode_particle,0,359,0,0);
-part_type_gravity(esplode_particle,0.02,90);
+//part_type_gravity(esplode_particle,0.02,90);
 // part_type_orientation(first_particle,0,359,10,0,true); useless cos disk but here for reference
-part_type_life(esplode_particle,100,150);
+part_type_life(esplode_particle,10,20);
 part_type_blend(esplode_particle,true);
 
 emitter = part_emitter_create(ParticleSystem)
 part_emitter_region(ParticleSystem, emitter, x-20, x+20, y-20, y+20, ps_shape_ellipse, ps_distr_gaussian);
-
 function walk_state() {
 	if (horizontal_speed == 0) horizontal_speed = 1;
 
 	// handle destroying the enemy when coming into contact with player attacks
 	if (place_meeting(x, y, obj_player_attack)) {
-		part_emitter_stream(ParticleSystem, emitter, esplode_particle, 1);
+		//part_emitter_stream(ParticleSystem, emitter, esplode_particle, 12);
+		part_emitter_burst(ParticleSystem, emitter, esplode_particle, 100);
 		instance_destroy();
 		obj_player.attack_knockback();
+		
+		//part_emitter_destroy(ParticleSystem, emitter);
 	}
 
 	// change direction when colliding with a wall
