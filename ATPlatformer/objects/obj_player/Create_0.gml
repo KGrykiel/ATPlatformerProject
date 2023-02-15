@@ -89,19 +89,19 @@ vertical_speed = 0;
 //Velocity components for movement induced by the environment
 environmental_horizontal_speed = 0;
 environmental_vertical_speed = 0;
-_gravity = 0.4;
+_gravity = 0.5;
 
 //down gravity
-down_gravity = 0.6;
-max_down_speed = 50;
+down_gravity = 0.52;
+max_down_speed = 20;
 
 //speed
-walk_speed = 4;
-air_speed = 4;
+walk_speed = 5;
+air_speed = 5;
 // for dash speed, see the dash parameters section
 
 //variable jumping heights
-max_jump_velocity = 10;
+max_jump_velocity = 11;
 min_jump_velocity = 3;
 
 //Acceleration and deceleration
@@ -145,9 +145,9 @@ current_jump = 0;
 coyote_time = 0.05
 
 //dash parameters
-dash_time = 0.25;
+dash_time = 0.15;
 dash_cooldown = 0.7;
-dash_speed = walk_speed * 3;
+dash_speed = walk_speed * 2.5;
 dash_distance = dash_speed * dash_time;
 dash_energy = 0;
 
@@ -162,7 +162,7 @@ function finish_jump() {
 	obj_player._jumping = false;
 }
 
-_jump_held_length = 0.2;
+_jump_held_length = 0.3;
 _jump_held_frames = _jump_held_length * FRAME_RATE;
 _jump_held_time_source = time_source_create(time_source_game, _jump_held_frames, time_source_units_frames, finish_jump);
 
