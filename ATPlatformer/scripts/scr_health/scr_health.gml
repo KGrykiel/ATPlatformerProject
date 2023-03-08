@@ -5,9 +5,9 @@
 
 /// @desc Automatically sets variables associated with health - should be used in create event
 function scr_create_health_vars(_max_health=10, _current_health=_max_health, _dead=false, _target=self){
-	_target.current_health = _current_health
-	_target.max_health = _max_health
-	_target.dead = _dead
+	_target.current_health = _current_health;
+	_target.max_health = _max_health;
+	_target.dead = _dead;
 } 
 
 /// @desc (temporary) Draws health bar of '_target' (default: object which called function) - should be used in draw event (remember draw_self())

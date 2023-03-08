@@ -10,17 +10,9 @@ vertical_knockback = 5;
 
 function idle_state() {}
 
-state = idle_state
+state = idle_state;
 
 
+// Health
 
-
-
-
-
-
-
-
-
-
-
+scr_create_health_vars(max_health);
