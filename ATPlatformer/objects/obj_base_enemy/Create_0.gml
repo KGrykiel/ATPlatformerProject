@@ -12,15 +12,5 @@ function idle_state() {}
 
 state = idle_state
 
-
-
-
-
-
-
-
-
-
-
-
+scr_create_health_vars(1,1)
 
