@@ -7,7 +7,7 @@ function walk_state() {
 
 	// handle destroying the enemy when coming into contact with player attacks
 	if (place_meeting(x, y, obj_player_attack)) {
-		instance_destroy();
+		scr_damage(1);
 		obj_player.attack_knockback();
 	}
 
@@ -25,7 +25,7 @@ function walk_state() {
 	if place_meeting(x, y, obj_player) {
 		with (obj_player) {
 			if iframes <= 0 {
-				current_health -= 2;
+				scr_damage(6);
 				horizontal_speed = sign(x - other.x) * other.horizontal_knockback
 				vertical_speed = -other.vertical_knockback
 				iframes = 60;

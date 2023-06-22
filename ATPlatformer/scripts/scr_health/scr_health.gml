@@ -3,15 +3,15 @@
 
 // Use in any object which has health
 
+
 /// @desc Automatically sets variables associated with health - should be used in create event
-function scr_create_health_vars(_max_health=10, _current_health=_max_health, _has_hitflash=true, _dead=false, _target=self){
+function scr_create_health_vars(_max_health=10, _current_health=_max_health, _has_hitflash=true, _target=self){
 	_target.current_health = _current_health;
 	_target.max_health = _max_health;
 	_target.has_hitflash = _has_hitflash;
 	if (_has_hitflash){
 		_target.in_hitflash = false;
 	}
-	_target.dead = _dead;
 } 
 
 /// @desc Draws the _target as white when it has just been hit if 'has_hitflash' is enabled - should be used in draw event instead of 'draw_self()'
@@ -32,12 +32,6 @@ function scr_draw_health_bar(_target=self){
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
 	
-	// If '_target' is dead, puts 'Dead' in place of health bar
-	if _target.dead{
-		draw_text(_target.x, _target.bbox_top, "Dead");
-		return
-	}
-
 	// If '_target' is not dead and 'current_health'/'max_health' exist, displays its current and max health
 	if variable_instance_exists(_target.id, "current_health") and variable_instance_exists(_target.id, "max_health"){
 		draw_text(_target.x, _target.bbox_top, string(_target.current_health)+"/"+string(_target.max_health));
@@ -58,14 +52,13 @@ function scr_heal(_amount, _target=self){
 function scr_damage(_amount, _target=self){
 	_target.current_health -= _amount;
 	scr_update_health_vars(_target);
-	if (_target.has_hitflash){
+	if (_target.has_hitflash && _target.state != _target.dead_state){
 		if (variable_instance_exists(_target, "in_hitflash")){
 			_target.in_hitflash = true;
 		} else {
 			show_debug_message("Instance {0} does not have the 'has_hitflash' variable but has 'has_hitflash' enabled \n-Make sure you are using 'scr_create_health_vars' in the create event", _target)
 		}
 	}
-	
 }
 
 /// @desc Increases max health of '_target' (default: object which called function) by '_amount'
@@ -99,10 +92,7 @@ function scr_update_health_vars(_target=self){
 	// Checks if '_target' is dead
 	if _target.current_health <= 0 {
 		_target.current_health = 0;
-		_target.dead = true;
-	}
-	else {
-		_target.dead = false
+		_target.state = _target.dead_state;
 	}
 	// Makes sure current health is not above max health
 	if _target.current_health > _target.max_health {

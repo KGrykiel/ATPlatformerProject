@@ -3,6 +3,8 @@
 event_inherited()
 _enable_gravity_while_jumping = true
 scr_create_health_vars(20,10)
+
+
 function attack_horizontal() {
 	obj_player.attack_sequence = layer_sequence_create("Sequences", x, y, seq_attack);
 	call_later(10, time_source_units_frames, end_attack);
@@ -68,6 +70,12 @@ function attack_knockback() {
 function dash() {
 	show_debug_message("dashing!");
 }
+
+
+function dead_state() {
+	instance_destroy();
+}
+
 //state declaration
 state = player_state_free
 
