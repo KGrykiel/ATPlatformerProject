@@ -4,11 +4,27 @@
 // Use in any object which has health
 
 /// @desc Automatically sets variables associated with health - should be used in create event
-function scr_create_health_vars(_max_health=10, _current_health=_max_health, _dead=false, _target=self){
-	_target.current_health = _current_health
-	_target.max_health = _max_health
-	_target.dead = _dead
+function scr_create_health_vars(_max_health=10, _current_health=_max_health, _has_hitflash=true, _dead=false, _target=self){
+	_target.current_health = _current_health;
+	_target.max_health = _max_health;
+	_target.has_hitflash = _has_hitflash;
+	if (_has_hitflash){
+		_target.in_hitflash = false;
+	}
+	_target.dead = _dead;
 } 
+
+/// @desc Draws the _target as white when it has just been hit if 'has_hitflash' is enabled - should be used in draw event instead of 'draw_self()'
+function scr_draw_hitflash(_target=self){
+	if (_target.has_hitflash && _target.in_hitflash){
+		shader_set(shd_hitflash);
+		_target.draw_self();
+		shader_reset();
+		_target.in_hitflash = false;
+	} else {
+		_target.draw_self();
+	}
+}
 
 /// @desc (temporary) Draws health bar of '_target' (default: object which called function) - should be used in draw event (remember draw_self())
 function scr_draw_health_bar(_target=self){
@@ -42,6 +58,14 @@ function scr_heal(_amount, _target=self){
 function scr_damage(_amount, _target=self){
 	_target.current_health -= _amount;
 	scr_update_health_vars(_target);
+	if (_target.has_hitflash){
+		if (variable_instance_exists(_target, "in_hitflash")){
+			_target.in_hitflash = true;
+		} else {
+			show_debug_message("Instance {0} does not have the 'has_hitflash' variable but has 'has_hitflash' enabled \n-Make sure you are using 'scr_create_health_vars' in the create event", _target)
+		}
+	}
+	
 }
 
 /// @desc Increases max health of '_target' (default: object which called function) by '_amount'
