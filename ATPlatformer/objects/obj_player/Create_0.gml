@@ -73,7 +73,7 @@ function dash() {
 
 
 function dead_state() {
-	instance_destroy();
+	room_restart();
 }
 
 //state declaration

@@ -25,7 +25,7 @@ function walk_state() {
 	if place_meeting(x, y, obj_player) {
 		with (obj_player) {
 			if iframes <= 0 {
-				scr_damage(6);
+				scr_damage(1);
 				horizontal_speed = sign(x - other.x) * other.horizontal_knockback
 				vertical_speed = -other.vertical_knockback
 				iframes = 60;
