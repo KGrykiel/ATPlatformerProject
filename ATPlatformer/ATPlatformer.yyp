@@ -41,7 +41,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.4.0.84",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"spr_inventory_bg","path":"sprites/spr_inventory_bg/spr_inventory_bg.yy",},},
@@ -54,6 +54,7 @@
     {"id":{"name":"change_variable","path":"scripts/change_variable/change_variable.yy",},},
     {"id":{"name":"ts_collisons","path":"tilesets/ts_collisons/ts_collisons.yy",},},
     {"id":{"name":"reset_dialogue_defaults","path":"scripts/reset_dialogue_defaults/reset_dialogue_defaults.yy",},},
+    {"id":{"name":"spr_newplayer_idle","path":"sprites/spr_newplayer_idle/spr_newplayer_idle.yy",},},
     {"id":{"name":"sequence_moments","path":"scripts/sequence_moments/sequence_moments.yy",},},
     {"id":{"name":"obj_dummy_item_world","path":"objects/obj_dummy_item_world/obj_dummy_item_world.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
@@ -80,6 +81,7 @@
     {"id":{"name":"scr_movement","path":"scripts/scr_movement/scr_movement.yy",},},
     {"id":{"name":"snd_voice2","path":"sounds/snd_voice2/snd_voice2.yy",},},
     {"id":{"name":"scr_collision","path":"scripts/scr_collision/scr_collision.yy",},},
+    {"id":{"name":"spr_newplayer_walk","path":"sprites/spr_newplayer_walk/spr_newplayer_walk.yy",},},
     {"id":{"name":"obj_textevent","path":"objects/obj_textevent/obj_textevent.yy",},},
     {"id":{"name":"rm_wallJump","path":"rooms/rm_wallJump/rm_wallJump.yy",},},
     {"id":{"name":"obj_emote","path":"objects/obj_emote/obj_emote.yy",},},
@@ -112,6 +114,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"snd_voice1","path":"sounds/snd_voice1/snd_voice1.yy",},},
     {"id":{"name":"snd_sonic_screwdriver","path":"sounds/snd_sonic_screwdriver/snd_sonic_screwdriver.yy",},},
+    {"id":{"name":"spr_newplayer_jump","path":"sprites/spr_newplayer_jump/spr_newplayer_jump.yy",},},
     {"id":{"name":"spr_dialoguefinished","path":"sprites/spr_dialoguefinished/spr_dialoguefinished.yy",},},
     {"id":{"name":"fnt_debug","path":"fonts/fnt_debug/fnt_debug.yy",},},
     {"id":{"name":"scr_execute_array","path":"scripts/scr_execute_array/scr_execute_array.yy",},},
