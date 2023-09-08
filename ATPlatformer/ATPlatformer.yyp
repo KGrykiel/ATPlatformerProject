@@ -140,6 +140,7 @@
     {"id":{"name":"spr_industrial_tiles","path":"sprites/spr_industrial_tiles/spr_industrial_tiles.yy",},},
     {"id":{"name":"spr_portrait_examplechar","path":"sprites/spr_portrait_examplechar/spr_portrait_examplechar.yy",},},
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
+    {"id":{"name":"spr_newplayer_jump","path":"sprites/spr_newplayer_jump/spr_newplayer_jump.yy",},},
     {"id":{"name":"spr_portrait_player","path":"sprites/spr_portrait_player/spr_portrait_player.yy",},},
     {"id":{"name":"scr_wrap_text","path":"scripts/scr_wrap_text/scr_wrap_text.yy",},},
     {"id":{"name":"seq_attack","path":"sequences/seq_attack/seq_attack.yy",},},
