@@ -22,5 +22,9 @@ function scr_state_sprites(){
 		case player_state_air:
 			sprite_index = spr_newplayer_jump
 		break;
+		
+		default:
+			sprite_index = spr_newplayer_idle;
+		break;
 	}
 }
