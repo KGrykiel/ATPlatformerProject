@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_collision_tiles",
-  "bbox_bottom": 127,
+  "name": "spr_metal_tiles_test",
+  "bbox_bottom": 191,
   "bbox_left": 0,
-  "bbox_right": 127,
+  "bbox_right": 191,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"591ff89b-5c07-4318-863b-655d7655186f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"83bc99e8-975f-4ee8-938e-83d4570edac0",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 128,
+  "height": 192,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"39cec33c-5068-46d2-b7e0-9191685fae88","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3cd979c6-6028-4a4a-b69a-a2a541a04317","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_collision_tiles",
+    "name": "spr_metal_tiles_test",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"591ff89b-5c07-4318-863b-655d7655186f","path":"sprites/spr_collision_tiles/spr_collision_tiles.yy",},},},"Disabled":false,"id":"c3580ebd-82e0-4777-98d4-4634c74d76a7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"83bc99e8-975f-4ee8-938e-83d4570edac0","path":"sprites/spr_metal_tiles_test/spr_metal_tiles_test.yy",},},},"Disabled":false,"id":"4751078e-71bf-4581-a651-eed130c79aa7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 128,
+  "width": 192,
 }
