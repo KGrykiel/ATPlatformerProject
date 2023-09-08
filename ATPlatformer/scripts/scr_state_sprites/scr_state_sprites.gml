@@ -20,7 +20,7 @@ function scr_state_sprites(){
 		break;
 		
 		case player_state_air:
-			sprite_index = spr_newplayer_jump
+			sprite_index = spr_player_jump
 		break;
 	}
 }
