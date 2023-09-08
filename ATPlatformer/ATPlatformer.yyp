@@ -41,7 +41,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.8.0.98",
   },
   "resources": [
     {"id":{"name":"spr_inventory_bg","path":"sprites/spr_inventory_bg/spr_inventory_bg.yy",},},
@@ -180,6 +180,7 @@
     {"roomId":{"name":"rm_breakablePlatforms","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},},
     {"roomId":{"name":"rm_jumpyPlatforms","path":"rooms/rm_jumpyPlatforms/rm_jumpyPlatforms.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],
