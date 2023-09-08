@@ -91,7 +91,7 @@ function player_state_free(){
 	//TODO: sprite shouldn't be directly assigned outside of scr_state_sprites
 	if(obj_inventory.inventory_active) {
 		state = player_state_inventory_check
-		sprite_index = spr_player_idle
+		//sprite_index = spr_player_idle
 		horizontal_speed = 0;
 	}
 	
@@ -100,7 +100,7 @@ function player_state_free(){
 	if(instance_exists(obj_textbox))
 	{ 
 		state = player_state_dialogue 
-		sprite_index = spr_player_idle;
+		//sprite_index = spr_player_idle;
 		horizontal_speed = 0;
 	}
 }
