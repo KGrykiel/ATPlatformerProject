@@ -22,9 +22,9 @@
     {"name":"FC_DialogueSystem","order":11,"path":"folders/Sprites/FC_DialogueSystem.yy",},
     {"name":"Player Sprites","order":9,"path":"folders/Sprites/Player Sprites.yy",},
     {"name":"test items","order":22,"path":"folders/Sprites/test items.yy",},
+    {"name":"Tiles","order":25,"path":"folders/Sprites/Tiles.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":6,"path":"folders/Timelines.yy",},
-    {"name":"Tiles","order":25,"path":"folders/Sprites/Tiles.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_inventory_bg","order":9,"path":"sprites/spr_inventory_bg/spr_inventory_bg.yy",},
