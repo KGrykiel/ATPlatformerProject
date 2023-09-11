@@ -1,10 +1,10 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_metal_tiles_test",
-  "bbox_bottom": 191,
+  "name": "spr_hook",
+  "bbox_bottom": 139,
   "bbox_left": 0,
-  "bbox_right": 191,
+  "bbox_right": 46,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,26 +13,26 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"83bc99e8-975f-4ee8-938e-83d4570edac0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e831129b-933d-4f32-8cd3-512fb269b7d1",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 192,
+  "height": 140,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3cd979c6-6028-4a4a-b69a-a2a541a04317","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"929cbf8a-8669-446e-b19c-769f557d8f01","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Tiles",
-    "path": "folders/Sprites/Tiles.yy",
+    "name": "AT3_Decor",
+    "path": "folders/Sprites/AT3_Decor.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_metal_tiles_test",
+    "name": "spr_hook",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"83bc99e8-975f-4ee8-938e-83d4570edac0","path":"sprites/spr_metal_tiles_test/spr_metal_tiles_test.yy",},},},"Disabled":false,"id":"4751078e-71bf-4581-a651-eed130c79aa7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e831129b-933d-4f32-8cd3-512fb269b7d1","path":"sprites/spr_hook/spr_hook.yy",},},},"Disabled":false,"id":"fb9c1131-22c3-4166-b109-c92667c858d5","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 192,
+  "width": 47,
 }

@@ -7,7 +7,7 @@ function walk_state() {
 
 	// handle destroying the enemy when coming into contact with player attacks
 	if (place_meeting(x, y, obj_player_attack)) {
-		instance_destroy();
+		instance_destroy(self)
 		obj_player.attack_knockback();
 	}
 
