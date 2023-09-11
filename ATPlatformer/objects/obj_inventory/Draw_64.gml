@@ -41,6 +41,7 @@ if (inventory_active) {
 							
 	// name and description text
 	if (inventory[selected_item_index] != -1) {
+		draw_set_halign(fa_left)
 		draw_set_font(fnt_dialogue)
 		var name = scr_wrap_text(inventory[selected_item_index].name, DESCRIPTION_BOX_WIDTH - DESCRIPTION_TEXT_SPACING, "\n", false)
 		draw_text(desc_box_x + DESCRIPTION_TEXT_SPACING, desc_box_y + DESCRIPTION_TEXT_SPACING, name)
