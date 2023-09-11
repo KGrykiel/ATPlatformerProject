@@ -23,6 +23,10 @@ function scr_state_sprites(){
 			sprite_index = spr_newplayer_jump
 		break;
 		
+		case player_state_against_wall:
+			sprite_index = spr_newplayer_walljump
+		break;
+		
 		default:
 			sprite_index = spr_newplayer_idle;
 		break;

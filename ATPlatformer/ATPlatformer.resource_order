@@ -62,6 +62,7 @@
     {"name":"spr_wirebox","order":5,"path":"sprites/spr_wirebox/spr_wirebox.yy",},
     {"name":"spr_industrial_tiles_background","order":3,"path":"sprites/spr_industrial_tiles_background/spr_industrial_tiles_background.yy",},
     {"name":"spr_platform2","order":13,"path":"sprites/spr_platform2/spr_platform2.yy",},
+    {"name":"spr_newplayer_walljump","order":6,"path":"sprites/spr_newplayer_walljump/spr_newplayer_walljump.yy",},
     {"name":"obj_breakable","order":2,"path":"objects/obj_breakable/obj_breakable.yy",},
     {"name":"scr_forced_jump","order":7,"path":"scripts/scr_forced_jump/scr_forced_jump.yy",},
     {"name":"obj_textbox","order":4,"path":"objects/obj_textbox/obj_textbox.yy",},
