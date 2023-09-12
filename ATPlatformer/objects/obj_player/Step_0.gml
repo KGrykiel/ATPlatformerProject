@@ -40,7 +40,7 @@ if (grounded)
 if (against_wall) dash_surface_reset = true;
 
 
-script_execute(state);
+state();
 
 //animations
 scr_state_sprites()

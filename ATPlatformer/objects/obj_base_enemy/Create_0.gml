@@ -10,6 +10,10 @@ vertical_knockback = 5;
 
 function idle_state() {}
 
+function dead_state() {
+	instance_destroy();
+}
+
 state = idle_state
 
 scr_create_health_vars(5,5)
