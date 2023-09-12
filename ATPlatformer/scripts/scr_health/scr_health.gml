@@ -30,12 +30,14 @@ function scr_draw_hitflash(_target=self){
 function scr_draw_health_bar(_target=self){
 	// Sets alignment of health bar
 	draw_set_halign(fa_center);
-	draw_set_valign(fa_bottom);
+    draw_set_valign(fa_bottom);
 	
 	// If '_target' is not dead and 'current_health'/'max_health' exist, displays its current and max health
 	if variable_instance_exists(_target.id, "current_health") and variable_instance_exists(_target.id, "max_health"){
 		draw_text(_target.x, _target.bbox_top, string(_target.current_health)+"/"+string(_target.max_health));
 	}
+	
+    draw_set_valign(fa_top);
 }
 
 

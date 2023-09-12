@@ -1,6 +1,6 @@
 /// @description Shoots projectile if also pressing shift
 
-if keyboard_check(vk_shift) {
+//if keyboard_check(vk_shift) {
 	// Shoots starting from roughly hands of player (30 above feet)
 	var _delta_x = mouse_x - x;
 	var _delta_y = mouse_y - (y-30);
@@ -16,4 +16,4 @@ if keyboard_check(vk_shift) {
 			vertical_speed -= 1;
 		}
 	}
-}
+//}

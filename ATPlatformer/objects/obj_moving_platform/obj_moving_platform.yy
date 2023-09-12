@@ -38,8 +38,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "spr_platform",
-    "path": "sprites/spr_platform/spr_platform.yy",
+    "name": "spr_moving_platform",
+    "path": "sprites/spr_moving_platform/spr_moving_platform.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -35,8 +35,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "spr_breakable",
-    "path": "sprites/spr_breakable/spr_breakable.yy",
+    "name": "spr_wirebox",
+    "path": "sprites/spr_wirebox/spr_wirebox.yy",
   },
   "spriteMaskId": null,
   "visible": true,

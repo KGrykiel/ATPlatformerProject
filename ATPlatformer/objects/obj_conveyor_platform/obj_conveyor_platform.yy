@@ -34,8 +34,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "spr_platform",
-    "path": "sprites/spr_platform/spr_platform.yy",
+    "name": "spr_conveyor_platform",
+    "path": "sprites/spr_conveyor_platform/spr_conveyor_platform.yy",
   },
   "spriteMaskId": null,
   "visible": true,
