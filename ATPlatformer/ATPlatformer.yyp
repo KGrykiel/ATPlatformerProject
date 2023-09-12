@@ -119,6 +119,7 @@
     {"id":{"name":"spr_sign_right","path":"sprites/spr_sign_right/spr_sign_right.yy",},},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},},
     {"id":{"name":"spr_white_square","path":"sprites/spr_white_square/spr_white_square.yy",},},
+    {"id":{"name":"shd_hitflash","path":"shaders/shd_hitflash/shd_hitflash.yy",},},
     {"id":{"name":"obj_base_enemy","path":"objects/obj_base_enemy/obj_base_enemy.yy",},},
     {"id":{"name":"obj_parallax","path":"objects/obj_parallax/obj_parallax.yy",},},
     {"id":{"name":"scr_health","path":"scripts/scr_health/scr_health.yy",},},
