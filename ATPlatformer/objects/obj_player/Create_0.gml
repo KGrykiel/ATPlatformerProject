@@ -97,27 +97,27 @@ vertical_speed = 0;
 //Velocity components for movement induced by the environment
 environmental_horizontal_speed = 0;
 environmental_vertical_speed = 0;
-_gravity = 0.5;
+_gravity = 0.5;  //CUSTOMIZABLE
 
 //down gravity
-down_gravity = 0.52;
-max_down_speed = 20;
+down_gravity = 0.52;  //CUSTOMIZABLE
+max_down_speed = 20;  //CUSTOMIZABLE
 
 //speed
-walk_speed = 5;
-air_speed = 5;
+walk_speed = 5;  //CUSTOMIZABLE
+air_speed = 5;  //CUSTOMIZABLE
 // for dash speed, see the dash parameters section
 
 //variable jumping heights
-max_jump_velocity = 11;
-min_jump_velocity = 3;
+max_jump_velocity = 11;  //CUSTOMIZABLE
+min_jump_velocity = 3;  //CUSTOMIZABLE
 
 //Acceleration and deceleration
-acceleration_period = 12; // no. of frames to accelerate from 0 to max_speed
-air_acceleration_period = 6; // no. of frames to accelerate from 0 to max_speed
+acceleration_period = 12; // no. of frames to accelerate from 0 to max_speed  //CUSTOMIZABLE
+air_acceleration_period = 6; // no. of frames to accelerate from 0 to max_speed  //CUSTOMIZABLE
 
-deceleration_period = 6; // no. of frames to decelerate from max_speed to 0
-air_deceleration_period = 10; // no. of frames to decelerate from max_speed to 0
+deceleration_period = 6; // no. of frames to decelerate from max_speed to 0  //CUSTOMIZABLE
+air_deceleration_period = 10; // no. of frames to decelerate from max_speed to 0  //CUSTOMIZABLE
 
 acceleration_amt = walk_speed / acceleration_period;
 air_acceleration_amt = air_speed / air_acceleration_period;
@@ -126,11 +126,11 @@ deceleration_amt = walk_speed / deceleration_period;
 air_deceleration_amt = air_speed / air_deceleration_period;
 
 // wall jump variables
-wall_jump_enabled = true;
-wall_sliding_speed = 1;
+wall_jump_enabled = true;  //CUSTOMIZABLE
+wall_sliding_speed = 1;  //CUSTOMIZABLE
 against_wall = false;
 // if the character's movement is intended to be locked for some duration
-wall_propulsion_speed = 7;
+wall_propulsion_speed = 7;  //CUSTOMIZABLE
 
 x_acc = 0
 
@@ -146,16 +146,16 @@ safe_x = 0;
 safe_y = 0;
 
 //double+ jumps
-max_jump = 1; 
+max_jump = 1;   //CUSTOMIZABLE
 current_jump = 0;
 
 //coyote time
-coyote_time = 0.05
+coyote_time = 0.05  //CUSTOMIZABLE
 
 //dash parameters
-dash_time = 0.15;
-dash_cooldown = 0.7;
-dash_speed = walk_speed * 2.5;
+dash_time = 0.15;  //CUSTOMIZABLE
+dash_cooldown = 0.7;  //CUSTOMIZABLE
+dash_speed = walk_speed * 2.5;  //CUSTOMIZABLE
 dash_distance = dash_speed * dash_time;
 dash_energy = 0;
 

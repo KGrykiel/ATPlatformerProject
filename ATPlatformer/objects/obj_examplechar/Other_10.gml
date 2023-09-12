@@ -7,19 +7,17 @@ switch(choice_variable){
 	#region First Dialogue
 		//Line 0
 		var i = 0;
-		myText[i]		= "Come check out this dialogue system I have stolen myself";
+		myText[i]		= "Welcome to the GameDevSig introductory workshop!";
 		mySpeaker[i]	= id;
 		
 		//Line 1
 		i++;
-		myText[i]		= "You can change colours, add a bunch of effects, and even give the player dialogue choice";
-		myEffects[i]	= [39,1, 47,0];
-		myTextCol[i]	= [15, c_lime, 23, c_white];
+		myText[i]		= "This level serves as an example of all of our implemented functionalities and what you can do yourself";
 		mySpeaker[i]	= id;
 		
 		//Line 2
 		i++;
-		myText[i]		= ["Based", "Cringe"];
+		myText[i]		= ["Cool!", "Incredible!"];
 		myTypes[i]		= 1;
 		mySpeaker[i]	= obj_player;
 		myNextLine[i]	= [3,4];
@@ -32,7 +30,7 @@ switch(choice_variable){
 		
 		//Line 4
 		i++;
-		myText[i]		= "Ok make a better one then shitter";
+		myText[i]		= "I know right?";
 		myEffects[i]	= [26,1, 33,0];
 		mySpeaker[i]	= id;
 		myTextCol[i]	= [26, c_maroon, 34, c_white];
@@ -40,12 +38,12 @@ switch(choice_variable){
 
 		//Line 5
 		i++;
-		myText[i]		= "Anyway, I also took the opportunity to make a quick level";
+		myText[i]		= "Anyway, go ahead and try it out, you will unlock new mechanics once you speak to more of my copies";
 		mySpeaker[i]	= id;
 		
 		//Line 6
 		i++;
-		myText[i]		= "It's to showcase all the functionalities we have implemented so far";
+		myText[i]		= "Go ahead and have fun, if you have any questions feel free to ask!";
 		mySpeaker[i]	= id;
 		myScripts[i]	= [change_variable, id, "choice_variable", "well"]
 
@@ -134,7 +132,7 @@ switch(choice_variable){
 		mySpeaker[i]	= id;
 		
 		i++;
-		myText[i]		= "trust :)";
+		myText[i]		= "trust me :)";
 		mySpeaker[i]	= id;
 		
 	#endregion
@@ -146,10 +144,6 @@ switch(choice_variable){
 		//Line 0
 		var i = 0;
 		myText[i]		= "We have destructible objects. as the name suggests you can destroy them";
-		mySpeaker[i]	= id;
-		
-		i++;
-		myText[i]		= "kinda cool innit?";
 		mySpeaker[i]	= id;
 		
 		i++;
@@ -168,7 +162,7 @@ switch(choice_variable){
 		mySpeaker[i]	= id;
 		
 		i++;
-		myText[i]		= "or you know, go ahead, I'm not your mom";
+		myText[i]		= "you can jump and then dash in the air by pressing shift!";
 		mySpeaker[i]	= id;
 	#endregion
 	
@@ -200,7 +194,7 @@ switch(choice_variable){
 		mySpeaker[i]	= id;
 		
 		i++;
-		myText[i]		= "It will help you design your own";
+		myText[i]		= "It will help you design your own!";
 		mySpeaker[i]	= id;
 	#endregion
 	
