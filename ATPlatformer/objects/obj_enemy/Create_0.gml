@@ -10,7 +10,7 @@ function walk_state() {
 	// handle destroying the enemy when coming into contact with player attacks
 	if (place_meeting(x, y, obj_player_attack)) {
 		if !invulenerable {
-			scr_damage(1);
+			scr_damage(5);
 			obj_player.attack_knockback();
 			invulenerable = true;
 			alarm[0] = floor(0.4*game_get_speed(gamespeed_fps))

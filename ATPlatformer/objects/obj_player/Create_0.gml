@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited()
 _enable_gravity_while_jumping = true
-scr_create_health_vars(20,10)
+scr_create_health_vars(20,20)
 
 
 function attack_horizontal() {

@@ -2,7 +2,7 @@
 
 #region TYPE 0: NORMAL
 if(type[page] == 0){
-	if(keyboard_check_pressed(interact_key)){
+	if(keyboard_check_pressed(interact_key) or keyboard_check_pressed(vk_space)){
 
 		//If we haven't "typed out" all the letters, immediately "type out" all letters (works as a "skip")
 		if(charCount < str_len){
@@ -27,7 +27,7 @@ if(type[page] == 0){
 #region TYPE 1: DIALOGUE CHOICE
 else {
 	if(chosen) exit;
-	if(keyboard_check_pressed(interact_key)){ 
+	if(keyboard_check_pressed(interact_key) or keyboard_check_pressed(vk_space)){ 
 		chosen = true; 
 		alarm[2] = 10; 
 		audio_play_sound(select_snd_effect, priority_snd_effect, false);
