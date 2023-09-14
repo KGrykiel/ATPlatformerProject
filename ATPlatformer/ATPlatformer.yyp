@@ -124,6 +124,7 @@
     {"id":{"name":"obj_parallax","path":"objects/obj_parallax/obj_parallax.yy",},},
     {"id":{"name":"scr_health","path":"scripts/scr_health/scr_health.yy",},},
     {"id":{"name":"rm_cameraTest","path":"rooms/rm_cameraTest/rm_cameraTest.yy",},},
+    {"id":{"name":"spr_tutorialbot","path":"sprites/spr_tutorialbot/spr_tutorialbot.yy",},},
     {"id":{"name":"seq_attack_down","path":"sequences/seq_attack_down/seq_attack_down.yy",},},
     {"id":{"name":"spr_room_exit","path":"sprites/spr_room_exit/spr_room_exit.yy",},},
     {"id":{"name":"rm_breakablePlatforms","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},},
