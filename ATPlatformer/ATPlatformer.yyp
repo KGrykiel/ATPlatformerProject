@@ -117,6 +117,8 @@
     {"id":{"name":"shd_hitflash","path":"shaders/shd_hitflash/shd_hitflash.yy",},},
     {"id":{"name":"obj_base_enemy","path":"objects/obj_base_enemy/obj_base_enemy.yy",},},
     {"id":{"name":"scr_health","path":"scripts/scr_health/scr_health.yy",},},
+    {"id":{"name":"rm_cameraTest","path":"rooms/rm_cameraTest/rm_cameraTest.yy",},},
+    {"id":{"name":"spr_tutorialbot","path":"sprites/spr_tutorialbot/spr_tutorialbot.yy",},},
     {"id":{"name":"seq_attack_down","path":"sequences/seq_attack_down/seq_attack_down.yy",},},
     {"id":{"name":"spr_room_exit","path":"sprites/spr_room_exit/spr_room_exit.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},

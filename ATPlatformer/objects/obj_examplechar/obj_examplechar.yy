@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_examplechar",
-    "path": "sprites/spr_examplechar/spr_examplechar.yy",
+    "name": "spr_tutorialbot",
+    "path": "sprites/spr_tutorialbot/spr_tutorialbot.yy",
   },
   "spriteMaskId": null,
   "visible": true,
