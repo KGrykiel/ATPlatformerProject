@@ -38,7 +38,7 @@ switch(choice_variable){
 
 		//Line 5
 		i++;
-		myText[i]		= "Anyway, go ahead and try it out, you will unlock new mechanics once you speak to more of my copies";
+		myText[i]		= "Anyway, try it out, you will unlock new mechanics once you speak to more of my copies";
 		mySpeaker[i]	= id;
 		
 		//Line 6

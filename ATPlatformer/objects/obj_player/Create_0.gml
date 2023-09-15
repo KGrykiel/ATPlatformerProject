@@ -187,15 +187,11 @@ iframes = 0;
 
 //Dialogue system
 reset_dialogue_defaults();
-myPortrait			= spr_portrait_player;
+myPortrait			= spr_newplayer_dialogue;
 myVoice				= snd_voice2;
 myFont				= fnt_dialogue;
 myName				= "Player";
 
-myPortraitTalk		= spr_portrait_examplechar_mouth;
-myPortraitTalk_x	= 26;
-myPortraitTalk_y	= 44;
-myPortraitIdle		= spr_portrait_examplechar_idle;
 
 // Room transition
 if (global.target_x != -1) {

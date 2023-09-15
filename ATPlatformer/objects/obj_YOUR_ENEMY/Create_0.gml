@@ -2,5 +2,8 @@
 // You can write your code in this editor
 
 
-//scr_draw_health_bar()
-scr_draw_hitflash()
+
+
+// Inherit the parent event
+event_inherited();
+
