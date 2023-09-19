@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_tutorialbot",
-    "path": "sprites/spr_tutorialbot/spr_tutorialbot.yy",
+    "name": "spr_tutorialbot_2",
+    "path": "sprites/spr_tutorialbot_2/spr_tutorialbot_2.yy",
   },
   "spriteMaskId": null,
   "visible": true,

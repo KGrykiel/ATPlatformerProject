@@ -50,6 +50,7 @@
     {"name":"spr_attack_smear","order":4,"path":"sprites/spr_attack_smear/spr_attack_smear.yy",},
     {"name":"create_dialogue","order":1,"path":"scripts/create_dialogue/create_dialogue.yy",},
     {"name":"spr_newplayer_idle","order":3,"path":"sprites/spr_newplayer_idle/spr_newplayer_idle.yy",},
+    {"name":"spr_tutorialbot_2","order":29,"path":"sprites/spr_tutorialbot_2/spr_tutorialbot_2.yy",},
     {"name":"snd_select","order":1,"path":"sounds/snd_select/snd_select.yy",},
     {"name":"spr_scaffolding_bg","order":16,"path":"sprites/spr_scaffolding_bg/spr_scaffolding_bg.yy",},
     {"name":"spr_attack_hitbox","order":3,"path":"sprites/spr_attack_hitbox/spr_attack_hitbox.yy",},

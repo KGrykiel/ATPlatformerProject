@@ -70,6 +70,7 @@
     {"id":{"name":"spr_attack_smear","path":"sprites/spr_attack_smear/spr_attack_smear.yy",},},
     {"id":{"name":"create_dialogue","path":"scripts/create_dialogue/create_dialogue.yy",},},
     {"id":{"name":"spr_newplayer_idle","path":"sprites/spr_newplayer_idle/spr_newplayer_idle.yy",},},
+    {"id":{"name":"spr_tutorialbot_2","path":"sprites/spr_tutorialbot_2/spr_tutorialbot_2.yy",},},
     {"id":{"name":"snd_select","path":"sounds/snd_select/snd_select.yy",},},
     {"id":{"name":"spr_scaffolding_bg","path":"sprites/spr_scaffolding_bg/spr_scaffolding_bg.yy",},},
     {"id":{"name":"spr_attack_hitbox","path":"sprites/spr_attack_hitbox/spr_attack_hitbox.yy",},},
