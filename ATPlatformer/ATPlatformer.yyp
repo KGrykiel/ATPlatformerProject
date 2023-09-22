@@ -43,7 +43,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.0.98",
+    "IDEVersion": "2023.8.1.102",
   },
   "resources": [
     {"id":{"name":"spr_junk","path":"sprites/spr_junk/spr_junk.yy",},},
@@ -73,6 +73,7 @@
     {"id":{"name":"spr_tutorialbot_2","path":"sprites/spr_tutorialbot_2/spr_tutorialbot_2.yy",},},
     {"id":{"name":"snd_select","path":"sounds/snd_select/snd_select.yy",},},
     {"id":{"name":"spr_scaffolding_bg","path":"sprites/spr_scaffolding_bg/spr_scaffolding_bg.yy",},},
+    {"id":{"name":"rm_giantWorm","path":"rooms/rm_giantWorm/rm_giantWorm.yy",},},
     {"id":{"name":"spr_attack_hitbox","path":"sprites/spr_attack_hitbox/spr_attack_hitbox.yy",},},
     {"id":{"name":"rm_jumpyPlatforms","path":"rooms/rm_jumpyPlatforms/rm_jumpyPlatforms.yy",},},
     {"id":{"name":"spr_portrait_examplechar_idle","path":"sprites/spr_portrait_examplechar_idle/spr_portrait_examplechar_idle.yy",},},
@@ -207,6 +208,7 @@
     {"roomId":{"name":"rm_movingPlatforms","path":"rooms/rm_movingPlatforms/rm_movingPlatforms.yy",},},
     {"roomId":{"name":"rm_breakablePlatforms","path":"rooms/rm_breakablePlatforms/rm_breakablePlatforms.yy",},},
     {"roomId":{"name":"rm_jumpyPlatforms","path":"rooms/rm_jumpyPlatforms/rm_jumpyPlatforms.yy",},},
+    {"roomId":{"name":"rm_giantWorm","path":"rooms/rm_giantWorm/rm_giantWorm.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

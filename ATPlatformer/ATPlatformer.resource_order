@@ -53,6 +53,7 @@
     {"name":"spr_tutorialbot_2","order":29,"path":"sprites/spr_tutorialbot_2/spr_tutorialbot_2.yy",},
     {"name":"snd_select","order":1,"path":"sounds/snd_select/snd_select.yy",},
     {"name":"spr_scaffolding_bg","order":16,"path":"sprites/spr_scaffolding_bg/spr_scaffolding_bg.yy",},
+    {"name":"rm_giantWorm","order":9,"path":"rooms/rm_giantWorm/rm_giantWorm.yy",},
     {"name":"spr_attack_hitbox","order":3,"path":"sprites/spr_attack_hitbox/spr_attack_hitbox.yy",},
     {"name":"rm_jumpyPlatforms","order":4,"path":"rooms/rm_jumpyPlatforms/rm_jumpyPlatforms.yy",},
     {"name":"spr_portrait_examplechar_idle","order":8,"path":"sprites/spr_portrait_examplechar_idle/spr_portrait_examplechar_idle.yy",},
