@@ -9,6 +9,9 @@ horizontal_knockback = 10;
 vertical_knockback = 5;
 invulenerable = false;
 
+default_damage = 1;
+default_max_fall_speed = 5;
+
 #region States
 
 function idle_state() {}
@@ -30,10 +33,10 @@ function dead_state() {
  
  
 #region Substates (small functions which can be used in many states)
- 
+
 /// @description Substate to handle destroying the enemy when coming into contact with player attacks (use when creating states)
-/// @param {real} _damage How much damage is taken when hit (default=1)
-function get_hit_substate(_damage=1) {
+/// @param {real} _damage How much damage is taken when hit (default=player melee_damage)
+function get_hit_substate(_damage=obj_player.melee_damage) {
 	if (place_meeting(x, y, obj_player_attack)) {
 		if !invulenerable {
 			scr_damage(_damage);
@@ -61,7 +64,7 @@ function bounce_on_enemy_substate() {
 
 /// @description Substate to damage player when colliding
 /// @param {real} _damage How much to damage the player (default=1)
-function damage_player_substate(_damage=1) {
+function damage_player_substate(_damage=default_damage) {
 	if place_meeting(x, y, obj_player) {
 		with (obj_player) {
 			if iframes <= 0 {
@@ -77,9 +80,9 @@ function damage_player_substate(_damage=1) {
 
 /// @description Substate to allow enemy to fall
 /// @param {real} _max_speed Maximum speed enemy will fall (default=5)
-function fall_substate(_max_speed=5) {
+function fall_substate(_max_speed=default_max_fall_speed) {
 	vertical_speed += grav;
-	vertical_speed = min(vertical_speed, 5)
+	vertical_speed = min(vertical_speed, _max_speed)
 }
 
 /// @description Substate to move enemy forward
