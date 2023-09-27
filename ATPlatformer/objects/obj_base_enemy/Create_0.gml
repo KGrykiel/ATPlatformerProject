@@ -57,7 +57,7 @@ function bounce_on_wall_substate() {
 
 /// @description Substate to change direction when colliding with another enemy
 function bounce_on_enemy_substate() {
-	if place_meeting(x,y,obj_enemy) {
+	if place_meeting(x,y,obj_base_enemy) {
 		horizontal_speed *= -1;
 	}
 }
