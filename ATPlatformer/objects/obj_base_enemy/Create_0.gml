@@ -16,8 +16,8 @@ default_max_fall_speed = 5;
 
 function idle_state() {}
 
-function walk_state() {
-	move_forward_substate();
+walk_state = function() {
+	move_forward_substate(1);
 	get_hit_substate(1);
 	bounce_on_wall_substate();
 	bounce_on_enemy_substate();
@@ -57,7 +57,7 @@ function bounce_on_wall_substate() {
 
 /// @description Substate to change direction when colliding with another enemy
 function bounce_on_enemy_substate() {
-	if place_meeting(x,y,obj_enemy) {
+	if place_meeting(x,y,obj_base_enemy) {
 		horizontal_speed *= -1;
 	}
 }
