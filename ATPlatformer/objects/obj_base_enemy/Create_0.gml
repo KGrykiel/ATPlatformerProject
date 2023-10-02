@@ -18,7 +18,7 @@ function idle_state() {}
 
 function walk_state() {
 	move_forward_substate();
-	get_hit_substate(1);
+	get_hit_substate();
 	bounce_on_wall_substate();
 	bounce_on_enemy_substate();
 	damage_player_substate(1);
