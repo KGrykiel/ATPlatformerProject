@@ -137,7 +137,6 @@
     {"id":{"name":"obj_danger_zone","path":"objects/obj_danger_zone/obj_danger_zone.yy",},},
     {"id":{"name":"obj_moving_platform","path":"objects/obj_moving_platform/obj_moving_platform.yy",},},
     {"id":{"name":"spr_dummy_item","path":"sprites/spr_dummy_item/spr_dummy_item.yy",},},
-    {"id":{"name":"rm_YOUR_ROOM","path":"rooms/rm_YOUR_ROOM/rm_YOUR_ROOM.yy",},},
     {"id":{"name":"spr_newplayer_dialogue","path":"sprites/spr_newplayer_dialogue/spr_newplayer_dialogue.yy",},},
     {"id":{"name":"obj_item_manager","path":"objects/obj_item_manager/obj_item_manager.yy",},},
     {"id":{"name":"obj_projectile","path":"objects/obj_projectile/obj_projectile.yy",},},
@@ -186,7 +185,6 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"roomId":{"name":"rm_example","path":"rooms/rm_example/rm_example.yy",},},
-    {"roomId":{"name":"rm_YOUR_ROOM","path":"rooms/rm_YOUR_ROOM/rm_YOUR_ROOM.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [
