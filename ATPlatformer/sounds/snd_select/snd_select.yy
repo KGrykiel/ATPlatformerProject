@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.144195,
   "parent": {
     "name": "FC_DialogueSystem",
     "path": "folders/Sounds/FC_DialogueSystem.yy",
