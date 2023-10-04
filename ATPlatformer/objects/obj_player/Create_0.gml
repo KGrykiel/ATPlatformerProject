@@ -2,7 +2,6 @@
 // You can write your code in this editor
 event_inherited()
 _enable_gravity_while_jumping = true
-scr_create_health_vars(20,10)
 
 
 function attack_horizontal() {
@@ -91,12 +90,6 @@ key_inventory = 0;
 key_attack = 0;
 key_dash = 0;
 
-//Velocty components for player input
-horizontal_speed = 0;
-vertical_speed = 0;
-//Velocity components for movement induced by the environment
-environmental_horizontal_speed = 0;
-environmental_vertical_speed = 0;
 _gravity = 0.5;
 
 //down gravity

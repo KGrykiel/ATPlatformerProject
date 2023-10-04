@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 
+event_inherited();
+
 key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
 key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
@@ -12,8 +14,8 @@ key_interact = keyboard_check_pressed(ord("E"));
 key_attack = mouse_check_button_pressed(mb_left);
 key_dash = keyboard_check(vk_shift);
 key_inventory = keyboard_check_pressed(ord("I"))
-if iframes > 0 iframes--;
 
+// TODO: avoid behaviour dependant on checking against state functions
 if (key_inventory) && 
 	(state == player_state_free || state == player_state_inventory_check) {	
 	obj_inventory.inventory_active = !obj_inventory.inventory_active
