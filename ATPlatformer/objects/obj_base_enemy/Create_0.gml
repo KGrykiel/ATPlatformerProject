@@ -6,9 +6,9 @@ grav = 0.5;
 horizontal_knockback = 10;
 vertical_knockback = 5;
 
-function idle_state() {}
+idle_state = function() {}
 
-function dead_state() {
+dead_state = function() {
 	instance_destroy();
 }
 

@@ -11,7 +11,7 @@ if (use_hitflash && in_hitflash) {
 	shader_set(shd_hitflash);
 }
 
-if (iframes % 2 == 0) draw_self(); 
+if ((iframes >> 2) % 2 == 0) draw_self(); 
 
 shader_reset();
 

@@ -55,12 +55,13 @@
     {"name":"inst_5CC3306C","path":"rooms/rm_concept/rm_concept.yy",},
     {"name":"inst_25ACEE7C","path":"rooms/rm_concept/rm_concept.yy",},
     {"name":"inst_1BA92E07","path":"rooms/rm_concept/rm_concept.yy",},
+    {"name":"inst_10B7D4A6","path":"rooms/rm_concept/rm_concept.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Text","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_23EB5DA6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_dummy_item_world","path":"objects/obj_dummy_item_world/obj_dummy_item_world.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":544.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_C505991","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":448.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_10B7D4A6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":480.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Wall_Decor","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":47,"SerialiseWidth":79,"TileCompressedData":[
 -525,-2147483648,1,0,-78,-2147483648,1,0,-54,-2147483648,3,2,0,4,-21,-2147483648,1,0,-54,-2147483648,-5,0,-19,-2147483648,-2,0,-53,-2147483648,-6,0,-2,-2147483648,1,7,-15,-2147483648,-2,0,-57,-2147483648,1,0,-3,-2147483648,1,12,-15,-2147483648,-2,0,-61,-2147483648,1,12,-15,-2147483648,-2,0,-55,-2147483648,1,0,-5,-2147483648,1,12,-15,-2147483648,-2,0,-61,-2147483648,1,17,-3,18,1,26,-11,

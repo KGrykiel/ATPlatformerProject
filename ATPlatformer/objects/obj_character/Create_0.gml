@@ -35,8 +35,9 @@ apply_damage = function(damage) {
 	}
 }
 
-apply_knockback = function(horizontal, vertical) {
-	
+apply_impulse = function(horizontal, vertical) {
+	horizontal_speed += horizontal;
+	vertical_speed += vertical;
 }
 
 #endregion
