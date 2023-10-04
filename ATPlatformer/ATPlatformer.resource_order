@@ -111,6 +111,7 @@
     {"name":"obj_moving_platform","order":3,"path":"objects/obj_moving_platform/obj_moving_platform.yy",},
     {"name":"spr_dummy_item","order":24,"path":"sprites/spr_dummy_item/spr_dummy_item.yy",},
     {"name":"spr_newplayer_dialogue","order":7,"path":"sprites/spr_newplayer_dialogue/spr_newplayer_dialogue.yy",},
+    {"name":"obj_charging_turtlebot","order":3,"path":"objects/obj_charging_turtlebot/obj_charging_turtlebot.yy",},
     {"name":"obj_item_manager","order":1,"path":"objects/obj_item_manager/obj_item_manager.yy",},
     {"name":"obj_projectile","order":8,"path":"objects/obj_projectile/obj_projectile.yy",},
     {"name":"scr_state_machine","order":3,"path":"scripts/scr_state_machine/scr_state_machine.yy",},
