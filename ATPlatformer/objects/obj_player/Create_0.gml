@@ -172,7 +172,7 @@ _jump_held_time_source = time_source_create(time_source_game, _jump_held_frames,
 attack_sequence = noone;
 facing_x = 1;
 recoil_impulse_x = 4;
-recoil_impulse_y = 10;
+recoil_impulse_y = 4;
 attack_dir_x = 0;
 attack_dir_y = 0;
 

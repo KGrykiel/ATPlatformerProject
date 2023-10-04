@@ -35,11 +35,6 @@ apply_damage = function(damage) {
 	}
 }
 
-apply_impulse = function(horizontal, vertical) {
-	horizontal_speed += horizontal;
-	vertical_speed += vertical;
-}
-
 #endregion
 #region Physics
 
