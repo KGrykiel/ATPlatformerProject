@@ -96,7 +96,12 @@ function fall_substate(_max_speed=default_max_fall_speed) {
 /// @description Substate to move enemy forward
 /// @param {real} _speed Speed at which enemy moves
 function move_forward_substate(_speed=1) {
-	if (horizontal_speed == 0) horizontal_speed = _speed;
+	if (horizontal_speed == 0) {
+		horizontal_speed = _speed;
+	}
+	else {
+		horizontal_speed = _speed * horizontal_speed/abs(horizontal_speed);
+	}
 }
 
 #endregion
