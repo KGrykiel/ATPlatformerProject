@@ -57,12 +57,8 @@ function bounce_on_wall_substate() {
 
 /// @description Substate to change direction when colliding with another enemy
 function bounce_on_enemy_substate() {
-	colliding = instance_place(x,y,obj_base_enemy);
-	if colliding != noone {
-		// Makes sure they are travelling towards the other object
-		if (colliding.x - self.x) * horizontal_speed > 0 {
-			horizontal_speed *= -1;
-		}
+	if place_meeting(x,y,obj_base_enemy) {
+		horizontal_speed *= -1;
 	}
 }
 
