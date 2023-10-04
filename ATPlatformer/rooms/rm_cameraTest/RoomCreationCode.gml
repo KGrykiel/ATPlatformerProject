@@ -1,1 +1,0 @@
-obj_player.max_jump = 2;

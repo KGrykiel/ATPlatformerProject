@@ -3,8 +3,8 @@
 
 event_inherited();
 environmental_horizontal_speed = 0;
-environmental_vertical_speed = 0; 
-grav = 0.5;
+environmental_vertical_speed = 0;
+grav = 0.5;    //CUSTOMIZABLE
 horizontal_knockback = 10;
 vertical_knockback = 5;
 invulenerable = false;
@@ -18,7 +18,7 @@ function idle_state() {}
 
 function walk_state() {
 	move_forward_substate();
-	get_hit_substate(1);
+	get_hit_substate();
 	bounce_on_wall_substate();
 	bounce_on_enemy_substate();
 	damage_player_substate(1);
@@ -57,7 +57,7 @@ function bounce_on_wall_substate() {
 
 /// @description Substate to change direction when colliding with another enemy
 function bounce_on_enemy_substate() {
-	if place_meeting(x,y,obj_enemy) {
+	if place_meeting(x,y,obj_base_enemy) {
 		horizontal_speed *= -1;
 	}
 }
@@ -96,5 +96,5 @@ function move_forward_substate(_speed=1) {
 
 state = idle_state
 
-scr_create_health_vars(10,10)
+scr_create_health_vars(10,10)    //CUSTOMIZABLE
 
