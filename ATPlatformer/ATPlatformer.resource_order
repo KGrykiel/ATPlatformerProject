@@ -62,6 +62,7 @@
     {"name":"spr_platform2","order":12,"path":"sprites/spr_platform2/spr_platform2.yy",},
     {"name":"spr_newplayer_walljump","order":6,"path":"sprites/spr_newplayer_walljump/spr_newplayer_walljump.yy",},
     {"name":"obj_breakable","order":2,"path":"objects/obj_breakable/obj_breakable.yy",},
+    {"name":"rm_template","order":11,"path":"rooms/rm_template/rm_template.yy",},
     {"name":"scr_forced_jump","order":7,"path":"scripts/scr_forced_jump/scr_forced_jump.yy",},
     {"name":"obj_textbox","order":4,"path":"objects/obj_textbox/obj_textbox.yy",},
     {"name":"ts_industrial_background","order":4,"path":"tilesets/ts_industrial_background/ts_industrial_background.yy",},

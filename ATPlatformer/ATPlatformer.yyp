@@ -43,7 +43,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.1.102",
+    "IDEVersion": "2023.8.2.106",
   },
   "resources": [
     {"id":{"name":"spr_junk","path":"sprites/spr_junk/spr_junk.yy",},},
@@ -85,6 +85,7 @@
     {"id":{"name":"spr_newplayer_walljump","path":"sprites/spr_newplayer_walljump/spr_newplayer_walljump.yy",},},
     {"id":{"name":"snd_moveselect","path":"sounds/snd_moveselect/snd_moveselect.yy",},},
     {"id":{"name":"obj_breakable","path":"objects/obj_breakable/obj_breakable.yy",},},
+    {"id":{"name":"rm_template","path":"rooms/rm_template/rm_template.yy",},},
     {"id":{"name":"scr_forced_jump","path":"scripts/scr_forced_jump/scr_forced_jump.yy",},},
     {"id":{"name":"obj_textbox","path":"objects/obj_textbox/obj_textbox.yy",},},
     {"id":{"name":"ts_industrial_background","path":"tilesets/ts_industrial_background/ts_industrial_background.yy",},},
@@ -190,6 +191,7 @@
     {"roomId":{"name":"rm_example","path":"rooms/rm_example/rm_example.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
+    {"roomId":{"name":"rm_template","path":"rooms/rm_template/rm_template.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [
