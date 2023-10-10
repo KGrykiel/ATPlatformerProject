@@ -172,6 +172,7 @@
     {"id":{"name":"obj_breakable_platform","path":"objects/obj_breakable_platform/obj_breakable_platform.yy",},},
     {"id":{"name":"par_speaker","path":"objects/par_speaker/par_speaker.yy",},},
     {"id":{"name":"obj_character","path":"objects/obj_character/obj_character.yy",},},
+    {"id":{"name":"Sprite64","path":"sprites/Sprite64/Sprite64.yy",},},
     {"id":{"name":"rm_example","path":"rooms/rm_example/rm_example.yy",},},
     {"id":{"name":"obj_activatable_block_TEST","path":"objects/obj_activatable_block_TEST/obj_activatable_block_TEST.yy",},},
     {"id":{"name":"spr_wires","path":"sprites/spr_wires/spr_wires.yy",},},
