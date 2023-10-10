@@ -117,6 +117,7 @@
     {"id":{"name":"create_textevent","path":"scripts/create_textevent/create_textevent.yy",},},
     {"id":{"name":"spr_sign_right","path":"sprites/spr_sign_right/spr_sign_right.yy",},},
     {"id":{"name":"MACROS","path":"scripts/MACROS/MACROS.yy",},},
+    {"id":{"name":"rm_charging_turtlebot","path":"rooms/rm_charging_turtlebot/rm_charging_turtlebot.yy",},},
     {"id":{"name":"obj_parallax","path":"objects/obj_parallax/obj_parallax.yy",},},
     {"id":{"name":"spr_white_square","path":"sprites/spr_white_square/spr_white_square.yy",},},
     {"id":{"name":"shd_hitflash","path":"shaders/shd_hitflash/shd_hitflash.yy",},},
@@ -135,6 +136,7 @@
     {"id":{"name":"fnt_debug","path":"fonts/fnt_debug/fnt_debug.yy",},},
     {"id":{"name":"scr_execute_array","path":"scripts/scr_execute_array/scr_execute_array.yy",},},
     {"id":{"name":"scr_change_colour_TEST","path":"scripts/scr_change_colour_TEST/scr_change_colour_TEST.yy",},},
+    {"id":{"name":"ts_collisions_small","path":"tilesets/ts_collisions_small/ts_collisions_small.yy",},},
     {"id":{"name":"snd_dummy_item","path":"sounds/snd_dummy_item/snd_dummy_item.yy",},},
     {"id":{"name":"obj_danger_zone","path":"objects/obj_danger_zone/obj_danger_zone.yy",},},
     {"id":{"name":"obj_moving_platform","path":"objects/obj_moving_platform/obj_moving_platform.yy",},},
@@ -192,6 +194,7 @@
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rm_testingRoom","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},},
     {"roomId":{"name":"rm_template","path":"rooms/rm_template/rm_template.yy",},},
+    {"roomId":{"name":"rm_charging_turtlebot","path":"rooms/rm_charging_turtlebot/rm_charging_turtlebot.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [
