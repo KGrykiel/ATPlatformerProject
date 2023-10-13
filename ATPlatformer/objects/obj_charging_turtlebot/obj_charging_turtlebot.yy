@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_buzzsaw",
-    "path": "sprites/spr_buzzsaw/spr_buzzsaw.yy",
+    "name": "spr_enemy",
+    "path": "sprites/spr_enemy/spr_enemy.yy",
   },
   "spriteMaskId": null,
   "visible": true,

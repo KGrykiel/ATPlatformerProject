@@ -54,8 +54,11 @@ alarm_state = function() {
 	
 	
 is_player_detected_substate = function() {
+	show_debug_message(collision_line(x, y, obj_player.x, obj_player.y, [layer_tilemap_get_id("Collisions"), obj_parent_entity], false, true) == noone)
 	if (distance_to_object(obj_player) < charge_range) {
-		return true;
+		if collision_line(x, y, obj_player.x, obj_player.y, [obj_parent_entity, layer_tilemap_get_id("Collisions")], false, true) == noone {
+			return true;
+		}
 	}
 	else return false;
 }
