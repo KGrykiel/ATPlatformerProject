@@ -102,7 +102,7 @@ function fall_substate(_max_speed=default_max_fall_speed) {
 function move_forward_substate(_speed=1, _move_direction=1) {
 	if (horizontal_speed == 0) {
 		horizontal_speed = _speed * _move_direction/abs(_move_direction);
-		image_xscale = _move_direction/abs(_move_direction);
+		image_xscale = -_move_direction/abs(_move_direction);
 	}
 	else {
 		horizontal_speed = _speed * horizontal_speed/abs(horizontal_speed);
