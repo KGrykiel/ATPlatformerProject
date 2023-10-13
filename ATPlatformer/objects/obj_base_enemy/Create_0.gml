@@ -52,6 +52,7 @@ function get_hit_substate(_damage=obj_player.melee_damage) {
 function bounce_on_wall_substate() {
 	if check_collision(horizontal_speed, -1) {
 		horizontal_speed *= -1;
+		image_xscale *= -1;
 	}
 }
 
@@ -59,11 +60,13 @@ function bounce_on_wall_substate() {
 function bounce_on_enemy_substate() {
 	if place_meeting(x,y,obj_base_enemy) {
 		horizontal_speed *= -1;
+		image_xscale *= -1;
 	colliding = instance_place(x,y,obj_base_enemy);
 	if colliding != noone {
 		// Makes sure they are travelling towards the other object
 		if (colliding.x - self.x) * horizontal_speed > 0 {
 			horizontal_speed *= -1;
+			image_xscale *= -1;
 		}
 	}
 }
@@ -99,6 +102,7 @@ function fall_substate(_max_speed=default_max_fall_speed) {
 function move_forward_substate(_speed=1, _move_direction=1) {
 	if (horizontal_speed == 0) {
 		horizontal_speed = _speed * _move_direction/abs(_move_direction);
+		image_xscale = _move_direction/abs(_move_direction);
 	}
 	else {
 		horizontal_speed = _speed * horizontal_speed/abs(horizontal_speed);
