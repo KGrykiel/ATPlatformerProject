@@ -43,7 +43,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.106",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"spr_junk","path":"sprites/spr_junk/spr_junk.yy",},},
@@ -157,6 +157,7 @@
     {"id":{"name":"spr_collision_tiles","path":"sprites/spr_collision_tiles/spr_collision_tiles.yy",},},
     {"id":{"name":"pth_test","path":"paths/pth_test/pth_test.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
+    {"id":{"name":"spr_charging_turtlebot_triggered","path":"sprites/spr_charging_turtlebot_triggered/spr_charging_turtlebot_triggered.yy",},},
     {"id":{"name":"spr_industrial_tiles","path":"sprites/spr_industrial_tiles/spr_industrial_tiles.yy",},},
     {"id":{"name":"spr_conveyor_platform","path":"sprites/spr_conveyor_platform/spr_conveyor_platform.yy",},},
     {"id":{"name":"spr_portrait_examplechar","path":"sprites/spr_portrait_examplechar/spr_portrait_examplechar.yy",},},

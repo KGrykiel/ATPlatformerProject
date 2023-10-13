@@ -32,6 +32,7 @@
     {"name":"inst_5B7F72F3","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},
     {"name":"inst_3C4197EF","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},
     {"name":"inst_7514C636","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},
+    {"name":"inst_700B1730","path":"rooms/rm_testingRoom/rm_testingRoom.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -80,6 +81,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_player_detector","path":"objects/obj_player_detector/obj_player_detector.yy",},"propertyId":{"name":"entity_activate_script","path":"objects/obj_player_detector/obj_player_detector.yy",},"value":"change_colour",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_player_detector","path":"objects/obj_player_detector/obj_player_detector.yy",},"propertyId":{"name":"entity_activate_args","path":"objects/obj_player_detector/obj_player_detector.yy",},"value":"[inst_3C4197EF]",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":256.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_700B1730","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_charging_turtlebot","path":"objects/obj_charging_turtlebot/obj_charging_turtlebot.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":128.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Backwalls","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":0,"SerialiseWidth":0,"TileSerialiseData":[
 ],},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},

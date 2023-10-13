@@ -95,9 +95,10 @@ function fall_substate(_max_speed=default_max_fall_speed) {
 
 /// @description Substate to move enemy forward
 /// @param {real} _speed Speed at which enemy moves
-function move_forward_substate(_speed=1) {
+/// @param {real} _move_direction The direction the enemy will start moving if it is standing still (>0 for right, <0 for left, 0 for don't move once it stops)
+function move_forward_substate(_speed=1, _move_direction=1) {
 	if (horizontal_speed == 0) {
-		horizontal_speed = _speed;
+		horizontal_speed = _speed * _move_direction/abs(_move_direction);
 	}
 	else {
 		horizontal_speed = _speed * horizontal_speed/abs(horizontal_speed);
