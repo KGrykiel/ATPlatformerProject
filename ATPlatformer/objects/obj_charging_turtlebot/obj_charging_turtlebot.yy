@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_enemy",
-    "path": "sprites/spr_enemy/spr_enemy.yy",
+    "name": "spr_charging_turtlebot_move",
+    "path": "sprites/spr_charging_turtlebot_move/spr_charging_turtlebot_move.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -52,8 +52,8 @@
   },
   "origin": 7,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Charging Turtlebot",
+    "path": "folders/Sprites/Charging Turtlebot.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
