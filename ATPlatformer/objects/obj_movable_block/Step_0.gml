@@ -30,6 +30,9 @@ if(!movement_finished){
 }else{
 	if(repeat_move){
 		time_wait += 1
+		if(!is_dashing){
+			time_wait += rest_time;
+			}
 		if(time_wait >= rest_time){
 			show_debug_message("finished waiting")
 			var new_destination = is_forward ? start_location : end_location;
@@ -55,6 +58,7 @@ if(!movement_finished){
 					move_distance = abs(y - new_destination[1])
 					break;
 			}
+			is_dashing = !is_dashing;
 			movement_finished = false;
 			moved_distance = 0;
 			is_forward = !is_forward;

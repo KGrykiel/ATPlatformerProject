@@ -13,6 +13,7 @@ is_forward = true
 movement_finished = false
 moved_distance = 0;
 time_wait = 0
+is_dashing = false;
 switch move_dir{
 	case MovetDirection.Up:
 		end_location = [x, y-move_distance]
