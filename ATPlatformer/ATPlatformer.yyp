@@ -154,6 +154,7 @@
     {"id":{"name":"obj_projectile","path":"objects/obj_projectile/obj_projectile.yy",},},
     {"id":{"name":"scr_state_machine","path":"scripts/scr_state_machine/scr_state_machine.yy",},},
     {"id":{"name":"create_instance_layer","path":"scripts/create_instance_layer/create_instance_layer.yy",},},
+    {"id":{"name":"spr_moving_block","path":"sprites/spr_moving_block/spr_moving_block.yy",},},
     {"id":{"name":"obj_dummy_item_world_2","path":"objects/obj_dummy_item_world_2/obj_dummy_item_world_2.yy",},},
     {"id":{"name":"spr_emotes","path":"sprites/spr_emotes/spr_emotes.yy",},},
     {"id":{"name":"fnt_dialogue","path":"fonts/fnt_dialogue/fnt_dialogue.yy",},},

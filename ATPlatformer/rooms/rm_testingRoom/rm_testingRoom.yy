@@ -80,7 +80,7 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_movable_block","path":"objects/obj_movable_block/obj_movable_block.yy",},"propertyId":{"name":"move_dir","path":"objects/obj_movable_block/obj_movable_block.yy",},"value":"MovetDirection.Up",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_movable_block","path":"objects/obj_movable_block/obj_movable_block.yy",},"propertyId":{"name":"rest_time","path":"objects/obj_movable_block/obj_movable_block.yy",},"value":"125",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_movable_block","path":"objects/obj_movable_block/obj_movable_block.yy",},"propertyId":{"name":"dashing_speed","path":"objects/obj_movable_block/obj_movable_block.yy",},"value":"5",},
-          ],"rotation":0.0,"scaleX":3.0,"scaleY":6.0,"x":192.0,"y":272.0,},
+          ],"rotation":0.0,"scaleX":1.0,"scaleY":2.0,"x":160.0,"y":128.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Backwalls","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":0,"SerialiseWidth":0,"TileSerialiseData":[
 ],},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},

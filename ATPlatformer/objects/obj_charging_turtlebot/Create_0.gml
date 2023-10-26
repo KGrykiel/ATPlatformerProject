@@ -82,7 +82,6 @@ alarm_state = function() {
 	
 is_player_detected_substate = function() {
 	if (distance_to_object(obj_player) < charge_range) {
-		show_debug_message(abs(angle_difference( point_direction(x, y, obj_player.x, obj_player.y),180) ))
 		charge_direction = -sign(image_xscale);
 		if collision_line(x, y, obj_player.x, obj_player.y, [obj_parent_entity, layer_tilemap_get_id("Collisions")], false, true) == noone
 			and abs(angle_difference( point_direction(x, y, obj_player.x, obj_player.y), (charge_direction >= 0) ? 0 : 180 )) < 10 { //it's stupid but it works idc

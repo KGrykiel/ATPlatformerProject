@@ -45,8 +45,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "spr_box",
-    "path": "sprites/spr_box/spr_box.yy",
+    "name": "spr_moving_block",
+    "path": "sprites/spr_moving_block/spr_moving_block.yy",
   },
   "spriteMaskId": null,
   "visible": true,

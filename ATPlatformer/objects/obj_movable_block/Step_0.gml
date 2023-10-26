@@ -34,7 +34,6 @@ if(!movement_finished){
 			time_wait += rest_time;
 			}
 		if(time_wait >= rest_time){
-			show_debug_message("finished waiting")
 			var new_destination = is_forward ? start_location : end_location;
 			switch(move_dir){
 				case MovetDirection.Up:
