@@ -1,5 +1,6 @@
- /// @description Insert description here
+ /// @description If player collides with Danger Zone
 // You can write your code in this editor
+
 
 if (other.use_reset)
 {
