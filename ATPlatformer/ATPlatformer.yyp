@@ -152,6 +152,7 @@
     {"id":{"name":"create_instance_layer","path":"scripts/create_instance_layer/create_instance_layer.yy",},},
     {"id":{"name":"obj_dummy_item_world_2","path":"objects/obj_dummy_item_world_2/obj_dummy_item_world_2.yy",},},
     {"id":{"name":"spr_emotes","path":"sprites/spr_emotes/spr_emotes.yy",},},
+    {"id":{"name":"spr_gun","path":"sprites/spr_gun/spr_gun.yy",},},
     {"id":{"name":"fnt_dialogue","path":"fonts/fnt_dialogue/fnt_dialogue.yy",},},
     {"id":{"name":"spr_danger_zone","path":"sprites/spr_danger_zone/spr_danger_zone.yy",},},
     {"id":{"name":"ts_wall_wires","path":"tilesets/ts_wall_wires/ts_wall_wires.yy",},},
