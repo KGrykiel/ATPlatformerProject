@@ -35,10 +35,13 @@
     {"name":"inst_7968E250","path":"rooms/rm_example/rm_example.yy",},
     {"name":"inst_96279F4","path":"rooms/rm_example/rm_example.yy",},
     {"name":"inst_52A1C9D9","path":"rooms/rm_example/rm_example.yy",},
+    {"name":"inst_386FC418","path":"rooms/rm_example/rm_example.yy",},
   ],
   "isDnd": false,
   "layers": [
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Text","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Text","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_386FC418","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_lego_turtlebot","path":"objects/obj_lego_turtlebot/obj_lego_turtlebot.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":512.0,},
+      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Wall_Decor","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":47,"SerialiseWidth":79,"TileCompressedData":[
 -525,-2147483648,1,0,-78,-2147483648,1,0,-54,-2147483648,3,2,0,4,-21,-2147483648,1,0,-54,-2147483648,-5,0,-19,-2147483648,-2,0,-53,-2147483648,-6,0,-2,-2147483648,1,7,-15,-2147483648,-2,0,-57,-2147483648,1,0,-3,-2147483648,1,12,-15,-2147483648,-2,0,-61,-2147483648,1,12,-15,-2147483648,-2,0,-55,-2147483648,1,0,-5,-2147483648,1,12,-15,-2147483648,-2,0,-61,-2147483648,1,17,-3,18,1,26,-11,
 -2147483648,1,0,-62,-2147483648,1,22,-15,-2147483648,1,0,-62,-2147483648,1,22,-78,-2147483648,1,27,-82,-2147483648,1,0,-278,-2147483648,1,7,-78,-2147483648,1,12,-12,-2147483648,1,7,-65,-2147483648,1,22,-12,-2147483648,1,12,-65,-2147483648,1,27,-12,-2147483648,1,27,-95,-2147483648,3,5,18,19,-75,-2147483648,2,5,29,-53,-2147483648,1,7,-21,-2147483648,3,15,16,29,-54,-2147483648,1,12,-78,-2147483648,2,

@@ -12,6 +12,8 @@ invulenerable = false;
 default_damage = 1;
 default_max_fall_speed = 5;
 
+red_koopa = false;
+
 #region States
 
 function idle_state() {}
@@ -21,6 +23,7 @@ function walk_state() {
 	get_hit_substate();
 	bounce_on_wall_substate();
 	bounce_on_enemy_substate();
+	if (red_koopa) {bounce_on_cliff_substate();}
 	damage_player_substate(1);
 	fall_substate(5);
 }
@@ -50,7 +53,21 @@ function get_hit_substate(_damage=obj_player.melee_damage) {
 
 /// @description Substate to change direction when colliding with a wall
 function bounce_on_wall_substate() {
-	if check_collision(horizontal_speed, -1) {
+	if check_collision(horizontal_speed, 0) {
+		horizontal_speed *= -1;
+	}
+}
+
+/// @description Substate to change direction when there's a drop at the end of the platform
+function bounce_on_cliff_substate() {
+	if (horizontal_speed > 0) {
+		border = bbox_right
+	}
+	else {
+		border = bbox_left
+	}
+	
+	if (!tilemap_get_at_pixel(obj_manager.collision_tilemap, border + horizontal_speed, bbox_bottom + 1)) {
 		horizontal_speed *= -1;
 	}
 }

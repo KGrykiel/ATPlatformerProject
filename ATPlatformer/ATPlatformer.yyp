@@ -43,7 +43,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.2.106",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"spr_junk","path":"sprites/spr_junk/spr_junk.yy",},},
@@ -65,6 +65,7 @@
     {"id":{"name":"sequence_moments","path":"scripts/sequence_moments/sequence_moments.yy",},},
     {"id":{"name":"obj_dummy_item_world","path":"objects/obj_dummy_item_world/obj_dummy_item_world.yy",},},
     {"id":{"name":"spr_railings_with_rug","path":"sprites/spr_railings_with_rug/spr_railings_with_rug.yy",},},
+    {"id":{"name":"spr_lego_turtlebot","path":"sprites/spr_lego_turtlebot/spr_lego_turtlebot.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_attack_smear","path":"sprites/spr_attack_smear/spr_attack_smear.yy",},},
     {"id":{"name":"create_dialogue","path":"scripts/create_dialogue/create_dialogue.yy",},},
@@ -99,6 +100,7 @@
     {"id":{"name":"snd_voice2","path":"sounds/snd_voice2/snd_voice2.yy",},},
     {"id":{"name":"scr_collision","path":"scripts/scr_collision/scr_collision.yy",},},
     {"id":{"name":"obj_textevent","path":"objects/obj_textevent/obj_textevent.yy",},},
+    {"id":{"name":"obj_lego_turtlebot","path":"objects/obj_lego_turtlebot/obj_lego_turtlebot.yy",},},
     {"id":{"name":"obj_emote","path":"objects/obj_emote/obj_emote.yy",},},
     {"id":{"name":"spr_projectile","path":"sprites/spr_projectile/spr_projectile.yy",},},
     {"id":{"name":"spr_platform","path":"sprites/spr_platform/spr_platform.yy",},},
