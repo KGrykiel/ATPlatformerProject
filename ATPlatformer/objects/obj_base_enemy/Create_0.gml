@@ -54,7 +54,7 @@ function get_hit_substate(_damage=obj_player.melee_damage) {
 /// @description Substate to change direction when colliding with a wall
 function bounce_on_wall_substate() {
 	if check_collision(horizontal_speed, 0) {
-		horizontal_speed *= -1;
+		reverse_substate()
 	}
 }
 
@@ -68,15 +68,21 @@ function bounce_on_cliff_substate() {
 	}
 	
 	if (!tilemap_get_at_pixel(obj_manager.collision_tilemap, border + horizontal_speed, bbox_bottom + 1)) {
-		horizontal_speed *= -1;
+		reverse_substate()
 	}
 }
 
 /// @description Substate to change direction when colliding with another enemy
 function bounce_on_enemy_substate() {
 	if place_meeting(x,y,obj_base_enemy) {
-		horizontal_speed *= -1;
+		reverse_substate()
 	}
+}
+
+// @description reverse sprite
+function reverse_substate() {
+	horizontal_speed *= -1
+	image_xscale *= -1
 }
 
 /// @description Substate to damage player when colliding
