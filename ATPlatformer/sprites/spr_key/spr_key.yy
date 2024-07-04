@@ -1,11 +1,11 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_sonic_screwdriver",
-  "bbox_bottom": 63,
-  "bbox_left": 27,
-  "bbox_right": 34,
-  "bbox_top": 0,
+  "name": "spr_key",
+  "bbox_bottom": 41,
+  "bbox_left": 11,
+  "bbox_right": 38,
+  "bbox_top": 30,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6815e30a-2254-49ca-825a-a527e6e3fc55",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e5be2efa-364d-4b6b-90dd-005fd849ea19",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 64,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"10634adf-b2a4-4fa0-83ba-b3fa577b4654","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"12db3e21-1061-4eb4-ac5f-d9f3241f4ab9","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_sonic_screwdriver",
+    "name": "spr_key",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6815e30a-2254-49ca-825a-a527e6e3fc55","path":"sprites/spr_sonic_screwdriver/spr_sonic_screwdriver.yy",},},},"Disabled":false,"id":"f03e8d0a-0702-4ab4-a18b-554af4780e6c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e5be2efa-364d-4b6b-90dd-005fd849ea19","path":"sprites/spr_key/spr_key.yy",},},},"Disabled":false,"id":"73188112-22b0-4742-8b73-8a0b56428079","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

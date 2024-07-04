@@ -22,6 +22,7 @@ global.item_list = {
 							function() {
 								audio_play_sound(snd_sonic_screwdriver, 1, false)
 							})
+	key: new create_item("Key", "What might this open?", )
 }
 
 
